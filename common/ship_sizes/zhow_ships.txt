@@ -1,0 +1,45 @@
+@carrier_formation_priority = 2
+#@carrier_combat_speed = 1.6
+@carrier_combat_speed = 1.25 # battleship is too slow, I should redo all the speeds
+@carrier_combat_rotation = 0.015
+@carrier_collision_radius = 8
+
+zhow_carrier = {
+	formation_priority = @carrier_formation_priority
+	max_speed = 2.2 # Slow down the fleet a bit outside of combat
+	acceleration = 0.2
+	rotation_speed = 0.15
+	combat_max_speed = @carrier_combat_speed
+	combat_rotation_speed = @carrier_combat_rotation
+	collision_radius = @carrier_collision_radius
+	modifier = {
+		ship_armor_add = 110
+		ship_evasion_add = 10
+		# I presume this prevents the AI from deleting it
+		ship_upkeep_mult = -1
+	}
+	max_hitpoints = 4800
+	size_multiplier = 12
+	fleet_slot_size = 12
+	section_slots = {
+		"bow" = { locator = "part1" }
+		"mid1" = { locator = "part2" }
+		"mid2" = { locator = "part3" }
+		"stern" = { locator = "part4" }
+	}
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 5
+	base_buildtime = 520
+	required_spaceport_level = 50
+	can_have_federation_design = no
+	enable_default_design = yes
+
+	prerequisites = { "zhow_tech_carrier_1" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "zhow_carrier_computer"
+	required_component_set = "thruster_components"
+	required_component_set = "powerstation_components"
+}

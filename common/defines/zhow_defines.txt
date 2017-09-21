@@ -1,0 +1,128 @@
+
+NGameplay = {
+	STARTING_WEAPON_TECHS = {
+		"tech_mass_drivers_1"
+		"tech_lasers_1"
+	}
+	STARTING_WEAPON_TECHS_ICONS = {
+		"GFX_weapon_type_01"
+		"GFX_weapon_type_02"
+	}
+}
+
+
+# -- -- From Realistic System Scale / Star Redux
+# -- 	--Scale--------------------------------------------------------------------------------------------------
+# -- 	NDefines.NCamera.SYSTEM_SPACE_SCALE_MULT = 100
+# -- 	NDefines.NGraphics.MOON_SCALE = 0.4
+# -- 	NDefines.NGraphics.DEFAULT_PLANET_PLANE = -500.0 -- -400.0
+# -- 	NDefines.NGameplay.PLANET_STATION_ORBIT_DISTANCE = 6 --6 - how far from the planet orbital stations will be
+# -- 	NDefines.NGameplay.PLANET_ORBIT_DISTANCE 	= 5 --10 - how far from the planet ships will orbit
+
+# -- 	--Asteroids----------------------------------------------------------------------------------------------
+# -- 	NDefines.NGraphics.ASTEROID_PLANE = -200.0
+# -- 	NDefines.NGraphics.ASTEROID_POSITION_OFFSET = -10 -- -8
+# -- 	NDefines.NGraphics.ASTEROID_HEIGHT_OFFSET = 5.5 -- 4
+# -- 	NDefines.NGraphics.ASTEROID_DIST_POW = 3 -- 3
+# -- 	NDefines.NGraphics.ASTEROID_AMOUNT_RADIUS_SCALER = 0.1 -- 0.1
+# -- 	NDefines.NGraphics.ASTEROID_MAX_SCALE = 4.0 -- 4.0
+
+# -- 	--System View--------------------------------------------------------------------------------------------
+# -- 	--NDefines.NGraphics.ORBIT_HSV = { 0.0, 0.0, 1.0 }
+# -- 	NDefines.NGraphics.SYSTEM_LINE_ALPHA_FADE_STEP = { 3, 5 } -- { 6, 8 }			-- Fade alpha betweeen zoom step X and Y
+# -- 	NDefines.NGraphics.SYSTEM_LINE_ALPHA_FADE_VALUE	= { 0.1, 0.05 } -- { 0.0, 0.1 }		-- Fade alpha value between X and Y
+# -- 	--NDefines.NCamera.SYSTEM_MAX_PITCH = 85.0
+# -- 	--NDefines.NCamera.SYSTEM_MIN_PITCH = -10
+# -- 	--NDefines.NCamera.SYSTEM_SLIDE_RADIUS_FACTOR = 4.0
+# -- 	--NDefines.NCamera.SYSTEM_SLIDE_SPEED = 4000.0
+
+# -- 	--NDefines.NCombat.COMBAT_BACK_OFF_RATE = 0.75 -- 0.25
+# -- 	NDefines.NCombat.COMBAT_DETECT_RANGE_MULT = 4 -- 1.05 Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
+
+# -- 	NDefines.NShip.FLEET_BASE_FORMATION_SCALE = 0.20 -- 2.0
+# -- 	NDefines.NShip.FLEET_BASE_FORMATION_DIV = 10 -- 10, rows per fleet
+# -- 	NDefines.NGraphics.SHIP_RANDOM_HEIGHT_OFFSET = -120.0 --150.0
+
+
+# -- -- Free Camera / Cinematic Camera
+
+# -- NDefines.NCamera.FOV = 50 -- Field-of-View
+# -- NDefines.NCamera.GALAXY_SHOW_FLEETS_ZOOM = 2300 -- Camera zoom interval to show fleet icons
+# -- NDefines.NCamera.GALAXY_SHOW_STARNAME_ZOOM = 650 -- Camera zoom interval to show star name
+# -- NDefines.NCamera.GALAXY_SHOW_FILTERICONS_ZOOM = 300 -- Camera zoom interval to show filter icons
+
+# -- NDefines.NCamera.ZOOM_STEPS_GALAXY 	= { 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 825, 900, 1050, 1200, 1350, 1500, 1825, 2250, 2575, 3000 } 	-- Galaxy zoom steps
+# -- -- System zoom steps, in percent relative to the system size
+# -- -- NDefines.NCamera.ZOOM_STEPS_SYSTEM_PERCENTAGES = {
+# -- -- 	0.0015625,
+# -- -- 	0.003125,
+# -- -- 	0.0046875,
+# -- -- 	0.0066875,
+# -- -- 	0.0086875,
+# -- -- 	0.0100095,
+# -- -- 	0.0110095,
+# -- -- 	0.0130095,
+# -- -- 	0.0150095,
+# -- -- 	0.0170095,
+# -- -- 	0.0190095,
+# -- -- 	0.0590095,
+# -- -- 	0.07,
+# -- -- 	0.09,
+# -- -- 	0.1,
+# -- -- 	0.4,
+# -- -- 	0.8
+# -- -- }
+# -- --ZOOM_STEPS_SYSTEM_PERCENTAGES  = { 0.025, 0.1,   0.25, 0.5, 1.0, 1.5, 3.0 }, -- System zoom steps, in percent relative to the system size
+# -- --PLANET_SCALE_SYSTEM              { 0.425, 0.325, 0.35, 0.5, 0.5, 0.5, 0.75 }, -- Scale for each System zoom steps
+# -- -- We keep it the same as novio just in case the user has it installed
+# -- NDefines.NCamera.ZOOM_STEPS_SYSTEM_PERCENTAGES = {
+# -- 	0.0125,
+# -- 	0.025,      -- 1
+# -- 	0.05,
+# -- 	0.1,        -- 2
+# -- 	0.125,
+# -- 	0.25,       -- 3
+# -- 	0.375,
+# -- 	0.5,        -- 4
+# -- 	0.75,
+# -- 	1.0,        -- 5
+# -- 	1.25,
+# -- 	1.5,        -- 6
+# -- 	1.75,
+# -- 	-- 2.0,
+# -- 	-- 2.5,
+# -- 	-- 3.0         -- Vanilla max
+# -- }
+# -- NDefines.NCamera.ENTER_SYSTEM_ZOOM_STEP = 7 -- 6 > Controls which zoom step is used after entering system
+
+# -- -- Scale for each system zoom step
+# -- NDefines.NGraphics.PLANET_SCALE_SYSTEM = {
+# -- 	0.100,     -- 0.0125
+# -- 	0.125,     -- 0.025
+# -- 	0.150,     -- 0.05
+# -- 	0.175,     -- 0.1, vanilla 0.025
+# -- 	0.20,      -- 0.125, vanilla 0.1
+# -- 	0.25,      -- 0.25, vanilla 0.25
+# -- 	0.30,      -- 0.375
+# -- 	0.35,      -- 0.5
+# -- 	0.40,      -- 0.75
+# -- 	0.45,      -- 1
+# -- 	0.5,       -- 1.25
+# -- 	0.55,      -- 1.5, vanilla 1.5, 1.0, 0.5
+# -- 	0.6,       -- 1.75
+# -- 	-- 0.65,      -- 2
+# -- 	-- 0.7,       -- 2.5
+# -- 	-- 0.75       -- 3, vanilla 3
+# -- }
+
+# -- NDefines.NGraphics.SHIP_ZOOM_SCALE_MULT = 135 -- 200
+
+# --  -- System zoom steps, in percent relative to the system size
+# -- NDefines.NCamera.ZOOM_STEPS_SHOW_FLEET_HEALTH_BARS = { 3, 4, 5, 6 } -- on which zoom steps per-fleet health bars should be shown
+# -- NDefines.NCamera.LEAVE_SYSTEM_ZOOM_STEP = 4 -- Controls which zoom step is used after leaving system
+# -- --NDefines.NCamera.ENTER_SYSTEM_ZOOM_STEP = 5 -- Controls which zoom step is used after entering system
+# -- NDefines.NCamera.SYSTEM_FOCUS_PLANET_STEP = 5 -- Controls which zoom step to planet zoom to in a system
+# -- --NDefines.NCamera.SYSTEM_MIN_PITCH = -120.0	-- in degrees
+# -- --NDefines.NCamera.SYSTEM_MAX_PITCH = 180.0	-- in degrees
+# -- --NDefines.NCamera.FOCUSED_MIN_PITCH = -120.0 -- in degrees, used when focused on planet/ship
+# -- --NDefines.NCamera.FOCUSED_MAX_PITCH = 180.0 -- in degrees, used when focused on planet/ship

@@ -1,0 +1,172 @@
+# =======================================
+# FIGHTER
+#
+
+utility_component_template = {
+	key = "STRIKE_FIGHTER_COMPONENT_1"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 6
+	cost = 0
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_fighter }
+	component_set = "strike_fighter_components"
+	ship_behavior = "folk_fighter_default"
+	upgrades_to = "STRIKE_FIGHTER_COMPONENT_2"
+	ai_weight = { weight = 1 }
+}
+utility_component_template = {
+	key = "STRIKE_FIGHTER_COMPONENT_2"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_basic"
+	icon_frame = 1
+	power = 12
+	cost = 0
+	prerequisites = { "tech_combat_computers_1" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_fighter }
+	component_set = "strike_fighter_components"
+	ship_behavior = "folk_fighter_default"
+	upgrades_to = "STRIKE_FIGHTER_COMPONENT_3"
+	ai_weight = { weight = 2 }
+}
+utility_component_template = {
+	key = "STRIKE_FIGHTER_COMPONENT_3"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_advanced"
+	icon_frame = 1
+	power = 18
+	cost = 0
+	prerequisites = { "tech_combat_computers_2" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_fighter }
+	component_set = "strike_fighter_components"
+	ship_behavior = "folk_fighter_default"
+	upgrades_to = "STRIKE_FIGHTER_COMPONENT_4"
+	ai_weight = { weight = 3 }
+}
+utility_component_template = {
+	key = "STRIKE_FIGHTER_COMPONENT_4"
+	size = small
+	icon = "GFX_ship_part_computer_sentient"
+	icon_frame = 1
+	power = 24
+	cost = 0
+	modifier = {
+		ship_shield_hp_add = 20
+		ship_shield_regen_add = 2
+	}
+	prerequisites = { "tech_combat_computers_3" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_fighter }
+	component_set = "strike_fighter_components"
+	ship_behavior = "folk_fighter_default"
+	upgrades_to = "STRIKE_FIGHTER_COMPONENT_5"
+	ai_weight = { weight = 4 }
+}
+utility_component_template = {
+	key = "STRIKE_FIGHTER_COMPONENT_5"
+	size = small
+	icon = "GFX_ship_part_computer_pregoc"
+	icon_frame = 1
+	power = 29
+	cost = 0
+	modifier = {
+		ship_shield_hp_add = 40
+		ship_shield_regen_add = 4
+	}
+	prerequisites = { "tech_precognition_interface" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_fighter }
+	component_set = "strike_fighter_components"
+	ship_behavior = "folk_fighter_default"
+	ai_weight = { weight = 5 }
+}
+
+
+# =======================================
+# BOMBER
+#
+
+utility_component_template = {
+	key = "STRIKE_BOMBER_COMPONENT_1"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 31
+	cost = 0
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_bomber }
+	component_set = "strike_bomber_components"
+	ship_behavior = "folk_bomber_default"
+	upgrades_to = "STRIKE_BOMBER_COMPONENT_2"
+	ai_weight = { weight = 1 }
+}
+utility_component_template = {
+	key = "STRIKE_BOMBER_COMPONENT_2"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_basic"
+	icon_frame = 1
+	power = 37
+	cost = 0
+	prerequisites = { "tech_combat_computers_1" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_bomber }
+	component_set = "strike_bomber_components"
+	ship_behavior = "folk_bomber_default"
+	upgrades_to = "STRIKE_BOMBER_COMPONENT_3"
+	ai_weight = { weight = 2 }
+}
+utility_component_template = {
+	key = "STRIKE_BOMBER_COMPONENT_3"
+	size = small
+	icon = "GFX_ship_part_computer_defensive_advanced"
+	icon_frame = 1
+	power = 43
+	cost = 0
+	prerequisites = { "tech_combat_computers_2" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_bomber }
+	component_set = "strike_bomber_components"
+	ship_behavior = "folk_bomber_default"
+	upgrades_to = "STRIKE_BOMBER_COMPONENT_4"
+	ai_weight = { weight = 3 }
+}
+utility_component_template = {
+	key = "STRIKE_BOMBER_COMPONENT_4"
+	size = small
+	icon = "GFX_ship_part_computer_sentient"
+	icon_frame = 1
+	power = 49
+	cost = 0
+	modifier = {
+		ship_shield_hp_add = 20
+		ship_shield_regen_add = 2
+	}
+	prerequisites = { "tech_combat_computers_3" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_bomber }
+	component_set = "strike_bomber_components"
+	ship_behavior = "folk_bomber_default"
+	upgrades_to = "STRIKE_BOMBER_COMPONENT_5"
+	ai_weight = { weight = 4 }
+}
+utility_component_template = {
+	key = "STRIKE_BOMBER_COMPONENT_5"
+	size = small
+	icon = "GFX_ship_part_computer_pregoc"
+	icon_frame = 1
+	power = 54
+	cost = 0
+	modifier = {
+		ship_shield_hp_add = 40
+		ship_shield_regen_add = 4
+	}
+	prerequisites = { "tech_precognition_interface" }
+	class_restriction = { shipclass_military }
+	size_restriction = { strike_bomber }
+	component_set = "strike_bomber_components"
+	ship_behavior = "folk_bomber_default"
+	ai_weight = { weight = 5 }
+}

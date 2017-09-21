@@ -1,0 +1,654 @@
+humans1 = {
+	name = "humans1"
+	spawn_enabled = yes # yes / no / always
+	ignore_portrait_duplication = yes
+
+	name_list = "HUM3"
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans1"
+
+	species_name = "PRESCRIPTED_species_name_humans1"
+	species_plural = "PRESCRIPTED_species_plural_humans1"
+	species_adjective = "PRESCRIPTED_species_adjective_humans1"
+	species_class = "HUM"
+	trait = "trait_adaptive"
+	trait = "trait_nomadic"
+	trait = "trait_wasteful"
+	portrait = "human"
+	adjective = "PRESCRIPTED_adjective_humans1"
+
+	room = "personality_federation_builders_room"
+
+	authority = "auth_democratic"
+	civics = { "civic_beacon_of_liberty" "civic_idealistic_foundation" }
+	government = gov_representative_democracy
+
+	ethic = "ethic_xenophile"
+	ethic = "ethic_fanatic_egalitarian"
+
+	flags = { human_1 custom_start_screen }
+
+	weapon = "tech_mass_drivers_1"
+	ftl = warp
+
+	planet_name = "NAME_Earth"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_9.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_humans1"
+		gender = female
+		portrait = "human_female_05"
+		texture = 0
+		hair = 1
+		clothes = 0
+	}
+}
+humans2 = {
+	name = "humans2"
+	spawn_enabled = yes # yes / no / always
+	ignore_portrait_duplication = yes
+
+	name_list = "HUM4"
+	ship_prefix = "PRESCRIPTED_ship_prefix_humans2"
+
+	species_name = "PRESCRIPTED_species_name_humans2"
+	species_plural = "PRESCRIPTED_species_plural_humans2"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_humans2"
+	species_class = "HUM"
+	trait = "trait_adaptive"
+	trait = "trait_nomadic"
+	trait = "trait_wasteful"
+	portrait = "human"
+	adjective = "PRESCRIPTED_adjective_humans2"
+
+	room = "personality_hegemonic_imperialists_room"
+
+	authority = "auth_dictatorial"
+	civics = { "civic_nationalistic_zeal" "civic_distinguished_admiralty" }
+	government = gov_constitutional_dictatorship
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_fanatic_militarist"
+
+	flags = { human_2 custom_start_screen }
+
+	weapon = "tech_lasers_1"
+	ftl = wormhole
+
+	planet_name = "NAME_Unity"
+	planet_class = "pc_continental"
+	initializer = "deneb_system"
+	system_name = "NAME_Deneb"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon= {
+			category = "human"
+			file = "flag_human_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripe.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_humans2"
+		portrait = "human_female_04"
+		gender = female
+		texture = 0
+		hair = 6
+		clothes = 2
+	}
+}
+
+# Tzynn
+tzynn = {
+	name = "tzynn"
+	spawn_enabled = yes # yes / no / always
+
+	name_list = "REP1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_tzynn"
+
+	species_name = "PRESCRIPTED_species_name_tzynn"
+	species_plural = "PRESCRIPTED_species_plural_tzynn"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_tzynn"
+	species_class = "REP"
+	trait = "trait_strong"
+	trait = "trait_talented"
+	trait = "trait_rapid_breeders"
+	trait = "trait_nonadaptive"
+	portrait = "rep9"
+	adjective = "PRESCRIPTED_adjective_tzynn"
+
+	room = "personality_slaving_despots_room"
+
+	authority = "auth_imperial"
+	civics = { "civic_police_state" "civic_slaver_guilds" }
+	#government = gov_despotic_empire
+	government = gov_star_empire
+
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_fanatic_militarist"
+
+	weapon = "tech_mass_drivers_1"
+	ftl = warp
+
+	planet_name = "PRESCRIPTED_planet_name_tzynn"
+	planet_class = "pc_desert"
+	system_name = "PRESCRIPTED_system_name_tzynn"
+
+	graphical_culture = "reptilian_01"
+	city_graphical_culture = "reptilian_01"
+
+	empire_flag = {
+		icon= {
+			category = "pointy"
+			file = "flag_pointy_2.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_tzynn"
+		gender = male
+		portrait = "rep9"
+		texture = 1
+		clothes = 4
+	}
+}
+
+# Yondar
+yondar = {
+	name = "yondar"
+	spawn_enabled = yes # yes / no / always
+
+	species_name = "PRESCRIPTED_species_name_yondar"
+	species_plural = "PRESCRIPTED_species_plural_yondar"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_yondar"
+	adjective = "PRESCRIPTED_adjective_yondar"
+
+	name_list = "AVI1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_yondar"
+
+	species_class = "AVI"
+	trait = "trait_conformists"
+	trait = "trait_talented"
+	trait = "trait_solitary"
+	portrait = "avi10"
+
+	planet_name = "PRESCRIPTED_planet_name_yondar"
+	planet_class = "pc_alpine"
+	system_name = "PRESCRIPTED_system_name_yondar"
+
+	room = "personality_evangelizing_zealots_room"
+
+	authority = "auth_imperial"
+	civics = { "civic_imperial_cult" "civic_aristocratic_elite" }
+	government = gov_divine_empire
+
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_fanatic_spiritualist"
+
+	weapon = "tech_lasers_1"
+	ftl = hyperdrive
+
+	graphical_culture = "avian_01"
+	city_graphical_culture = "avian_01"
+
+	empire_flag = {
+		icon= {
+			category = "zoological"
+			file = "flag_zoological_6.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "stripes.dds"
+		}
+		colors={
+			"blue"
+			"dark_blue"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_yondar"
+		gender = male
+		portrait = "avi10"
+		texture = 1
+		clothes = 3
+	}
+}
+
+# Ix'Idar
+ixidar = {
+	name = "ixidar"
+	spawn_enabled = yes # yes / no / always
+
+	species_name = "PRESCRIPTED_species_name_ixidar"
+	species_plural = "PRESCRIPTED_species_plural_ixidar"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_ixidar"
+	adjective = "PRESCRIPTED_adjective_ixidar"
+
+	name_list = "ART1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_ixidar"
+
+	species_class = "ART"
+	trait = "trait_rapid_breeders"
+	trait = "trait_communal"
+	trait = "trait_repugnant"
+	trait = "trait_strong"
+	portrait = "art12"
+
+	planet_name = "PRESCRIPTED_planet_name_ixidar"
+	planet_class = "pc_arctic"
+	system_name = "PRESCRIPTED_system_name_ixidar"
+
+	room = "personality_hegemonic_imperialists_room"
+
+	authority = "auth_dictatorial"
+	civics = { "civic_efficient_bureaucracy" "civic_functional_architecture" }
+	#government = gov_constitutional_dictatorship
+	government = gov_totalitarian_regime
+
+	ethic = "ethic_materialist"
+	ethic = "ethic_fanatic_authoritarian"
+
+	weapon = "tech_mass_drivers_1"
+	ftl = hyperdrive
+
+	graphical_culture = "arthropoid_01"
+	city_graphical_culture = "arthropoid_01"
+
+	empire_flag = {
+		icon= {
+			category = "ornate"
+			file = "flag_ornate_18.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"dark_grey"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_ixidar"
+		gender = male
+		portrait = "art12"
+		texture = -1
+		clothes = 2
+	}
+}
+
+# Chinorr
+chinorr = {
+	name = "chinorr"
+	spawn_enabled = yes # yes / no / always
+
+	species_name = "PRESCRIPTED_species_name_chinorr"
+	species_plural = "PRESCRIPTED_species_plural_chinorr"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_chinorr"
+	adjective = "PRESCRIPTED_adjective_chinorr"
+
+	name_list = "MOL1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_chinorr"
+
+	species_class = "MOL"
+	trait = "trait_industrious"
+	trait = "trait_repugnant"
+	trait = "trait_natural_engineers"
+	portrait = "mol11"
+
+	planet_name = "PRESCRIPTED_planet_name_chinorr"
+	planet_class = "pc_arid"
+	system_name = "PRESCRIPTED_system_name_chinorr"
+
+	room = "personality_erudite_explorers_room"
+
+	authority = "auth_oligarchic"
+	civics = { "civic_technocracy" "civic_mining_guilds" }
+	#government = gov_plutocratic_oligarchy
+	government = gov_science_directorate
+
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_fanatic_materialist"
+
+	weapon = "tech_lasers_1"
+	ftl = hyperdrive
+
+	graphical_culture = "molluscoid_01"
+	city_graphical_culture = "molluscoid_01"
+
+	empire_flag = {
+		icon= {
+			category = "ornate"
+			file = "flag_ornate_4.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "triangle_split.dds"
+		}
+		colors={
+			"red_orange"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_chinorr"
+		gender = male
+		portrait = "mol11"
+		texture = 1
+		#hair = 0
+		clothes = 3
+	}
+}
+
+# Jehetma
+jehetma = {
+	name = "jehetma"
+	spawn_enabled = yes # yes / no / always
+
+	species_name = "PRESCRIPTED_species_name_jehetma"
+	species_plural = "PRESCRIPTED_species_plural_jehetma"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_jehetma"
+	adjective = "PRESCRIPTED_adjective_jehetma"
+
+	name_list = "FUN1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_jehetma"
+
+	species_class = "FUN"
+	trait = "trait_slow_breeders"
+	trait = "trait_thrifty"
+	trait = "trait_communal"
+	portrait = "fun13"
+
+	planet_name = "PRESCRIPTED_planet_name_jehetma"
+	planet_class = "pc_tundra"
+	system_name = "PRESCRIPTED_system_name_jehetma"
+
+	room = "personality_harmonious_hierarchy_room"
+
+	authority = "auth_oligarchic"
+	civics = { "civic_environmentalist" "civic_aristocratic_elite" }
+	#government = gov_plutocratic_oligarchy
+	government = gov_irenic_bureaucracy
+
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_fanatic_pacifist"
+
+	weapon = "tech_mass_drivers_1"
+	ftl = wormhole
+
+	graphical_culture = "fungoid_01"
+	city_graphical_culture = "fungoid_01"
+
+	empire_flag = {
+		icon= {
+			category = "ornate"
+			file = "flag_ornate_7.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"dark_brown"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_jehetma"
+		gender = female
+		portrait = "fun13"
+		texture = -1
+		#hair = 0
+		clothes = 2
+	}
+}
+
+# Scyldari
+scyldari = {
+	name = "scyldari"
+	spawn_enabled = yes # yes / no / always
+
+	species_name = "PRESCRIPTED_species_name_scyldari"
+	species_plural = "PRESCRIPTED_species_plural_scyldari"	#we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_scyldari"
+	adjective = "PRESCRIPTED_adjective_scyldari"
+
+	name_list = "MAM1"
+	ship_prefix = "PRESCRIPTED_ship_prefix_scyldari"
+
+	species_class = "MAM"
+	trait = "trait_charismatic"
+	trait = "trait_solitary"
+	trait = "trait_natural_sociologists"
+	trait = "trait_quick_learners"
+	portrait = "mam6"
+
+	planet_name = "PRESCRIPTED_planet_name_scyldari"
+	planet_class = "pc_ocean"
+	system_name = "PRESCRIPTED_system_name_scyldari"
+
+	room = "personality_peaceful_traders_room"
+
+	authority = "auth_democratic"
+	civics = { "civic_environmentalist" "civic_free_haven" }
+	#government = gov_representative_democracy
+	government = gov_moral_democracy
+
+	ethic = "ethic_materialist"
+	ethic = "ethic_pacifist"
+	ethic = "ethic_xenophile"
+
+	weapon = "tech_mass_drivers_1"
+	ftl = warp
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon= {
+			category = "spherical"
+			file = "flag_spherical_15.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={
+			"burgundy"
+			"orange"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_scyldari"
+		gender = female
+		portrait = "mam6"
+		texture = 3
+		#hair = 0
+		clothes = 3
+	}
+}
+
+## Kel-Azaan
+kel_azaan = {
+	name = "kel_azaan"
+	spawn_enabled = yes
+
+	species_name = "PRESCRIPTED_species_name_kel_azaan"
+	species_plural = "PRESCRIPTED_species_plural_kel_azaan"	# we should localize the names!
+	species_adjective = "PRESCRIPTED_species_adjective_kel_azaan"
+	adjective = "PRESCRIPTED_adjective_kel_azaan"
+
+	name_list = "ART3"
+	ship_prefix = "PRESCRIPTED_ship_prefix_kel_azaan"
+
+	species_class = "ART"
+	trait = "trait_adaptive"
+	trait = "trait_nomadic"
+	trait = "trait_fleeting"
+	portrait = "art8"
+
+	planet_name = "PRESCRIPTED_planet_name_kel_azaan"
+	system_name = "PRESCRIPTED_system_name_kel_azaan"
+	planet_class = "pc_savannah"
+
+	room = "personality_democratic_crusaders_room"
+
+	authority = "auth_democratic"
+	civics = { "civic_warrior_culture" "civic_citizen_service" }
+	#government = gov_representative_democracy
+	government = gov_citizen_republic
+
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_militarist"
+	ethic = "ethic_spiritualist"
+
+	weapon = "tech_mass_drivers_1"
+	ftl = wormhole
+
+	graphical_culture = "arthropoid_01"
+	city_graphical_culture = "arthropoid_01"
+
+	empire_flag = {
+		icon={
+			category="ornate"
+			file="flag_ornate_20.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"purple"
+			"dark_purple"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_kel_azaan"
+		gender = male
+		portrait = "art8"
+		texture = 1
+		#hair = 0
+		clothes = 2
+	}
+}
+
+# Blorg Commonality
+blorg={
+	name = "blorg"
+	spawn_enabled = no # yes / no / always
+	spawn_as_fallen = yes # overrides spawn_enabled for fallen empires
+
+	name_list="HUM4"
+	ship_prefix="PRESCRIPTED_ship_prefix_blorg"
+	species_name="PRESCRIPTED_species_name_blorg"
+	species_plural="PRESCRIPTED_species_plural_blorg"
+	species_class="FUN"
+	species_adjective="PRESCRIPTED_species_adjective_blorg"
+	portrait="fun12"
+	#name="Blorg Commonality"
+	adjective="PRESCRIPTED_adjective_blorg"
+
+	room = "personality_federation_builders_room"
+
+	authority = "auth_oligarchic"
+	civics = { "civic_free_haven" "civic_distinguished_admiralty" }
+	#government = gov_plutocratic_oligarchy
+	government = gov_military_junta
+
+	ftl=warp
+	weapon="tech_lasers_1"
+	planet_name="PRESCRIPTED_planet_name_blorg"
+	planet_class="pc_tropical"
+	system_name="PRESCRIPTED_system_name_blorg"
+	initializer=""
+	graphical_culture="fungoid_01"
+	city_graphical_culture="fungoid_01"
+	empire_flag={
+		icon={
+			category="blocky"
+			file="flag_blocky_11.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"green"
+			"red_orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_blorg"
+		portrait="fun12"
+		texture=0
+	}
+	ethic="ethic_fanatic_xenophile"
+	ethic="ethic_militarist"
+	trait="trait_repugnant"
+	trait="trait_solitary"
+	trait="trait_venerable"
+}

@@ -1,0 +1,118 @@
+namespace = zhowstart
+
+# on game start
+event = {
+	id = zhowstart.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Find a random player country to decide the features
+		random_country = {
+			limit = {
+				is_ai = no
+				is_country_type = "default"
+			}
+			set_country_flag = "zhow_decider"
+		}
+		while = {
+			limit = {
+				any_country = {
+					is_country_type = default
+					NOR = {
+						has_technology = tech_mass_drivers_1
+						has_technology = tech_lasers_1
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = default
+					NOR = {
+						has_technology = tech_mass_drivers_1
+						has_technology = tech_lasers_1
+					}
+				}
+				random_list = {
+					50 = {
+						give_technology = {
+							tech = tech_mass_drivers_1
+							message = yes
+						}
+					}
+					50 = {
+						give_technology = {
+							tech = tech_lasers_1
+							message = yes
+						}
+					}
+				}
+			}
+		}
+		# every_country = {
+		# 	limit = {
+		# 		NOT = { has_modifier = zhow_ship_speed }
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = zhow_ship_speed
+		# 		days = -1
+		# 	}
+		# }
+	}
+}
+
+country_event = {
+	id = zhowstart.3
+	title = "zhow.start.title"
+	desc = "zhow.start.desc"
+	picture = "GFX_evt_galactic_senate"
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = "default"
+		is_ai = no
+		has_country_flag = "zhow_decider"
+	}
+
+	option = {
+		name = zhow.enable.all
+		custom_tooltip = zhow.enable.tooltip
+		hidden_effect = {
+			set_global_flag = "zhow_enable_carrier"
+			#set_global_flag = "zhow_enable_carrier"
+			#set_global_flag = "zhow_enable_carrier"
+		}
+	}
+	option = {
+		name = zhow.enable.carrier
+		custom_tooltip = zhow.enable.tooltip
+		trigger = { NOT = { has_global_flag = "zhow_enable_carrier" } }
+		hidden_effect = {
+			set_global_flag = "zhow_enable_carrier"
+			country_event = { id = zhowstart.3 }
+		}
+	}
+	option = {
+		name = zhow.disable.carrier
+		custom_tooltip = zhow.disable.tooltip
+		trigger = { has_global_flag = "zhow_enable_carrier" }
+		hidden_effect = {
+			remove_global_flag = "zhow_enable_carrier"
+			country_event = { id = zhowstart.3 }
+		}
+	}
+	option = {
+		name = zhow.enable.close
+		default_hide_option = yes
+	}
+}
+
+# Console event to enable features in existing games
+country_event = {
+	id = zhowstart.4
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		set_global_flag = "zhow_enable_carrier"
+	}
+}

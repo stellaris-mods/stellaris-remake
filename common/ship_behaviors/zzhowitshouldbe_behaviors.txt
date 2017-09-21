@@ -1,0 +1,105 @@
+ship_behavior = {
+	name = "zhow_carrier_behavior"
+	preferred_attack_range = 180
+	formation_distance = 90
+	return_to_formation_distance = 90
+
+	collision_awareness = 0
+	collision_strafe = 0
+	collision_radius = 1.2
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = orbit
+
+	desc = "zhow_carrier_behavior_desc"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 130
+		# 50% armor = -300
+		# 0% armor  = -600
+		damage_value					= -20#-200
+		low_health_bonus				= 0#600
+		shield_focus_value				= 0
+		# 50 bonus for corvette, 140=destroyer,350=cruiser,720=battleship
+		# Stations have like 250 armor, so that's a bonus of 250*1*5=1250
+		# after shields are gone, of course
+		armor_focus_value				= 5
+		already_incoming_damage_penalty = 0
+		# 5=1800 penalty at 180 range
+		distance_to_fleet_penalty		= 0
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+
+ship_behavior = {
+	name = "folk_fighter_default"
+	preferred_attack_range = 6
+	formation_distance = 6
+	return_to_formation_distance = 108
+
+	collision_awareness = 0.6
+	collision_strafe = 0
+	collision_radius = 0.4
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+
+	desc = "CORVETTE_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 130
+		# 50% armor = -300
+		# 0% armor  = -600
+		damage_value					= -20#-200
+		low_health_bonus				= 0#600
+		shield_focus_value				= 0
+		# 50 bonus for corvette, 140=destroyer,350=cruiser,720=battleship
+		# Stations have like 250 armor, so that's a bonus of 250*1*5=1250
+		# after shields are gone, of course
+		armor_focus_value				= 5
+		already_incoming_damage_penalty = 0
+		# 5=1800 penalty at 180 range
+		distance_to_fleet_penalty		= 5
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+ship_behavior = {
+	name = "folk_bomber_default"
+	preferred_attack_range = 8
+	formation_distance = 8
+	return_to_formation_distance = 108
+
+	collision_awareness = 0.6
+	collision_strafe = 0
+	collision_radius = 0.4
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+
+	desc = "CORVETTE_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 130
+		# 50% armor = -300
+		# 0% armor  = -600
+		damage_value					= -20#-200
+		low_health_bonus				= 0#600
+		shield_focus_value				= 0
+		# 50 bonus for corvette, 140=destroyer,350=cruiser,720=battleship
+		# Stations have like 250 armor, so that's a bonus of 250*1*5=1250
+		# after shields are gone, of course
+		armor_focus_value				= 5
+		already_incoming_damage_penalty = 0
+		# 5=1800 penalty at 180 range
+		distance_to_fleet_penalty		= 5
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}

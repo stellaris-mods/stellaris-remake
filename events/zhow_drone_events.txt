@@ -1,0 +1,64 @@
+
+# the drone country type doesn't get events, so we need to create fleets of fighters for them
+namespace = zhow_drone
+
+event = {
+	id = zhow_drone.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = drone }
+			country_event = {
+				id = zhow_drone.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = zhow_drone.2
+	hide_window = yes
+	trigger = { is_country_type = drone }
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	immediate = {
+		every_owned_fleet = {
+			limit = { is_ship_size = homebase }
+			solar_system = {
+				if = {
+					limit = {
+						any_ship_in_system = {
+							exists = owner
+							owner = { is_country_type = drone }
+							is_ship_size = strike_fighter
+						}
+					}
+					random_fleet_in_system = {
+						limit = {
+							is_ship_size = strike_fighter
+							exists = owner
+							owner = { is_country_type = drone }
+						}
+						while = {
+							limit = {
+								count_fleet_ships = {
+									limit = { is_ship_size = strike_fighter }
+									count < 16
+								}
+							}
+							zhow_spawn_fighter_drone = yes
+						}
+					}
+					else = {
+						zhow_spawn_drone_fleet = yes
+					}
+				}
+			}
+		}
+	}
+}

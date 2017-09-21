@@ -1,0 +1,446 @@
+entity = {
+	name = "howitshouldbe_section_entity"
+	pdxmesh = ""
+	# Scale set to hide the weapon component inside the mesh of fighters and bombers
+	scale = 0.01
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	locator = { name = "part4" }
+	locator = { name = "part5" }
+	locator = { name = "part6" }
+	locator = { name = "part7" }
+	locator = { name = "part8" }
+	locator = { name = "part9" }
+	locator = { name = "part10" }
+}
+
+# Status:
+# ED: OK
+# Fallen: OK
+# Swarm: OK
+# AI: ?
+# Mammalian: OK
+# Reptilian: OK
+# Avian: OK
+# Anthropoid: OK
+# Molluscoid: OK
+# Fungoid: OK
+# Plantoid: probably OK
+#
+
+# =======================================
+# Non-player graphical cultures
+#
+# Probably have to add ship designs for these with
+# add_ship_design
+#
+
+@default_fighter_scale = 1.8
+@default_bomber_scale = 1.8
+@ed_scale = 0.2
+
+entity = {
+	name = "extra_dimensional_01_strike_fighter_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "extra_dimensional_01_strike_bomber_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "extra_dimensional_02_strike_bomber_green_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_green_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "extra_dimensional_02_strike_fighter_green_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_green_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "extra_dimensional_03_strike_bomber_orange_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_orange_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "extra_dimensional_03_strike_fighter_orange_entity"
+	pdxmesh = "extra_dimensional_01_warship_small_orange_mesh"
+	scale = @ed_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_medium_01 and _02
+}
+entity = {
+	name = "ai_01_strike_bomber_entity"
+	pdxmesh = "ai_01_fighter_mesh"
+	scale = @default_bomber_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "ai_01_strike_fighter_entity"
+	pdxmesh = "ai_01_fighter_mesh"
+	scale = @default_fighter_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "fallen_empire_01_strike_bomber_entity"
+	pdxmesh = "fallen_empire_01_fighter_mesh"
+	scale = @default_bomber_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_01_strike_fighter_entity"
+	pdxmesh = "fallen_empire_01_fighter_mesh"
+	scale = @default_fighter_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_02_strike_bomber_entity"
+	pdxmesh = "fallen_empire_02_fighter_mesh"
+	scale = @default_bomber_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_02_strike_fighter_entity"
+	pdxmesh = "fallen_empire_02_fighter_mesh"
+	scale = @default_fighter_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_03_strike_bomber_entity"
+	pdxmesh = "fallen_empire_03_fighter_mesh"
+	scale = @default_bomber_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_03_strike_fighter_entity"
+	pdxmesh = "fallen_empire_03_fighter_mesh"
+	scale = @default_fighter_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_04_strike_bomber_entity"
+	pdxmesh = "fallen_empire_04_fighter_mesh"
+	scale = @default_bomber_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "fallen_empire_04_strike_fighter_entity"
+	pdxmesh = "fallen_empire_04_fighter_mesh"
+	scale = @default_fighter_scale
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: pasted__pasted__engine
+}
+entity = {
+	name = "swarm_01_strike_bomber_entity"
+	pdxmesh = "swarm_01_fighter_mesh"
+	scale = 1.5
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	default_state = "idle"
+	state = { name = "idle"			animation = "idle"		animation_blend_time = 0.0 }
+	state = { name = "moving"		animation = "moving"		animation_blend_time = 0.0  }
+	state = { name = "death"		animation = "death"		animation_blend_time = 0.0 looping = no
+		event = { time = 1.0 node = "root"	particle = "amoeba_gib_squirt_effect" keep_particle = yes trigger_once = yes }}
+	# no locator
+}
+entity = {
+	name = "swarm_01_strike_fighter_entity"
+	pdxmesh = "swarm_01_fighter_mesh"
+	scale = 1.5
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	default_state = "idle"
+	state = { name = "idle"			animation = "idle"		animation_blend_time = 0.0 }
+	state = { name = "moving"		animation = "moving"		animation_blend_time = 0.0  }
+	state = { name = "death"		animation = "death"		animation_blend_time = 0.0 looping = no
+		event = { time = 1.0 node = "root"	particle = "amoeba_gib_squirt_effect" keep_particle = yes trigger_once = yes }}
+	# no locator
+}
+
+# add aux slot items to designs
+
+# drone country should use it
+
+
+entity = {
+	name = "ancient_drone_01_strike_fighter_entity"
+	pdxmesh = "ancient_drone_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	default_state = idle
+	state = { name = "idle"	animation = "idle" animation_blend_time = 1.05 animation_speed = 1.0
+		event = { time = 0 node = "engine_small_01" particle = "arthropoid_01_1_0_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_small_02" particle = "arthropoid_01_1_0_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_small_03" particle = "arthropoid_01_1_0_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = ancient_drone_idle } }
+	}
+
+	state = { name = "moving"	animation = "moving" animation_blend_time = 1.05 animation_speed = 1.0
+		event = { time = 0 node = "engine_small_01" particle = "arthropoid_01_1_0_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_small_02" particle = "arthropoid_01_1_0_exhaust_oblong_idle_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_small_03" particle = "arthropoid_oblong_small_moving_particle" keep_particle = yes trigger_once = yes }
+	}
+
+	state = { name = "death"	animation = "death" animation_blend_time = 0 animation_speed = 1.0 looping = no
+		event = { time = 0 node = "root" particle = "medium_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = ship_destroyed } }
+	}
+	# locator: pasted__pasted__engine
+}
+
+# ancient_drone.mesh
+# locators: engine_small_01, _01_2, _02, _02_2, _03, _04, _05
+
+entity = {
+	name = "nongfx_strike_fighter_entity"
+	cull_radius = 70
+	default_state = idle
+	state = { name = "idle" state_time = 3 }
+	state = { name = "moving" state_time = 4 }
+	state = { name = "death" state_time = 12 looping = no }
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	game_data = { size = 20 }
+	scale = 1
+}
+
+# hive_asteroid_05_entity is the fighter ship
+# hive_asteroid spawns it
+entity = {
+	name = "hive_asteroid_strike_fighter_entity"
+	pdxmesh = "hive_asteroid_05_mesh"
+
+		state = { name = "idle" }
+
+		state = { name = "launch" state_time = 5
+		event = { trigger_once = yes sound = { soundeffect = "hive_minions_moving_out" } }
+		event = { trigger_once = yes sound = { soundeffect = "hive_minion_idle" } }
+		}
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	scale = 1.4
+}
+
+entity = {
+	name = "amoeba_strike_fighter_entity"
+	pdxmesh = "space_amoeba_mesh"
+
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+
+	default_state = idle
+	state = { name = "idle"	animation = "moving" animation_blend_time = 3.05 animation_speed = 2.0
+		start_event = { trigger_once = yes sound = { soundeffect = "space_amoeba_idle" } }
+	}
+
+	state = { name = "moving"	animation = "moving" animation_blend_time = 1.05 animation_speed = 1.0
+	}
+
+	state = { name = "death"	animation = "death" animation_blend_time = 1.05 animation_speed = 1.0 looping = no
+		event = { time = 2.4 particle = "amoeba_gib_squirt_effect" keep_particle = yes trigger_once = yes }
+		event = { trigger_once = yes sound = { soundeffect = "space_amoeba_death" } }
+	}
+	# no locators
+
+	scale = 1.2
+}
+
+# technosphere uses mammalian
+
+
+# =======================================
+# Standard graphical cultures
+#
+
+entity = {
+	name = "arthropoid_01_strike_fighter_entity"
+	pdxmesh = "arthropoid_01_fighter_mesh"
+	scale = 1.2
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "arthropoid_01_strike_bomber_entity"
+	pdxmesh = "arthropoid_01_bomber_mesh"
+	scale = 1.1
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+
+entity = {
+	name = "avian_01_strike_fighter_entity"
+	pdxmesh = "avian_01_fighter_mesh"
+	scale = 3
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "avian_01_strike_bomber_entity"
+	pdxmesh = "avian_01_bomber_mesh"
+	scale = 2.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+
+entity = {
+	name = "fungoid_01_strike_fighter_entity"
+	pdxmesh = "fungoid_01_fighter_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_small_01
+}
+entity = {
+	name = "fungoid_01_strike_bomber_entity"
+	pdxmesh = "fungoid_01_bomber_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_small_01 and _02
+}
+
+entity = {
+	name = "mammalian_01_strike_fighter_entity"
+	pdxmesh = "mammalian_01_fighter_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "mammalian_01_strike_bomber_entity"
+	pdxmesh = "mammalian_01_bomber_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# locator: engine_small_01
+}
+
+entity = {
+	name = "molluscoid_01_strike_fighter_entity"
+	pdxmesh = "molluscoid_01_fighter_mesh"
+	scale = 2.2
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "molluscoid_01_strike_bomber_entity"
+	pdxmesh = "molluscoid_01_bomber_mesh"
+	scale = 2.1
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+
+entity = {
+	name = "plantoid_01_strike_fighter_entity"
+	pdxmesh = "plantoid_01_fighter_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "plantoid_01_strike_bomber_entity"
+	pdxmesh = "plantoid_01_bomber_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+
+entity = {
+	name = "reptilian_01_strike_fighter_entity"
+	pdxmesh = "reptilian_01_fighter_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}
+entity = {
+	name = "reptilian_01_strike_bomber_entity"
+	pdxmesh = "reptilian_01_bomber_mesh"
+	scale = 1.6
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	# no locator
+}

@@ -1,0 +1,75 @@
+### Missile Launcher
+weapon_component_template = {
+	key = "ZHOW_LARGE_MISSILE_1"
+	size = torpedo
+	entity = "turret_missile_large_entity"
+
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+
+	prerequisites = { "tech_missiles_1" }
+	component_set = "MISSILE_1"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+	upgrades_to = "ZHOW_LARGE_MISSILE_2"
+
+	power = -2.5
+	cost = 2.5
+
+	damage = { min = 8 max = 12 }
+	shield_damage = 1
+	shield_penetration = 0
+	armor_penetration = 0
+	windup = { min = 20 max = 30 }
+	total_fire_time = 30
+	range = 45
+	accuracy = 1
+	tracking = 0.7
+
+	missile_speed = 5
+	missile_evasion = 0
+	missile_health = 1
+	missile_armor = 0
+	missile_shield = 0
+}
+
+### Advanced Missile Launcher
+weapon_component_template = {
+	key = "ZHOW_LARGE_MISSILE_2"
+	size = torpedo
+	entity = "turret_missile_large_entity"
+
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+
+	prerequisites = { "tech_missiles_2" }
+	component_set = "MISSILE_2"
+	projectile_gfx = "large_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range }
+	upgrades_to = "LARGE_MISSILE_3"
+
+	power = -10
+	cost = 10
+
+	damage = { min = 16 max = 30 }
+	shield_damage = 1
+	shield_penetration = 0
+	armor_penetration = 0
+	windup = { min = 20 max = 30 }
+	total_fire_time = 30
+	range = 65
+	accuracy = 1
+	tracking = 0.7
+
+	missile_speed = 5
+	missile_evasion = 0.1
+	missile_health = 1
+	missile_armor = 0
+	missile_shield = 0
+}

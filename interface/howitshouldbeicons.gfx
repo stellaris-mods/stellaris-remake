@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_autocannon_4"
+		texturefile = "gfx/ship_part_autocannon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_point_defense_4"
+		texturefile = "gfx/ship_part_point_defense_4.dds"
+	}
+}

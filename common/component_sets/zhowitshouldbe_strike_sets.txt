@@ -1,0 +1,172 @@
+component_set = {
+	key = "strike_fighter_components"
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "strike_bomber_components"
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "strike_ftl_components"
+	required_component_set = yes
+	icon = "GFX_ship_part_hyperdrive"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_MISSILE_1"
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_MISSILE_2"
+	icon = "GFX_ship_part_missile_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_MISSILE_3"
+	icon = "GFX_ship_part_missile_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_MISSILE_4"
+	icon = "GFX_ship_part_missile_4"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_AUTOCANNON_1"
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_AUTOCANNON_2"
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_AUTOCANNON_3"
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "STRIKE_AUTOCANNON_4"
+	icon = "GFX_ship_part_autocannon_4"
+	icon_frame = 1
+}
+
+# FLAK
+component_set = {
+	key = "STRIKE_PLASMA_1"
+	icon = "GFX_ship_part_plasma_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_PLASMA_2"
+	icon = "GFX_ship_part_plasma_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_PLASMA_3"
+	icon = "GFX_ship_part_plasma_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_TORPEDO_1"
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_TORPEDO_2"
+	icon = "GFX_ship_part_torpedo_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_TORPEDO_3"
+	icon = "GFX_ship_part_torpedo_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ZPD_POINT_DEFENCE_1"
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "ZPD_POINT_DEFENCE_2"
+	icon = "GFX_ship_part_point_defense_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "ZPD_POINT_DEFENCE_3"
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "ZPD_POINT_DEFENCE_4"
+	icon = "GFX_ship_part_point_defense_4"
+	icon_frame = 1
+}
+
+
+
+
+
+# AUX
+component_set = {
+	key = "STRIKE_HULL"
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_FIRERATE"
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_ARMOR"
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_DAMAGE"
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_POWER"
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_EVASION"
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+}
+
+# tech
+component_set = {
+	key = "STRIKE_COOLDOWN"
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	required_component_set = yes
+}
+
+component_set = {
+	key = "STRIKE_AMOUNT"
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	required_component_set = yes
+}

@@ -1,0 +1,144 @@
+tech_flak_batteries_3 = {
+	area = engineering
+	cost = 4000
+	tier = 3
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_flak_batteries_2" }
+	weight = 50
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2		#weapons are good
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+zhow_tech_carrier_1 = {
+	cost = 7000
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = military
+	prerequisites = { "tech_spaceport_6" }
+	weight = 0
+
+	prereqfor_desc = {
+		ship = {
+			title = "zhow_carrier_unlock"
+			desc = "zhow_carrier_unlock_tooltip"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 50
+			has_global_flag = "zhow_enable_carrier"
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = zhow_tech_carrier_1
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 60 }
+		}
+		modifier = {
+			factor = 1
+			years_passed > 60
+		}
+		modifier = {
+			factor = 2
+			years_passed > 70
+		}
+		modifier = {
+			factor = 3
+			years_passed > 80
+		}
+		modifier = {
+			factor = 4
+			years_passed > 90
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	# It seems ai_weight is an additive to the base weight + weight_modifiers, while weight_modifiers only apply to players
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+zhow_impossible_tech = {
+	cost = 0
+	area = engineering
+	weight = 0
+	category = { voidcraft }
+	tier = 3
+	ai_update_type = all
+	is_reverse_engineerable = no
+	weight_modifier = {
+		factor = 0
+	}
+	ai_weight = { factor = 0 }
+}

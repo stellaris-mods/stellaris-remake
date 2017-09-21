@@ -1,0 +1,95 @@
+# ship_section_template = {
+# 	key = "CORVETTE_TORPEDO_1"
+# 	ship_size = corvette
+# 	fits_on_slot = torpedo
+# 	entity = "howitshouldbe_section_entity"
+# 	icon = "GFX_ship_part_core_mid"
+# 	cost = 0
+# 	ai_weight = { factor = 1 }
+
+# 	component_slot = {
+# 		name = "TORPEDO_01"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part1"
+# 	}
+
+# 	small_utility_slots = 1
+# }
+
+# ship_section_template = {
+# 	key = "DESTROYER_TORPEDO_1"
+# 	ship_size = destroyer
+# 	fits_on_slot = torpedo
+# 	entity = "howitshouldbe_section_entity"
+# 	icon = "GFX_ship_part_core_mid"
+# 	cost = 0
+# 	ai_weight = { factor = 1 }
+
+# 	component_slot = {
+# 		name = "TORPEDO_01"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part1"
+# 	}
+
+# 	small_utility_slots = 2
+# }
+
+# ship_section_template = {
+# 	key = "CRUISER_TORPEDO_1"
+# 	ship_size = cruiser
+# 	fits_on_slot = torpedo
+# 	entity = "howitshouldbe_section_entity"
+# 	icon = "GFX_ship_part_core_mid"
+# 	cost = 0
+# 	ai_weight = { factor = 1 }
+
+# 	component_slot = {
+# 		name = "TORPEDO_01"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part1"
+# 	}
+# 	component_slot = {
+# 		name = "TORPEDO_02"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part2"
+# 	}
+
+# 	medium_utility_slots = 1
+# 	small_utility_slots = 2
+# }
+
+# ship_section_template = {
+# 	key = "BATTLESHIP_TORPEDO_1"
+# 	ship_size = battleship
+# 	fits_on_slot = torpedo
+# 	entity = "howitshouldbe_section_entity"
+# 	icon = "GFX_ship_part_core_mid"
+# 	cost = 0
+# 	ai_weight = { factor = 1 }
+
+# 	component_slot = {
+# 		name = "TORPEDO_01"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part1"
+# 	}
+# 	component_slot = {
+# 		name = "TORPEDO_02"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part2"
+# 	}
+# 	component_slot = {
+# 		name = "TORPEDO_03"
+# 		slot_size = torpedo
+# 		slot_type = weapon
+# 		locatorname = "part3"
+# 	}
+
+# 	medium_utility_slots = 2
+# 	small_utility_slots = 2
+# }

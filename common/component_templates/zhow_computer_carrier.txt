@@ -1,0 +1,23 @@
+utility_component_template = {
+	key = "ZHOW_CARRIER_COMPUTER_1"
+	size = small
+	icon = "GFX_ship_part_strike_craft_scout_1"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = { shipclass_military }
+	size_restriction = { zhow_carrier }
+	component_set = "zhow_carrier_computer"
+	ship_behavior = "zhow_carrier_behavior"
+
+	ship_modifier = {
+		ship_weapon_damage = 1.5
+		ship_fire_rate_mult = -0.6
+	}
+	modifier = {
+		ship_auto_repair_add = 0.05
+	}
+	ai_weight = {
+		weight = 1
+	}
+}

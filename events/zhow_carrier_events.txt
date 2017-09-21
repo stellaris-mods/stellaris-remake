@@ -1,0 +1,240 @@
+namespace = zhowcarrier
+
+# on_entering_battle
+# fromfrom = countries fleet
+country_event = {
+	id = zhowcarrier.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROMFROM = {
+			any_ship = {
+				is_ship_size = zhow_carrier
+			}
+			# count_fleet_ships = {
+			# 	limit = {
+
+			# 	}
+			# 	count > 0
+			# }
+		}
+	}
+
+	immediate = {
+		every_owned_ship = {
+			limit = {
+				is_ship_size = zhow_carrier
+				exists = fleet
+				fleet = { is_same_value = fromfrom }
+			}
+			if = {
+				limit = { NOT = { has_ship_flag = zhow_carrier_regen_1 } }
+				zcarrier_launch_squadron = yes
+				set_timed_ship_flag = {
+					flag = zhow_carrier_regen_1
+					days = 89
+				}
+			}
+			if = {
+				limit = { NOT = { has_ship_flag = zhow_carrier_regen_2 } }
+				zcarrier_launch_squadron = yes
+				set_timed_ship_flag = {
+					flag = zhow_carrier_regen_2
+					days = 89
+				}
+			}
+			if = {
+				limit = { NOT = { has_ship_flag = zhow_carrier_regen_3 } }
+				zcarrier_launch_squadron = yes
+				set_timed_ship_flag = {
+					flag = zhow_carrier_regen_3
+					days = 89
+				}
+			}
+		}
+	}
+}
+
+# Max Fighters: 36
+# Max Bombers: 12
+# total 48
+
+# 3 squadrons of 16
+
+# So we cant use variables in ship scopes
+# We cant use the fleet for variable storage, because it might have more than one carrier
+# There is a few options:
+# 1. Allow a limited number of carriers that we can set specific flags on, map those
+#    to one random galaxy planet per carrier with a variable ID, and use that planet
+#    scope to calculate the strike craft regeneration
+# 2. Allow an arbitrary number of carriers. This means we can only use ship flags to
+#    control strike craft launches.
+# Since we are going for option two, we need to find a way to define launch cooldowns
+# using timed ship flags.
+# The problem with this is that we want the strike craft squadrons to be quite large
+# and launched immediately upon engage, but then regenerate slowly, per-squadron.
+# If one squadron consists of 12 crafts, and we want to regenerate 4 crafts per month,
+# we need 3x flags per squadron regeneration, and if we have 4 squadrons, that means
+# we need 3x4, or 12 flags.
+
+ship_event = {
+	id = zhowcarrier.2
+	hide_window = yes
+
+	trigger = {
+		is_ship_size = zhow_carrier
+		is_in_combat = yes
+		NOT = {
+			has_ship_flag = zhow_carrier_regen_1
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 45
+	}
+
+	immediate = {
+		zcarrier_launch_squadron = yes
+		set_timed_ship_flag = {
+			flag = zhow_carrier_regen_1
+			days = 85
+		}
+	}
+}
+
+# MTTH 30 years +/-
+country_event = {
+	id = zhowcarrier.100
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = zhow_enable_carrier
+		has_technology = zhow_tech_carrier_1
+		exists = capital_scope
+	}
+
+	mean_time_to_happen = {
+		years = 29
+		# If we don't have a carrier, and no project, start up a research
+		# program again ASAP
+		modifier = {
+			factor = 0.05
+			NOT = { has_special_project = zhow_carrier_project }
+			count_owned_ships = {
+				limit = { is_ship_size = zhow_carrier }
+				count = 0
+			}
+		}
+		modifier = {
+			factor = 2
+			count_owned_ships = {
+				limit = { is_ship_size = zhow_carrier }
+				count > 3
+			}
+		}
+		modifier = {
+			factor = 4
+			count_owned_ships = {
+				limit = { is_ship_size = zhow_carrier }
+				count > 5
+			}
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = zhowcarrier.101
+			days = 12
+			random = 359
+		}
+	}
+}
+country_event = {
+	id = zhowcarrier.101
+	is_triggered_only = yes
+	title = zhow_carrier_project
+	desc = zhow_carrier_project_DESC
+	picture = GFX_evt_fleet_good
+	trigger = {
+		exists = capital_scope
+		NOT = {
+			has_special_project = zhow_carrier_project
+		}
+	}
+	immediate = {
+		enable_special_project = {
+			name = zhow_carrier_project
+			location = capital_scope
+			owner = root
+		}
+	}
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Triggered by special project
+planet_event = {
+	id = zhowcarrier.1000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = solar_system
+		exists = owner
+		exists = root
+	}
+	immediate = {
+		owner = {
+			country_event = {
+				id = zhowcarrier.1001
+			}
+		}
+	}
+}
+
+# -! A Stellaris remake
+# -LotgH_Flag
+# -LotgH_Names (a personal WIP: just an edited mynameslist.txt)
+# -Planetary Computer
+# -SMG Battle Survivors
+# -SMG Fleet Logistics
+# -SMG Warscore
+# -the Free Planet Alliance
+
+country_event = {
+	id = zhowcarrier.1001
+	is_triggered_only = yes
+	title = zhow_carrier_project
+	desc = zhow_carrier_completed
+	picture = GFX_evt_fleet_good
+
+	trigger = {
+		exists = capital_scope
+	}
+
+	immediate = {
+		create_fleet = {
+			name = "Carrier Strike Group"
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = random
+					random_existing_design = zhow_carrier
+				}
+				while = {
+					count = 8
+					create_ship = {
+						name = random
+						random_existing_design = destroyer
+					}
+				}
+				set_location = root.capital_scope
+			}
+		}
+	}
+	option = {
+		name = EXCELLENT
+	}
+}
+

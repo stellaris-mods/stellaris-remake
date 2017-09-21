@@ -1,0 +1,38 @@
+zhow_spawn_fighter_drone = {
+	create_ship = {
+		name = "Drone"
+		design = "Ancient Drone"
+		upgradable = no
+		#effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+	}
+}
+zhow_spawn_drone_fleet = {
+	create_fleet = {
+		name = "Central Processing Defense"
+		effect = {
+			set_owner = ROOT
+			while = {
+				count = 16
+				zhow_spawn_fighter_drone = yes
+			}
+			set_location = {
+				target = PREVPREV
+				distance = 12
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 120
+			set_aggro_range_measure_from = self
+			set_formation_scale = 0.4
+		}
+	}
+}
+
+zhow_spawn_fighter_amoeba = {
+	create_ship = {
+		name = "Amoeba"
+		design = "Tiny Space Organism"
+		upgradable = no
+		#effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+	}
+}

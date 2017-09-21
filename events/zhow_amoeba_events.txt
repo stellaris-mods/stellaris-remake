@@ -1,0 +1,50 @@
+
+
+
+# the amoeba country type doesn't get events, so we need to create fleets of fighters for them
+namespace = zhow_amoeba
+
+event = {
+	id = zhow_amoeba.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = amoeba }
+			country_event = {
+				id = zhow_amoeba.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = zhow_amoeba.2
+	hide_window = yes
+	trigger = { is_country_type = amoeba }
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	immediate = {
+		every_owned_ship = {
+			limit = { is_ship_size = space_amoeba_mother }
+			fleet = {
+				if = {
+					limit = {
+						count_fleet_ships = {
+							limit = { is_ship_size = nongfx_strike_fighter }
+							count < 19
+						}
+					}
+				}
+				zhow_spawn_fighter_amoeba = yes
+				zhow_spawn_fighter_amoeba = yes
+				zhow_spawn_fighter_amoeba = yes
+				zhow_spawn_fighter_amoeba = yes
+			}
+		}
+	}
+}

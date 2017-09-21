@@ -1,0 +1,27 @@
+ship_design = {
+	name = "Extradimensional Speck"
+	ship_size = strike_fighter
+
+	section = {
+		template = "STRIKE_FIGHTER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_AUTOCANNON_3"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FIGHTER_POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component="STRIKE_JUMP_DRIVE_1"
+	required_component="STRIKE_FIGHTER_COMPONENT_3"
+}

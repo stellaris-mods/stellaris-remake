@@ -1,0 +1,12 @@
+todo:
+
+add new torpedo sections to all global_ship_designs that need it
+lower the range of earlier missile weapons if I can
+
+carrier needs fighter global design if there is no tech
+not sure if we actually need to, we seem to get a base design then
+
+
+
+- set ship upkeep for fighters/bombers to zero
+- can no longer build them

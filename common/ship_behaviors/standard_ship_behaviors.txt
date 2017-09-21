@@ -1,0 +1,319 @@
+
+# PARADOX:
+# What was your plan with the use_ship_kill_target = no in XL weapons?
+# It is so incredibly destructive to the behavior system.
+#
+# I think I'm blinded by frustration, but I can NOT see how that property
+# is proper for XL weapons.
+#
+# For missiles, torpedoes? That would be fine. For weapons that can turn? Fine.
+# What is going on, can you please explain your though process?!
+#
+# It's more destructive the longer the chargeup time is on the weapon.
+#
+
+# Used by ED ships, AI-revolt ships, and Swarm ships
+# And some Fallen Empire ships
+ship_behavior = {
+	name = "default"
+	preferred_attack_range = median
+
+	formation_distance = 10
+	return_to_formation_distance = 60
+
+	collision_awareness = 0.75
+	attack_move_pattern = none
+	passive_move_pattern = orbit
+
+	desc = "DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 100
+		damage_value					= 0
+		low_health_bonus				= 350
+		shield_focus_value				= 0
+		armor_focus_value				= 0
+		already_incoming_damage_penalty = 150
+		distance_to_fleet_penalty		= 0
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# Used by lots of anomaly ships, nomads, and sentinels.
+# Also space cloud
+ship_behavior = {
+	name = "aggressive"
+	preferred_attack_range = 10.0
+	formation_distance = 30
+	return_to_formation_distance = 60
+
+	collision_awareness = 0.5
+	attack_move_pattern = follow
+	passive_move_pattern = charge
+
+	desc = "AGGRESSIVE_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 100
+		damage_value					= 0
+		low_health_bonus				= 400
+		shield_focus_value				= 0
+		armor_focus_value				= 0
+		already_incoming_damage_penalty = 0
+		distance_to_fleet_penalty		= 2
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# Not used by any vanilla ships
+ship_behavior = {
+	name = "defensive"
+	preferred_attack_range = max
+	formation_distance = 12
+	return_to_formation_distance = 15
+	collision_awareness = 0.35
+	attack_move_pattern = stationary
+	passive_move_pattern = follow
+
+	desc = "DEFENSIVE_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 0
+		damage_value					= 0
+		low_health_bonus				= 0
+		shield_focus_value				= 0
+		armor_focus_value				= 0
+		already_incoming_damage_penalty = 0
+		distance_to_fleet_penalty		= 0
+		size_difference_penalty			= 0
+		transport_target_penalty		= 0
+		civilian_target_penalty			= 0
+	}
+}
+
+# Small ships should swarm bigger ones
+# So try to target ships with more HP/shields or whatever
+ship_behavior = {
+	name = "corvette_default"
+	preferred_attack_range = 10
+	formation_distance = 10
+	return_to_formation_distance = 58
+
+	collision_awareness = 0.6
+	collision_strafe = 0.8
+	collision_radius = 0.2
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+
+	desc = "CORVETTE_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 130
+		# 50% armor = -300
+		# 0% armor  = -600
+		damage_value					= -200#-200
+		low_health_bonus				= 0#600
+		shield_focus_value				= 0
+		# 50 bonus for corvette, 140=destroyer,350=cruiser,720=battleship
+		# Stations have like 250 armor, so that's a bonus of 250*1*5=1250
+		# after shields are gone, of course
+		armor_focus_value				= 5
+		already_incoming_damage_penalty = 0
+		# 5=1800 penalty at 180 range
+		distance_to_fleet_penalty		= 4
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# Destroyers should be in the middle of the fleet,
+# shooting down strike crafts and focusing smaller targets
+ship_behavior = {
+	name = "destroyer_default"
+	preferred_attack_range = median
+
+	formation_distance = 40
+	return_to_formation_distance = 30
+
+	collision_awareness = 0.6
+	collision_strafe = 0.2
+	collision_radius = 0.6
+	attack_move_pattern = charge
+	passive_move_pattern = charge
+
+	desc = "DESTOYER_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 100#900
+		damage_value					= 0
+		# Always pick lowhanging fruit
+		low_health_bonus				= 400
+		shield_focus_value				= 0
+		armor_focus_value				= 0
+		already_incoming_damage_penalty = 0
+		# 1800 penalty at 120 range units away
+		distance_to_fleet_penalty		= 5
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# Cruisers should just lay down fire on any target
+ship_behavior = {
+	name = "cruiser_default"
+	preferred_attack_range = 44
+
+	formation_distance = 65
+	return_to_formation_distance = 90
+
+	collision_awareness = 0.75
+	collision_strafe = 1.2
+	collision_radius = 0.6
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = orbit
+
+	desc = "CRUISER_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 450
+		damage_value					= 0
+		low_health_bonus				= 550
+		shield_focus_value				= 0
+		armor_focus_value				= 0#-100
+		# Becomes a bonus of roughly 200 vs a corvette with incoming fleet DPS of 1000
+		already_incoming_damage_penalty = 100#-60
+		#already_incoming_damage_penalty = 0
+		# Penalty of roughly 180 for anything more than 80 units away
+		distance_to_fleet_penalty		= 2.4
+		#distance_to_fleet_penalty		= 8
+		size_difference_penalty			= 0
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# Not used by any vanilla ships
+ship_behavior = {
+	name = "battleship_default"
+	preferred_attack_range = 90
+	formation_distance = 90
+	return_to_formation_distance = 120
+	collision_awareness = 1.0
+	collision_radius = 1.0
+	collision_strafe = 0.5
+	attack_move_pattern = none
+	passive_move_pattern = charge
+
+	desc = "BATTLESHIP_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 0
+		damage_value					= -50
+		low_health_bonus				= 0
+		shield_focus_value				= 1
+		armor_focus_value				= 1
+		already_incoming_damage_penalty = 1
+		distance_to_fleet_penalty		= 0
+		size_difference_penalty			= 0
+		transport_target_penalty		= 0
+		civilian_target_penalty			= 0
+	}
+}
+
+ship_behavior = {
+	name = "battleship_sniper"
+	preferred_attack_range = 80
+	formation_distance = 88
+	return_to_formation_distance = 120
+	collision_awareness = 0.2
+	collision_radius = 1.2
+	collision_strafe = 0.4
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+
+	desc = "BATTLESHIP_SNIPER_BEHAVIOR_DESC"
+
+	targeting = {
+		# Remember, since XL weapons set use_ship_kill_target = no, we
+		# do need to create a behavior that allows them to fire on the target
+		# THEY want. i.e., they need to have the highest return value from targeting()
+
+		#component_target_weight_mult	= 0.022
+		component_target_weight_mult = 0
+		# This needs to prevent us from changing to targets
+		# further away than formation distance + BS attack distance + 40
+		# So that's 90 + 60 + 40 = 190. The difference between
+		# sniper range and where we want to engage is 190-60, so 130.
+		# The difference between BS attack range and the above, is 130-60=70.
+		keep_previous_target_bonus		= 690
+		damage_value					= 0
+		# Prevents us changing to smaller targets, not sure
+		# how this value is calculated, the docs just say "a few shots"
+		# It seems that it actually accounts for target total hull+shields,
+		# and not the ships DPS.
+		low_health_bonus				= -1200 #-500
+		# Prefer shielded targets over zero shield if we have a
+		shield_focus_value				= 0#0.1
+		armor_focus_value				= 0#-50
+		# Roughly -160 penalty if 6 other battleships are firing on this target
+		# This prevents our XL weapon not being able to fire due to long
+		# wind-up times. But it also might make the BS chase targets
+		# that are further away than necessary.
+		already_incoming_damage_penalty = 90#280#300
+		# 120 range = +1200
+		# Battleship: 90 range = +900
+		# Corvette:   10 range = +100
+		distance_to_fleet_penalty		= 0
+		#distance_to_fleet_penalty		= 0#-10
+		size_difference_penalty			= 0
+		#angle_to_target_penalty			= 2500 # vanilla = 10000
+		transport_target_penalty		= 1000
+		civilian_target_penalty			= 1000
+	}
+}
+
+# BS is 8
+# titan is 20
+# large_ship_fallen_empire("Beta") is 8
+# SHIT
+
+ship_behavior = {
+	name = "stellarite_default"
+	preferred_attack_range = max
+
+	formation_distance = 75
+	return_to_formation_distance = 100
+
+	collision_awareness = 0.9
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+
+	desc = "STELLARITE_DEFAULT_BEHAVIOR_DESC"
+
+	targeting = {
+		component_target_weight_mult	= 0
+		keep_previous_target_bonus		= 0
+		damage_value					= 0
+		low_health_bonus				= 500
+		shield_focus_value				= 0
+		armor_focus_value				= 0
+		already_incoming_damage_penalty = 90
+		distance_to_fleet_penalty		= 5
+		size_difference_penalty			= 10
+		transport_target_penalty		= 0
+		civilian_target_penalty			= 0
+	}
+}

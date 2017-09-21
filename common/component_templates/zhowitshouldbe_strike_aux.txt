@@ -1,0 +1,171 @@
+
+utility_component_template = {
+	key = "STRIKE_EVASION_1"
+	size = aux
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "STRIKE_EVASION"
+
+	modifier = {
+		ship_evasion_add = 5
+	}
+
+	ai_weight = {
+		# Highest vanilla component as of 1.4 is 25 (with modifiers)
+		weight = 30
+	}
+
+	##class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_HULL_1"
+	size = aux
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	power = -5
+	cost = 0
+
+	prerequisites = { "tech_cryostasis_1" }
+	component_set = "STRIKE_HULL"
+
+	modifier = {
+		ship_hitpoints_add = 10
+	}
+
+	ai_weight = { weight = 0 }
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_POWER_1"
+	size = aux
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = 10
+	cost = 0
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "STRIKE_POWER"
+
+	ai_weight = { weight = 0 }
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_FIRERATE_1"
+	size = aux
+	icon = "GFX_ship_part_autocannon_1"
+	icon_frame = 1
+	power = -5
+	cost = 0
+
+	prerequisites = { "tech_cryostasis_2" }
+	component_set = "STRIKE_FIRERATE"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+
+	ai_weight = { weight = 0 }
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_ARMOR_1"
+	size = aux
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	power = -5
+	cost = 0
+
+	prerequisites = { "tech_synchronized_defences" }
+	component_set = "STRIKE_ARMOR"
+
+	modifier = {
+		ship_armor_add = 5
+	}
+
+	ai_weight = { weight = 0 }
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_DAMAGE_1"
+	size = aux
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+	power = -5
+	cost = 0
+
+	prerequisites = { "tech_colonization_2" }
+	component_set = "STRIKE_DAMAGE"
+
+	ship_modifier = {
+		ship_weapon_damage = 0.05
+	}
+
+	ai_weight = { weight = 0 }
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter strike_bomber }
+}
+
+utility_component_template = {
+	key = "STRIKE_COOLDOWN_1"
+	size = extra_large
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+	power = -100000
+	cost = 0
+
+	prerequisites = { tech_repeatable_weapon_type_strike_craft_fire_rate }
+	component_set = "STRIKE_COOLDOWN"
+	ai_weight = {
+		weight = 0
+	}
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_fighter }
+}
+
+utility_component_template = {
+	key = "STRIKE_AMOUNT_1"
+	size = extra_large
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+	power = -100000
+	cost = 0
+
+	prerequisites = { tech_strike_craft_3 tech_repeatable_weapon_type_strike_craft_fire_damage }
+	component_set = "STRIKE_AMOUNT"
+	ai_weight = {
+		weight = 0
+	}
+	should_ai_use = no
+
+	#class_restriction = { shipclass_strikecraft }
+	size_restriction = { strike_bomber }
+}
+
+
+
+

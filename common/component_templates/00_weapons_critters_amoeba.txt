@@ -1,0 +1,42 @@
+@regen = 0.13
+
+# ####################
+#  Critter Weapons - Space Amoeba
+# ####################
+
+@critter_cost_value = 35
+
+
+### Standard Amoeba Weapon
+
+weapon_component_template = {
+	key = "SPACE_AMOEBA_WEAPON"
+	hidden = yes
+
+	size = medium
+	entity = "medium_space_amoeba_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "space_amoeba_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	cost = @critter_cost_value
+}
+
+weapon_component_template = {
+	key = "SMALL_SPACE_AMOEBA_WEAPON"
+	hidden = yes
+
+	size = medium
+	entity = "small_space_amoeba_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "small_space_amoeba_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	cost = @critter_cost_value
+}

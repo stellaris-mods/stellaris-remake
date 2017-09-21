@@ -1,0 +1,229 @@
+# 2nd Aura Slot on Fortress
+
+@stationLargeAuraRange = 110
+
+utility_component_template = {
+	key = "STATION_LARGE_2NDAURA_NANOBOT_CLOUD"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_2nd_aura_components"
+
+	friendly_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @stationLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura
+			priority = 20
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.05
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STATION_LARGE_2NDAURA_SHIELD_RECHARGER"
+	size = medium
+	icon = "GFX_ship_part_aura_shield_recharger"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_2nd_aura_components"
+	prerequisites = { "tech_shield_recharge_aura_1" }
+
+	friendly_aura = {
+		name = "aura_shield_recharger"
+		radius = @stationLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_regen_add_perc = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			weight = 10
+			has_country_flag = ai_flag_defensive_personality
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STATION_LARGE_2NDAURA_SHIELD_DAMPENER"
+	size = medium
+	icon = "GFX_ship_part_aura_shield_dampener"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_2nd_aura_components"
+
+	hostile_aura = {
+		name = "aura_shield_dampener"
+		radius = @stationLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_hp_mult = -0.25
+			ship_shield_regen_add_perc = -0.05
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			has_country_flag = ai_flag_aggressive_personality
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STATION_LARGE_2NDAURA_QUANTUM_DESTABILIZER"
+	size = medium
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_2nd_aura_components"
+	prerequisites = {"tech_aura_quantum_destabilizer"}
+
+	hostile_aura = {
+		name = "aura_quantum_destabilizer"
+		radius = @stationLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = -0.15
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "STATION_LARGE_2NDAURA_MINEFIELD_1"
+	size = medium
+	icon = "GFX_ship_part_aura_minefield"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_2nd_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	hostile_aura = {
+		name = "aura_minefield"
+		radius = @stationLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_minefield_aura
+			priority = 1
+		}
+
+		damage_per_day = {
+			accuracy = 0.2
+			damage = { min = 5 max = 15 }
+			shield_damage = 1.0
+			shield_penetration = 0.0
+			armor_penetration = 0.75
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+
+			area_effect = {
+				entity = "mine_field_small_entity"
+				dynamic_scale = no
+			}
+			 ship_effect = {
+				 entity = "ship_aura_minefield_entity"
+				 dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

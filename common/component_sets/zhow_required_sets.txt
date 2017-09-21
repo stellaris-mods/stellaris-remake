@@ -1,0 +1,6 @@
+component_set = {
+	key = "zhow_carrier_computer"
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}

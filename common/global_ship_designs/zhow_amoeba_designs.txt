@@ -1,0 +1,30 @@
+
+
+ship_design = {
+	name = "Tiny Space Organism"
+	ship_size = nongfx_strike_fighter
+	hide_size = yes
+
+	section = {
+		template = "AMOEBA_STRIKE_FIGHTER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_PLASMA_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FIGHTER_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component="WARP_DRIVE_3"
+	required_component="STRIKE_FIGHTER_COMPONENT_2"
+}
