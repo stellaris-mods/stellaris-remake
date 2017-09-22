@@ -14,7 +14,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		keep_previous_target_bonus		= 130
+		#keep_previous_target_bonus		= 130
 		# 50% armor = -300
 		# 0% armor  = -600
 		damage_value					= -20#-200
@@ -50,7 +50,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		keep_previous_target_bonus		= 130
+		#keep_previous_target_bonus		= 130
 		# 50% armor = -300
 		# 0% armor  = -600
 		damage_value					= -20#-200
@@ -85,7 +85,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		keep_previous_target_bonus		= 130
+		#keep_previous_target_bonus		= 130
 		# 50% armor = -300
 		# 0% armor  = -600
 		damage_value					= -20#-200

@@ -12,7 +12,7 @@ ship_behavior = {
 	passive_move_pattern = orbit
 
 	targeting = {
-		keep_previous_target_bonus		= 1000
+		#keep_previous_target_bonus		= 1000
 		damage_value					= 0
 		low_health_bonus				= 1000
 		shield_focus_value				= 0
@@ -37,7 +37,7 @@ ship_behavior = {
 	passive_move_pattern = orbit
 
 	targeting = {
-		keep_previous_target_bonus		= 1000
+		#keep_previous_target_bonus		= 1000
 		damage_value					= 0
 		low_health_bonus				= 1000
 		shield_focus_value				= 0
