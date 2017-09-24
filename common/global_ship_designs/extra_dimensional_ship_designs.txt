@@ -1057,11 +1057,6 @@ ship_design = {
 	section = {
 		template = "ed_dimensional_portal_key_blue"
 		slot = "mid"
-
-		component = {
-			slot = "MEDIUM_UTILITY_1"
-			template = "BORDER_EXTRUDER_3"
-		}
 	}
 }
 
