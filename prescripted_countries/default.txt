@@ -1,18 +1,17 @@
 default = {
 	name = ""
-
-	name_list = "HUM1"
-	ship_prefix = "ISS"
-
-	species_name = ""
-	species_plural = ""	#we should localize this!
-	species_adjective = ""
-	species_class = "HUM"
-	portrait = "human"
-	room = "ethic_pacifist_room"
 	adjective = ""
 
-	government = "indirect_democracy"
+	ship_prefix = "ISS"
+
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name_list = "HUM1"
+	}
+	room = "default_room"
+
+	authority = "auth_democratic"
 
 	weapon = "tech_mass_drivers_1"
 	ftl = warp
