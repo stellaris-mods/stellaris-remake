@@ -304,7 +304,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	cost = 20
-	border_extrusion_range = 20
+	border_extrusion_range = 25
 	class_restriction = { shipclass_outpost_station }
 
 	component_set = "border_extruders"
@@ -323,7 +323,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	cost = 20
-	border_extrusion_range = 20
+	border_extrusion_range = 25
 	class_restriction = { shipclass_outpost_station }
 	hidden = yes
 

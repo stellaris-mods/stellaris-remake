@@ -20,6 +20,7 @@ weapon_component_template = {
 	projectile_gfx = "particle_lance"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_long_range weapon_role_anti_armor }
+	upgrades_to = "LARGE_ENERGY_LANCE_2"
 }
 
 # ## Energy Lance 2

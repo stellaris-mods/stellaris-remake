@@ -72,8 +72,8 @@ weapon_component_template = {
 	ai_weight = { weight = 0 }
 
 	key = "FLAK_BATTERY_1"
-	size = medium
-	entity = "medium_kinetic_gun_entity"
+	size = point_defence
+	entity = "small_kinetic_gun_entity"
 
 	icon = "GFX_ship_part_flak_batteries_1"
 	icon_frame = 1
@@ -93,8 +93,8 @@ weapon_component_template = {
 	ai_weight = { weight = 0 }
 
 	key = "FLAK_BATTERY_2"
-	size = medium
-	entity = "medium_kinetic_gun_entity"
+	size = point_defence
+	entity = "small_kinetic_gun_entity"
 
 	icon = "GFX_ship_part_flak_batteries_2"
 	icon_frame = 1
