@@ -29,7 +29,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 100
+		keep_previous_target_bonus		= 100
 		damage_value					= 0
 		low_health_bonus				= 350
 		shield_focus_value				= 0
@@ -58,7 +58,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 100
+		keep_previous_target_bonus		= 100
 		damage_value					= 0
 		low_health_bonus				= 400
 		shield_focus_value				= 0
@@ -85,7 +85,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 0
+		keep_previous_target_bonus		= 0
 		damage_value					= 0
 		low_health_bonus				= 0
 		shield_focus_value				= 0
@@ -116,7 +116,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 130
+		keep_previous_target_bonus		= 130
 		# 50% armor = -300
 		# 0% armor  = -600
 		damage_value					= -200#-200
@@ -154,7 +154,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 100#900
+		keep_previous_target_bonus		= 100#900
 		damage_value					= 0
 		# Always pick lowhanging fruit
 		low_health_bonus				= 400
@@ -187,7 +187,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 450
+		keep_previous_target_bonus		= 450
 		damage_value					= 0
 		low_health_bonus				= 550
 		shield_focus_value				= 0
@@ -220,7 +220,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 0
+		keep_previous_target_bonus		= 0
 		damage_value					= -50
 		low_health_bonus				= 0
 		shield_focus_value				= 1
@@ -258,7 +258,7 @@ ship_behavior = {
 		# So that's 90 + 60 + 40 = 190. The difference between
 		# sniper range and where we want to engage is 190-60, so 130.
 		# The difference between BS attack range and the above, is 130-60=70.
-		#keep_previous_target_bonus		= 690
+		keep_previous_target_bonus		= 690
 		damage_value					= 0
 		# Prevents us changing to smaller targets, not sure
 		# how this value is calculated, the docs just say "a few shots"
@@ -305,7 +305,7 @@ ship_behavior = {
 
 	targeting = {
 		component_target_weight_mult	= 0
-		#keep_previous_target_bonus		= 0
+		keep_previous_target_bonus		= 0
 		damage_value					= 0
 		low_health_bonus				= 500
 		shield_focus_value				= 0
