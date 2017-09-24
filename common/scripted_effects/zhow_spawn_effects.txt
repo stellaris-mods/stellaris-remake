@@ -149,6 +149,10 @@ zhow_spawn_ed3_fleet = {
 	}
 
 }
+
+# XXX be much more aggressive
+# final_core_ai 2s + 8m + 6l + 4xl + 16 strike
+# core_ai 2s + 8m + 6l + 2xl + 8 strike
 zhow_spawn_ai_fleet ={
 	zhow_set_fleet_timer = yes
 	create_fleet = {

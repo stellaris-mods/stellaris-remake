@@ -20,5 +20,7 @@ zhow_spawner_stations = {
 		is_ship_size = dimensional_portal_ed
 		is_ship_size = military_station_large_ed
 		is_ship_size = anchor_station
+		is_ship_size = final_core_ai
+		is_ship_size = core_ai
 	}
 }
