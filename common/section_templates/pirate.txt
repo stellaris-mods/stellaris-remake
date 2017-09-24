@@ -27,7 +27,7 @@ ship_section_template = {
 		locatorname = "medium_gun_01"
 	}
 
-	small_utility_slots = 6
+	small_utility_slots = 4
 	medium_utility_slots = 2
 }
 
@@ -63,7 +63,7 @@ ship_section_template = {
 		locatorname = "small_gun_03"
 	}
 
-	small_utility_slots = 6
+	small_utility_slots = 4
 	medium_utility_slots = 2
 }
 
@@ -87,7 +87,7 @@ ship_section_template = {
 		locatorname = "small_gun_01"
 	}
 
-	small_utility_slots = 6
+	small_utility_slots = 4
 	medium_utility_slots = 3
 }
 
@@ -119,7 +119,7 @@ ship_section_template = {
 	}
 
 	small_utility_slots = 5
-	medium_utility_slots = 5
+	medium_utility_slots = 4
 }
 
 ship_section_template = {
@@ -161,7 +161,7 @@ ship_section_template = {
 	}
 
 	small_utility_slots = 5
-	medium_utility_slots = 5
+	medium_utility_slots = 4
 }
 
 ### Pirate Cruiser
@@ -215,9 +215,9 @@ ship_section_template = {
 		locatorname = "small_gun_02"
 	}
 
-	medium_utility_slots = 7
+	medium_utility_slots = 6
 	large_utility_slots = 3
-	small_utility_slots = 4
+	small_utility_slots = 2
 }
 
 
@@ -261,7 +261,6 @@ ship_section_template = {
 	}
 
 	large_utility_slots = 3
-	small_utility_slots = 2
 }
 
 
@@ -299,5 +298,4 @@ ship_section_template = {
 	}
 
 	large_utility_slots = 6
-	small_utility_slots = 2
 }

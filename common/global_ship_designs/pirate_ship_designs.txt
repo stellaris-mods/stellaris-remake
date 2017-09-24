@@ -626,11 +626,11 @@ ship_design = {
 			template = "LARGE_SHIELD_1"
 		}
 		component = {
-			slot = "LARGE_UTILITY_1"
+			slot = "LARGE_UTILITY_2"
 			template = "LARGE_SHIELD_1"
 		}
 		component = {
-			slot = "LARGE_UTILITY_1"
+			slot = "LARGE_UTILITY_3"
 			template = "LARGE_SHIELD_1"
 		}
 		component = {
@@ -640,7 +640,7 @@ ship_design = {
 		component = {
 			slot = "SMALL_UTILITY_2"
 			template = "AFTERBURNER_1"
-		}
+
 	}
 	required_component="SHIP_SENSOR_1"
 	required_component = "WARP_DRIVE_1"
