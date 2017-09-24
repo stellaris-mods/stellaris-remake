@@ -86,29 +86,29 @@ ship_section_template = {
 		locatorname = "medium_gun_04"
 	}
 	component_slot = {
-		name = "LARGE_GUN_09"
-		slot_size = large
+		name = "TORPEDO_01"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_01"
 	}
 	component_slot = {
-		name = "LARGE_GUN_10"
-		slot_size = large
+		name = "TORPEDO_02"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_02"
 	}
 	component_slot = {
-		name = "LARGE_GUN_11"
-		slot_size = large
+		name = "TORPEDO_03"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_03"
 	}
 	component_slot = {
-		name = "LARGE_GUN_12"
-		slot_size = large
+		name = "TORPEDO_04"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_04"
@@ -127,27 +127,21 @@ ship_section_template = {
 	icon = "GFX_ship_part_core_mid"
 
 	component_slot = {
-		name = "LARGE_GUN_03"
-		slot_size = large
+		name = "TORPEDO_01"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_01"
 	}
 	component_slot = {
-		name = "LARGE_GUN_04"
-		slot_size = large
+		name = "TORPEDO_02"
+		slot_size = torpedo
 		slot_type = weapon
 		rotation = 90
 		locatorname = "medium_gun_02"
 	}
 	component_slot = {
 		name = "EXTRA_LARGE_01"
-		slot_size = extra_large
-		slot_type = weapon
-		locatorname = "large_gun_01"
-	}
-	component_slot = {
-		name = "EXTRA_LARGE_02"
 		slot_size = extra_large
 		slot_type = weapon
 		locatorname = "large_gun_01"

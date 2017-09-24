@@ -63,6 +63,22 @@ ship_design = {
 			template = "MEDIUM_GAMMA_LASER"
 		}
 		component = {
+			slot = "TORPEDO_01"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
 			slot = "LARGE_UTILITY_1"
 			template = "LARGE_ZERO_POINT_REACTOR"
 		}
@@ -173,6 +189,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_2"
@@ -874,6 +898,22 @@ ship_design = {
 			template = "MEDIUM_GAMMA_LASER"
 		}
 		component = {
+			slot = "TORPEDO_01"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
 			slot = "LARGE_UTILITY_1"
 			template = "LARGE_ZERO_POINT_REACTOR"
 		}
@@ -984,6 +1024,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_2"
@@ -1685,6 +1733,22 @@ ship_design = {
 			template = "MEDIUM_PLASMA_3"
 		}
 		component = {
+			slot = "TORPEDO_01"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
 			slot = "LARGE_UTILITY_1"
 			template = "LARGE_ZERO_POINT_REACTOR"
 		}
@@ -1796,6 +1860,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ARC_EMITTER_2"
@@ -2497,6 +2569,22 @@ ship_design = {
 			template = "MEDIUM_MASS_DRIVER_5"
 		}
 		component = {
+			slot = "TORPEDO_01"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
 			slot = "LARGE_UTILITY_1"
 			template = "LARGE_ZERO_POINT_REACTOR"
 		}
@@ -2608,6 +2696,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_MASS_ACCELERATOR_2"
@@ -3308,6 +3404,22 @@ ship_design = {
 			template = "MEDIUM_GAMMA_LASER"
 		}
 		component = {
+			slot = "TORPEDO_01"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "ENERGY_TORPEDO_2"
+		}
+		component = {
 			slot = "LARGE_UTILITY_1"
 			template = "LARGE_ZERO_POINT_REACTOR"
 		}
@@ -3418,6 +3530,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_MASS_ACCELERATOR_2"
@@ -4065,6 +4185,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
 		}
@@ -4155,6 +4283,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
 		}
@@ -4244,6 +4380,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
@@ -4337,6 +4481,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
 		}
@@ -4426,6 +4578,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
@@ -4517,6 +4677,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ENERGY_LANCE_1"
 		}
@@ -4606,6 +4774,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_MASS_ACCELERATOR_1"
@@ -4697,6 +4873,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_MASS_ACCELERATOR_1"
 		}
@@ -4786,6 +4970,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_MASS_ACCELERATOR_1"
@@ -5662,6 +5854,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ARC_EMITTER_1"
 		}
@@ -5752,6 +5952,14 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ARC_EMITTER_1"
 		}
@@ -5841,6 +6049,14 @@ ship_design = {
 		template = "fallen_empire_large_warship_key"
 		slot = "mid"
 
+		component = {
+			slot = "TORPEDO_01"
+			template = "LARGE_MISSILE_5"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}
 		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "LARGE_ARC_EMITTER_1"
