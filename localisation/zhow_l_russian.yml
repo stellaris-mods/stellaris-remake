@@ -1,0 +1,270 @@
+﻿#l_braz_por:
+#l_english:
+#l_french:
+#l_german:
+#l_polish:
+l_russian:
+#l_spanish:
+
+# To override vanilla strings, they must be higher in natural sort order. A comes before B, etc.
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
+
+weapon_type_strike_craft_weapon_damage_mult: "Nothing"
+weapon_type_strike_craft_weapon_fire_rate_mult: "Nothing"
+weapon_type_strike_craft_speed_mult: "Nothing"
+
+tech_pd_tracking_1: "Able Strike Weaponry"
+tech_pd_tracking_1_desc: "Provides downsized versions of some of our lower level weapons for mounting on strike crafts."
+tech_pd_tracking_2: "Interlinked Strike Weaponry"
+tech_pd_tracking_2_desc: "A new array of upgraded downsized versions of our weapons for mounting on strike crafts."
+tech_pd_tracking_3: "Algorithmic Strike Weaponry"
+tech_pd_tracking_3_desc: "Advanced computational prediction increases the effectiveness of our strike craft weaponry."
+
+tech_flak_batteries_1: "Additional Strike Weapons"
+tech_flak_batteries_1_desc: "Researches new weapons for our strike craft Fighters and Bombers with increased armor penetration capabilities."
+tech_flak_batteries_2: "Upgraded Strike Weapon Alternatives"
+tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our strike craft weapon alternatives."
+
+tech_repeatable_weapon_type_strike_craft_fire_damage: "Synapse Hangar Engineers"
+tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Adds additional hangar engineering tools and automated construction robots to allow for an additional strike craft production per cycle."
+tech_repeatable_weapon_type_strike_craft_fire_rate: "Boost Coolers"
+tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Boosting the coolers allows excess heat from the automated strike craft construction systems in the hangar bays allows faster launch times for new strike craft squadrons."
+
+tech_strike_craft_1: "Automated Strike Fighters"
+tech_strike_craft_1_desc: "These unmanned strike craft drones are autonomously constructed and launched from capable warships, like the Battleship, and rely on their speed and small size to survive long enough to punch through enemy defenses. Spawns 2 craft per Battleship when you engage a hostile fleet, with a 150 day construction time before a new squadron is ready."
+tech_strike_craft_2: "Automated Strike Bombers"
+tech_strike_craft_2_desc: "Allows the Battleship to construct an additional type of strike craft drone per squadron: The Bomber! On engagement, the type of strike craft produced is determined by a randomized set of dice rolled by the engineers."
+tech_strike_craft_3: "Additional Strike Craft"
+tech_strike_craft_3_desc: "A further refinement in strike craft construction hangar designs allows our Battleships to construct an extra random drone strike craft per squadron, bringing it up to a total of 3."
+tech_amoeba_strike_craft_1_desc: "As we breed Space Amoebas in captivity, we study their symbiotic flagella and use this knowledge to upgrade our strike fighters and bombers. $GAdds new Section Template for strike crafts.§!"
+tech_swarm_strike_craft_1_desc: "Analyzing specimens from defeated Prethoryn enables us to clone and study their genetic buildup, allowing us to use this knowledge to improve our strike craft systems. $GAdds new Section Template for strike crafts.§!"
+
+# End vanilla overrides
+
+# Carrier Supergroup
+# Carrier Strike Group
+
+# Fleet Carrier, Cruiser, Destroyer Squadron (destroyer+frigate)
+# All ships operate around 50 knots
+zhow.start.title: "Select Remake Features"
+zhow.start.desc: "Please select which §HA Stellaris Remake§! features to enable or disable below. Your choices affect every player and artificial intelligence for the whole duration of the game.\n\nEven if you enable the features below, they will still need to be unlocked via technologies and/or other means."
+zhow.enable.all: "§GEnable all features and close window§!"
+zhow.enable.carrier: "§GEnable§! Carrier Ship Class"
+zhow.disable.carrier: "§RDisable§! Carrier Ship Class"
+zhow.enable.tooltip: "Enables the feature for everyone in the game, including AI."
+zhow.disable.tooltip: "Disables the feature for everyone in the game."
+zhow.enable.close: "Close window"
+
+
+tech_flak_batteries_3: "Dark Matter Weapon Alternatives"
+tech_flak_batteries_3_desc: "Our science vessels have recently come across a supermassive black hole, studied it for a century, and came up with several revisions to our description of the laws of physics. These updated descriptions might allow our engineers to create even more powerful weapon systems."
+
+STATION_LARGE_2NDAURA_NANOBOT_CLOUD: "$AURA_NANOBOT_CLOUD$ - $military_station_large$"
+STATION_LARGE_2NDAURA_SHIELD_RECHARGER: "$AURA_SHIELD_RECHARGER$ - $military_station_large$"
+STATION_LARGE_2NDAURA_SHIELD_DAMPENER: "$AURA_SHIELD_DAMPENER$ - $military_station_large$"
+STATION_LARGE_2NDAURA_QUANTUM_DESTABILIZER: "$AURA_QUANTUM_DESTABILIZER$ - $military_station_large$"
+STATION_LARGE_2NDAURA_SUBSPACE_SNARE: "$AURA_STATION_SUBSPACE_SNARE$ - $military_station_large$"
+STATION_LARGE_2NDAURA_MINEFIELD_1: "$AURA_MINEFIELD_1$ - $military_station_large$"
+
+ZHOW_LARGE_MISSILE_1: "$LARGE_MISSILE_1$"
+ZHOW_LARGE_MISSILE_2: "$LARGE_MISSILE_2$"
+
+howitshouldbe.explain.strike_cooldown: "We can stop researching strike craft fire rate now, we will no longer get any benefits from it.\n\nThe repeatable Strike Craft Fire Damage tech WILL give benefits, so pick that one instead."
+howitshouldbe.explain.strike_crafts: "You've finished researching Strike Fighter (drone) technology. We're getting a detailed report from our scientists:\n\n - Drones are launched from Battleships in combat\n - Autobuilt drones run out of fuel after ~100 days\n - Make sure all ships use the §Rsame FTL type§!\n - Shields only provide §R50%§! of their stated value on drones\n\nSince the drones are buildable, they occupy 1 navy slot. If you find yourself with too many, don't be afraid of sending them on a suicide mission, or dismantling them."
+
+CORVETTE_TORPEDO_1: "Standard Ballistic"
+DESTROYER_TORPEDO_1: "Standard Ballistic"
+CRUISER_TORPEDO_1: "Standard Ballistic"
+BATTLESHIP_TORPEDO_1: "Standard Ballistic"
+
+STRIKE_FIGHTER_1: "Strike Fighter"
+STRIKE_BOMBER_1: "Strike Bomber"
+STRIKE_FIGHTER_2: "Amoeba Fighter"
+STRIKE_BOMBER_2: "Amoeba Bomber"
+STRIKE_FIGHTER_3: "Swarm Fighter"
+STRIKE_BOMBER_3: "Swarm Bomber"
+
+strike_fighter: "Fighter"
+strike_bomber: "Bomber"
+strike_fighter_plural: "Fighters"
+strike_bomber_plural: "Bombers"
+nongfx_strike_fighter: "Miniscule"
+nongfx_strike_fighter_plural: "Miniscules"
+
+strike_bomber_components: "Bomber Systems"
+strike_bomber_components_DESC: "Automated strike bomber computers."
+strike_fighter_components: "Fighter Systems"
+strike_fighter_components_DESC: "Automated strike fighter computers."
+
+zhow_hidden_set: "Unused Components"
+zhow_hidden_set_DESC: "These components are unused by our empire."
+
+STRIKE_FIGHTER_COMPONENT_1: "Basic Fighter Drone"
+STRIKE_FIGHTER_COMPONENT_2: "Intermediate Fighter Drone"
+STRIKE_FIGHTER_COMPONENT_3: "Advanced Fighter Drone"
+STRIKE_FIGHTER_COMPONENT_4: "Sentient Fighter Drone"
+STRIKE_FIGHTER_COMPONENT_5: "Inexplicable Fighter Drone"
+
+STRIKE_BOMBER_COMPONENT_1: "Basic Bomber Drone"
+STRIKE_BOMBER_COMPONENT_2: "Intermediate Bomber Drone"
+STRIKE_BOMBER_COMPONENT_3: "Advanced Bomber Drone"
+STRIKE_BOMBER_COMPONENT_4: "Sentient Bomber Drone"
+STRIKE_BOMBER_COMPONENT_5: "Inexplicable Bomber Drone"
+
+STRIKE_EMPTY_DRIVE: "$EMPTY_DRIVE$ (Strike)"
+STRIKE_EMPTY_DRIVE_DESC: "§RYou need to use the same FTL drive category (Warp/Hyper/Wormhole/Jump) on strike craft drones as the regular fleet, or the Strike craft will simply never be built!§!"
+STRIKE_WARP_DRIVE_1: "$WARP_DRIVE_1$ (Strike)"
+STRIKE_WARP_DRIVE_1_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_WARP_DRIVE_2: "$WARP_DRIVE_2$ (Strike)"
+STRIKE_WARP_DRIVE_2_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_WARP_DRIVE_3: "$WARP_DRIVE_3$ (Strike)"
+STRIKE_WARP_DRIVE_3_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_HYPER_DRIVE_1: "$HYPER_DRIVE_1$ (Strike)"
+STRIKE_HYPER_DRIVE_1_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_HYPER_DRIVE_2: "$HYPER_DRIVE_2$ (Strike)"
+STRIKE_HYPER_DRIVE_2_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_HYPER_DRIVE_3: "$HYPER_DRIVE_3$ (Strike)"
+STRIKE_HYPER_DRIVE_3_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_JUMP_DRIVE_1: "$JUMP_DRIVE_1$ (Strike)"
+STRIKE_JUMP_DRIVE_1_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_PSI_JUMP_DRIVE_1: "$PSI_JUMP_DRIVE_1$ (Strike)"
+STRIKE_PSI_JUMP_DRIVE_1_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+STRIKE_WORMHOLE_DRIVE: "$WORMHOLE_DRIVE$ (Strike)"
+STRIKE_WORMHOLE_DRIVE_DESC: "$STRIKE_EMPTY_DRIVE_DESC$"
+
+STRIKE_MISSILE_1: "Nuclear Missiles"
+STRIKE_MISSILE_1_DESC: "Space-to-space missiles equipped with high-yield nuclear warheads. Although based on old pre-space technology, these crude fire-and-forget weapons can be surprisingly effective at range."
+STRIKE_MISSILE_2: "Fusion Missiles"
+STRIKE_MISSILE_2_DESC: "These updated space-to-space missiles have more powerful fusion warheads and improved flight performance."
+STRIKE_MISSILE_3: "Antimatter Missiles"
+STRIKE_MISSILE_3_DESC: "Advanced missiles equipped with very powerful antimatter warheads. A new and improved guidance system gives them a better chance of finding their targets."
+STRIKE_MISSILE_4: "Quantum Missiles"
+STRIKE_MISSILE_4_DESC: "The latest version of space-to-space missile, this upgraded variant has an immensely powerful warhead that draws its energy from a zero point vacuum."
+
+STRIKE_AUTOCANNON_1: "Ionizer Gatling"
+STRIKE_AUTOCANNON_1_DESC: "The gatling is a rapid-fire ionized particle delivery system. Strike crafts are too small to carry large amounts of ammunition, so this gun feeds on the dark matter surrounding the strike craft, powered by an EM-field generator."
+STRIKE_AUTOCANNON_2: "Vulcan Gatling"
+STRIKE_AUTOCANNON_2_DESC: "Improved dark matter assimilation provides a slight increase in power output."
+STRIKE_AUTOCANNON_3: "Avenger Gatling"
+STRIKE_AUTOCANNON_3_DESC: "Further refinements to the ion cannon design provide for further advantages in combat."
+STRIKE_AUTOCANNON_4: "Savage Gatling"
+STRIKE_AUTOCANNON_4_DESC: "Reaching a new level of understanding of ionized particles and dark matter allows our engineers to construct the Savage delivery system."
+
+STRIKE_PLASMA_1: "Plasma Gatling"
+STRIKE_PLASMA_1_DESC: "Large-caliber plasma-infused ionized particle weapon that fire high-energy, hot payloads using a stabilized electromagnetic field. Offers increased armor penetration compared to the standard gatling systems."
+STRIKE_PLASMA_2: "Marauder Plasma Gatling"
+STRIKE_PLASMA_2_DESC: "Upgraded with improved accuracy, tracking, and the latest in thermal transfer science, this improved Plasma gatling provides additional reliability and firepower on the battlefield."
+STRIKE_PLASMA_3: "Boxer Plasma Gatling"
+STRIKE_PLASMA_3_DESC: "Antimatter studies performed over the previous decade allow our engineers to upgrade the weapon systems even further."
+
+
+STRIKE_TORPEDO_1: "Stinger Torpedo"
+STRIKE_TORPEDO_1_DESC: "Torpedoes are essentially slow-moving missiles equipped with more powerful warheads and shield modulators that let them slip unmolested through energy screens. However it makes them much more susceptible to point-defense weaponry."
+STRIKE_TORPEDO_2: "Fox Torpedo"
+STRIKE_TORPEDO_2_DESC: "Fox torpedoes provide a small upgrade from the previous generation, doing slightly more damage and getting a almost insignificant upgrade to their hull, allowing them to withstand point defense systems for possibly another few seconds."
+STRIKE_TORPEDO_3: "Antimatter Torpedo"
+STRIKE_TORPEDO_3_DESC: "Antimatter torpedoes, created from detailed physics texts written as a result of a decade of black hole study, allow your ships to do even more damage! We've also managed to increase their hull integrity slightly."
+
+STRIKE_PD_AUTOCANNON_1: "Ionizer Gatling"
+STRIKE_PD_AUTOCANNON_2: "Vulcan Gatling"
+STRIKE_PD_AUTOCANNON_3: "Avenger Gatling"
+STRIKE_PD_AUTOCANNON_4: "Savage Gatling"
+STRIKE_PD_MISSILE_1: "Nuclear Missiles"
+STRIKE_PD_MISSILE_2: "Fusion Missiles"
+STRIKE_PD_MISSILE_3: "Antimatter Missiles"
+STRIKE_PD_MISSILE_4: "Quantum Missiles"
+STRIKE_PD_PLASMA_1: "Plasma Gatling"
+STRIKE_PD_PLASMA_2: "Marauder Plasma Gatling"
+STRIKE_PD_PLASMA_3: "Boxer Plasma Gatling"
+STRIKE_PD_TORPEDO_1: "Stinger Torpedo"
+STRIKE_PD_TORPEDO_2: "Fox Torpedo"
+STRIKE_PD_TORPEDO_3: "Antimatter Torpedo"
+
+
+ZPD_POINT_DEFENCE_1: "Sentinel Point-Defense"
+ZPD_POINT_DEFENCE_1_DESC: "Hull-mounted countermeasures against missiles and torpedoes are often essential for larger fleet engagements."
+ZPD_POINT_DEFENCE_2: "Barrier Point-Defense"
+ZPD_POINT_DEFENCE_2_DESC: "Updated prediction algorithms improves tracking and point-defense efficency."
+ZPD_POINT_DEFENCE_3: "Guardian Point-Defense"
+ZPD_POINT_DEFENCE_3_DESC: "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+ZPD_POINT_DEFENCE_4: "Savage Point-Defense"
+ZPD_POINT_DEFENCE_4_DESC: "The latest in point-defense ammunition coating and ballistic technology allows an even better weapons platform."
+
+FIGHTER_POINT_DEFENCE_1: "Sentinel Point-Defense"
+FIGHTER_POINT_DEFENCE_2: "Barrier Point-Defense"
+FIGHTER_POINT_DEFENCE_3: "Guardian Point-Defense"
+FIGHTER_POINT_DEFENCE_4: "Savage Point-Defense"
+
+strike_fighter_pointdefence: "Figher Point-Defense System"
+strike_fighter_pointdefence_desc: "Automated point-defense systems."
+strike_bomber_pointdefence: "Bomber Point-Defense System"
+strike_bomber_pointdefence_desc: "Automated point-defense systems."
+
+STRIKE_HULL: "Hull Plating"
+STRIKE_HULL_DESC: "Patches on a few extra layers of plating on the strike craft."
+STRIKE_FIRERATE: "Speed-loader"
+STRIKE_FIRERATE_DESC: "Increases firing rate by upgrading the tiny engine that feeds ammunition to the weapon systems."
+STRIKE_ARMOR: "Reinforced Hull"
+STRIKE_ARMOR_DESC: "Engineers spend some extra time fixing on the hull platings, giving the strike craft slightly increased survivability."
+STRIKE_DAMAGE: "Barrel Widener"
+STRIKE_DAMAGE_DESC: "Widens the barrel of the mounted weapon system, allowing it to fire more powerful projectiles."
+STRIKE_POWER: "Battery"
+STRIKE_POWER_DESC: "Bolts on a small battery on the strike craft, providing some power for extra components."
+STRIKE_EVASION: "Extra CPU"
+STRIKE_EVASION_DESC: "Adds an extra CPU to the strike crafts combat computer, making it more capable in offensive situations."
+
+STRIKE_HULL_1: "Hull Plating"
+STRIKE_FIRERATE_1: "Speed-cocker"
+STRIKE_ARMOR_1: "Reinforced Hull"
+STRIKE_DAMAGE_1: "Barrel Widener"
+STRIKE_POWER_1: "Battery"
+STRIKE_EVASION_1: "Extra CPU"
+
+# This is show in the tech desc
+# Unlocks Component: STRIKE_COOLDOWN
+# if you hover it, the tooltip shows STRIKE_COOLDOWN_DESC
+# then the actual component is shown with the component type icon on the right side,
+# with a tooltip containing STRIKE_COOLDOWN_TEST and STRIKE_COOLDOWN_TEST_DESC
+STRIKE_COOLDOWN: "Strike Craft Cooldown -10"
+STRIKE_COOLDOWN_DESC: "Lowers the time between automated strike craft deployment by Battleships by 10 days. The cooldown starts at 150 days. The cooldown can't be less than 10 days, and you will get a warning message if you ever reach level 14 or higher on this repeatable technology."
+STRIKE_COOLDOWN_1: "$STRIKE_COOLDOWN$"
+STRIKE_COOLDOWN_1_DESC: "$STRIKE_COOLDOWN_DESC$\n\nThis component doesn't actually exist. It was only added to force this text show up in the technology description."
+
+STRIKE_AMOUNT: "Strike Crafts +1"
+STRIKE_AMOUNT_DESC: "Makes your Battleships spawn one extra random type of Strike Fighter or Bomber at every hostile engagement (provided the cooldown is up)."
+STRIKE_AMOUNT_1: "$STRIKE_AMOUNT$"
+STRIKE_AMOUNT_1_DESC: "$STRIKE_AMOUNT_DESC$\n\nThis component doesn't actually exist. It was only added to force this text show up in the technology description."
+
+
+####################################
+# Carrier
+####################################
+zhow_carrier: "Carrier"
+zhow_carrier_plural: "Carriers"
+
+zhow_carrier_project: "Carrier Strike Group"
+zhow_carrier_project_DESC: "Our department of defense has budgeted for the construction of a Carrier Strike Group, and created a special project towards the manufacturing of such. This is a monumentous event for our empire. Please visit the special project facilities to engage the project at your convenience.\n\nThe department head informs us that the strike group will be commissioned for a 30-year window of operation, approximately."
+zhow_carrier_completed: "Our new Carrier Strike Group has been delivered to orbit around our capital planet. The Carrier itself needs to be protected, as it has no onboard sensory equipment. The maintenance costs for this mobile command center will be footed by the department for the foreseeable future."
+
+zhow_carrier_unlock: "§HUnlocks Ship Type:§! Carrier"
+zhow_carrier_unlock_tooltip: "§HCarrier§!\nA huge hull configuration, the Carrier brings multiple squadrons of fighters and bombers into battle."
+zhow_tech_carrier_1: "Carrier Construction"
+zhow_tech_carrier_1_desc: "$zhow_carrier_unlock_tooltip$"
+
+ZHOW_CARRIER_COMPUTER_1: "Carrier Strike Group"
+ZHOW_CARRIER_COMPUTER_1_DESC: "This vessel serves as a command center for the rest of the fleet."
+
+zhow_carrier_behavior_desc: "Carrier warships will attempt to stay far away from military engagements, instead sending squadrons of automated strike craft drones into the heart of battle.\nFighters per month: §G6§!\nBombers per month: §G2§!\nMax Fighters: §G36§!\nMax Bombers: §G12§!\n"
+
+zhow_carrier_bow_broadside: "Broadside Bow"
+zhow_carrier_bow_salvo: "Salvo Bow"
+
+zhow_carrier_mid1_hangar: "Hangar Section"
+zhow_carrier_mid1_carrier: "Carrier Section"
+
+zhow_carrier_mid2_hangar: "Hangar Section"
+zhow_carrier_mid2_carrier: "Carrier Section"
+
+zhow_carrier_stern_broadside: "Fleet Command"

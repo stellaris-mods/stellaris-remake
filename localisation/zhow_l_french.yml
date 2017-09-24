@@ -1,39 +1,45 @@
-﻿l_english:
-# ZZZ override not working
- tech_pd_tracking_1:0 "Active Strike Weaponry"
- tech_pd_tracking_1_desc:0 "The best defence is a good offense. Provides downsized versions of some of our lower level weapons for mounting on strike crafts.\n\n"
+﻿#l_braz_por:
+#l_english:
+l_french:
+#l_german:
+#l_polish:
+#l_russian:
+#l_spanish:
 
-# Overriding vanilla strings
+# To override vanilla strings, they must be higher in natural sort order. A comes before B, etc.
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
+
 weapon_type_strike_craft_weapon_damage_mult: "Nothing"
 weapon_type_strike_craft_weapon_fire_rate_mult: "Nothing"
 weapon_type_strike_craft_speed_mult: "Nothing"
-starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
+
+tech_pd_tracking_1: "Able Strike Weaponry"
+tech_pd_tracking_1_desc: "Provides downsized versions of some of our lower level weapons for mounting on strike crafts."
+tech_pd_tracking_2: "Interlinked Strike Weaponry"
+tech_pd_tracking_2_desc: "A new array of upgraded downsized versions of our weapons for mounting on strike crafts."
+tech_pd_tracking_3: "Algorithmic Strike Weaponry"
+tech_pd_tracking_3_desc: "Advanced computational prediction increases the effectiveness of our strike craft weaponry."
+
+tech_flak_batteries_1: "Additional Strike Weapons"
+tech_flak_batteries_1_desc: "Researches new weapons for our strike craft Fighters and Bombers with increased armor penetration capabilities."
+tech_flak_batteries_2: "Upgraded Strike Weapon Alternatives"
+tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our strike craft weapon alternatives."
+
+tech_repeatable_weapon_type_strike_craft_fire_damage: "Synapse Hangar Engineers"
+tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Adds additional hangar engineering tools and automated construction robots to allow for an additional strike craft production per cycle."
+tech_repeatable_weapon_type_strike_craft_fire_rate: "Boost Coolers"
+tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Boosting the coolers allows excess heat from the automated strike craft construction systems in the hangar bays allows faster launch times for new strike craft squadrons."
 
 tech_strike_craft_1: "Automated Strike Fighters"
-tech_strike_craft_1_desc: "These unmanned strike craft drones are autonomously constructed and launched from capable warships, like the Battleship, and rely on their speed and small size to survive long enough to punch through enemy defences. Spawns 2 craft per Battleship when you engage a hostile fleet, with a 150 day construction time before a new squadron is ready.\n\n"
+tech_strike_craft_1_desc: "These unmanned strike craft drones are autonomously constructed and launched from capable warships, like the Battleship, and rely on their speed and small size to survive long enough to punch through enemy defenses. Spawns 2 craft per Battleship when you engage a hostile fleet, with a 150 day construction time before a new squadron is ready."
 tech_strike_craft_2: "Automated Strike Bombers"
-tech_strike_craft_2_desc: "Allows the Battleship to construct an additional type of strike craft drone per squadron: The Bomber! On engagement, the type of strike craft produced is determined by a randomized set of dice rolled by the engineers.\n\n"
+tech_strike_craft_2_desc: "Allows the Battleship to construct an additional type of strike craft drone per squadron: The Bomber! On engagement, the type of strike craft produced is determined by a randomized set of dice rolled by the engineers."
 tech_strike_craft_3: "Additional Strike Craft"
-tech_strike_craft_3_desc: "A further refinement in strike craft construction hangar designs allows our Battleships to construct an extra random drone strike craft per squadron, bringing it up to a total of 3.\n\n"
-# is working, wtf
-tech_pd_tracking_2: "Interlinked Strike Weaponry"
-tech_pd_tracking_2_desc: "A new array of upgraded downsized versions of our weapons for mounting on strike crafts.\n\n"
-# ZZZ The next one doesnt work for me, it still shows vanilla description wtf
-tech_pd_tracking_3: "Predictive Strike Weaponry"
-tech_pd_tracking_3_desc: "Advanced prediction increases the effectiveness of our strike craft weaponry.\n\n"
-tech_repeatable_weapon_type_strike_craft_fire_damage: "Synapse Hangar Engineers"
-tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Upgrades the hangar engineering tools and automated construction robots to allow for an additional strike craft production per cycle.\n\n"
-tech_repeatable_weapon_type_strike_craft_fire_rate: "Heat Recyclers"
-tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Recycling excess heat from the automated strike craft construction systems in the hangar bays allows faster launch times for new strike craft squadrons.\n\n"
-tech_amoeba_strike_craft_1: "Amoeba-inspired Sections"
-tech_amoeba_strike_craft_1_desc: "By breeding Space Amoebas in captivity, we can study their symbiotic flagella and use this knowledge to upgrade our strike fighters and bombers.\nAdds a new kind of Section Template for strike crafts.\n\n"
-tech_swarm_strike_craft_1: "Swarm-inspired Sections"
-tech_swarm_strike_craft_1_desc: "Collecting specimens from defeated Prethoryn enables us to clone and study their genetic buildup, allowing us to use this knowledge to improve our strike craft systems.\nAdds a new kind of Section Template for strike crafts.\n\n"
-tech_flak_batteries_1: "Additional Strike Weapons"
-tech_flak_batteries_1_desc: "Researches new weapons for our strike craft Fighters and Bombers with increased armor penetration capabilities.\n\n"
-tech_flak_batteries_2: "Upgraded Strike Weapon Alternatives"
-tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our strike craft weapon alternatives.\n\n"
-
+tech_strike_craft_3_desc: "A further refinement in strike craft construction hangar designs allows our Battleships to construct an extra random drone strike craft per squadron, bringing it up to a total of 3."
+tech_amoeba_strike_craft_1_desc: "As we breed Space Amoebas in captivity, we study their symbiotic flagella and use this knowledge to upgrade our strike fighters and bombers. $GAdds new Section Template for strike crafts.§!"
+tech_swarm_strike_craft_1_desc: "Analyzing specimens from defeated Prethoryn enables us to clone and study their genetic buildup, allowing us to use this knowledge to improve our strike craft systems. $GAdds new Section Template for strike crafts.§!"
 
 # End vanilla overrides
 
@@ -53,7 +59,7 @@ zhow.enable.close: "Close window"
 
 
 tech_flak_batteries_3: "Dark Matter Weapon Alternatives"
-tech_flak_batteries_3_desc: "Our science vessels have recently come across a supermassive black hole, studied it for a century, and came up with several revisions to our description of the laws of physics. These updated descriptions might allow our engineers to create even more powerful weapon systems.\n\n"
+tech_flak_batteries_3_desc: "Our science vessels have recently come across a supermassive black hole, studied it for a century, and came up with several revisions to our description of the laws of physics. These updated descriptions might allow our engineers to create even more powerful weapon systems."
 
 STATION_LARGE_2NDAURA_NANOBOT_CLOUD: "$AURA_NANOBOT_CLOUD$ - $military_station_large$"
 STATION_LARGE_2NDAURA_SHIELD_RECHARGER: "$AURA_SHIELD_RECHARGER$ - $military_station_large$"
@@ -155,9 +161,9 @@ STRIKE_PLASMA_3_DESC: "Antimatter studies performed over the previous decade all
 
 
 STRIKE_TORPEDO_1: "Stinger Torpedo"
-STRIKE_TORPEDO_1_DESC: "Torpedoes are essentially slow-moving missiles equipped with more powerful warheads and shield modulators that let them slip unmolested through energy screens. However it makes them much more susceptible to point-defence weaponry."
+STRIKE_TORPEDO_1_DESC: "Torpedoes are essentially slow-moving missiles equipped with more powerful warheads and shield modulators that let them slip unmolested through energy screens. However it makes them much more susceptible to point-defense weaponry."
 STRIKE_TORPEDO_2: "Fox Torpedo"
-STRIKE_TORPEDO_2_DESC: "Fox torpedoes provide a small upgrade from the previous generation, doing slightly more damage and getting a almost insignificant upgrade to their hull, allowing them to withstand point defence systems for possibly another few seconds."
+STRIKE_TORPEDO_2_DESC: "Fox torpedoes provide a small upgrade from the previous generation, doing slightly more damage and getting a almost insignificant upgrade to their hull, allowing them to withstand point defense systems for possibly another few seconds."
 STRIKE_TORPEDO_3: "Antimatter Torpedo"
 STRIKE_TORPEDO_3_DESC: "Antimatter torpedoes, created from detailed physics texts written as a result of a decade of black hole study, allow your ships to do even more damage! We've also managed to increase their hull integrity slightly."
 
@@ -177,26 +183,24 @@ STRIKE_PD_TORPEDO_2: "Fox Torpedo"
 STRIKE_PD_TORPEDO_3: "Antimatter Torpedo"
 
 
-ZPD_POINT_DEFENCE_1: "Sentinel Point-Defence"
+ZPD_POINT_DEFENCE_1: "Sentinel Point-Defense"
 ZPD_POINT_DEFENCE_1_DESC: "Hull-mounted countermeasures against missiles and torpedoes are often essential for larger fleet engagements."
-ZPD_POINT_DEFENCE_2: "Barrier Point-Defence"
-ZPD_POINT_DEFENCE_2_DESC: "Updated prediction algorithms improves tracking and point-defence efficency."
-ZPD_POINT_DEFENCE_3: "Guardian Point-Defence"
+ZPD_POINT_DEFENCE_2: "Barrier Point-Defense"
+ZPD_POINT_DEFENCE_2_DESC: "Updated prediction algorithms improves tracking and point-defense efficency."
+ZPD_POINT_DEFENCE_3: "Guardian Point-Defense"
 ZPD_POINT_DEFENCE_3_DESC: "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
-ZPD_POINT_DEFENCE_4: "Savage Point-Defence"
-ZPD_POINT_DEFENCE_4_DESC: "The latest in point-defence ammunition coating and ballistic technology allows an even better weapons platform."
+ZPD_POINT_DEFENCE_4: "Savage Point-Defense"
+ZPD_POINT_DEFENCE_4_DESC: "The latest in point-defense ammunition coating and ballistic technology allows an even better weapons platform."
 
-FIGHTER_POINT_DEFENCE_1: "Sentinel Point-Defence"
-FIGHTER_POINT_DEFENCE_2: "Barrier Point-Defence"
-FIGHTER_POINT_DEFENCE_3: "Guardian Point-Defence"
-FIGHTER_POINT_DEFENCE_4: "Savage Point-Defence"
+FIGHTER_POINT_DEFENCE_1: "Sentinel Point-Defense"
+FIGHTER_POINT_DEFENCE_2: "Barrier Point-Defense"
+FIGHTER_POINT_DEFENCE_3: "Guardian Point-Defense"
+FIGHTER_POINT_DEFENCE_4: "Savage Point-Defense"
 
-
-
-strike_fighter_pointdefence: "Figher Point-Defence System"
-strike_fighter_pointdefence_desc: "Automated point-defence systems."
-strike_bomber_pointdefence: "Bomber Point-Defence System"
-strike_bomber_pointdefence_desc: "Automated point-defence systems."
+strike_fighter_pointdefence: "Figher Point-Defense System"
+strike_fighter_pointdefence_desc: "Automated point-defense systems."
+strike_bomber_pointdefence: "Bomber Point-Defense System"
+strike_bomber_pointdefence_desc: "Automated point-defense systems."
 
 STRIKE_HULL: "Hull Plating"
 STRIKE_HULL_DESC: "Patches on a few extra layers of plating on the strike craft."
@@ -241,7 +245,7 @@ zhow_carrier: "Carrier"
 zhow_carrier_plural: "Carriers"
 
 zhow_carrier_project: "Carrier Strike Group"
-zhow_carrier_project_DESC: "Our department of defence has budgeted for the construction of a Carrier Strike Group, and created a special project towards the manufacturing of such. This is a monumentous event for our empire. Please visit the special project facilities to engage the project at your convenience.\n\nThe department head informs us that the strike group will be commissioned for a 30-year window of operation, approximately."
+zhow_carrier_project_DESC: "Our department of defense has budgeted for the construction of a Carrier Strike Group, and created a special project towards the manufacturing of such. This is a monumentous event for our empire. Please visit the special project facilities to engage the project at your convenience.\n\nThe department head informs us that the strike group will be commissioned for a 30-year window of operation, approximately."
 zhow_carrier_completed: "Our new Carrier Strike Group has been delivered to orbit around our capital planet. The Carrier itself needs to be protected, as it has no onboard sensory equipment. The maintenance costs for this mobile command center will be footed by the department for the foreseeable future."
 
 zhow_carrier_unlock: "§HUnlocks Ship Type:§! Carrier"
