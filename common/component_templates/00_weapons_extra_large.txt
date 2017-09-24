@@ -13,7 +13,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_energy_lance_1" }
@@ -34,7 +33,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_energy_lance_2" }
@@ -59,7 +57,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_arc_emitter_1" }
@@ -81,7 +78,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_arc_emitter_2" }
@@ -108,7 +104,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_mass_accelerator_1" }
@@ -132,7 +127,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 10.0
 	static_rotation = yes
 
 	prerequisites = { "tech_mass_accelerator_2" }
@@ -159,7 +153,6 @@ weapon_component_template = {
 	icon_frame = 1
 
 	firing_arc = 25.0
-	min_range = 30.0
 	static_rotation = yes
 
 	component_set = "TITAN_LASER"
