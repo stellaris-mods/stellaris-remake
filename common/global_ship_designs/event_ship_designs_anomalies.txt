@@ -40,29 +40,29 @@ ship_design = {
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_4"
-			template = "MEDIUM_SHIELD_2"
+			template = "MEDIUM_SHIELD_4"
 		}
 		component = {
 			slot = "SMALL_UTILITY_1"
-			template = "SMALL_SHIELD_2"
+			template = "SMALL_ARMOR_4"
 		}
 		component = {
 			slot = "SMALL_UTILITY_2"
-			template = "SMALL_SHIELD_2"
+			template = "SMALL_ARMOR_4"
 		}
 		component = {
 			slot = "SMALL_UTILITY_3"
-			template = "SMALL_SHIELD_2"
+			template = "SMALL_SHIELD_4"
 		}
 		component = {
 			slot = "SMALL_UTILITY_4"
-			template = "SMALL_SHIELD_2"
+			template = "SMALL_SHIELD_4"
 		}
 	}
 	required_component = "WARP_DRIVE_2"
 	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
-	required_component = "SHIP_THRUSTER_2"
-	required_component = "SHIP_SENSOR_2"
+	required_component = "SHIP_THRUSTER_3"
+	required_component = "SHIP_SENSOR_3"
 }
 
 # Automated Shipyard Raider
