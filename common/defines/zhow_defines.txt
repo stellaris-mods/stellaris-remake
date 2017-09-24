@@ -10,6 +10,15 @@ NGameplay = {
 	}
 }
 
+NCombat = {
+	# We use completely remade ship behaviors, so this is not necessary.
+	# I assume 1 means behavior_result * 1, so this nullifies it.
+	COMBAT_TARGET_STICKYNESS = 1
+	# These values seem sensible to me.
+	# MISSILE_RETARGET_CHANCE_START = 100
+	# MISSILE_RETARGET_CHANCE_REDUCTION = 35
+}
+
 
 # -- -- From Realistic System Scale / Star Redux
 # -- 	--Scale--------------------------------------------------------------------------------------------------
