@@ -11,9 +11,9 @@
 
 starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
 
-weapon_type_strike_craft_weapon_damage_mult: "Nothing"
-weapon_type_strike_craft_weapon_fire_rate_mult: "Nothing"
-weapon_type_strike_craft_speed_mult: "Nothing"
+weapon_type_strike_craft_weapon_damage_mult: "Ignore"
+weapon_type_strike_craft_weapon_fire_rate_mult: "Ignore"
+weapon_type_strike_craft_speed_mult: "Ignore"
 
 tech_pd_tracking_1: "Able Strike Weaponry"
 tech_pd_tracking_1_desc: "Provides downsized versions of some of our lower level weapons for mounting on strike crafts."
@@ -24,7 +24,7 @@ tech_pd_tracking_3_desc: "Advanced computational prediction increases the effect
 
 tech_flak_batteries_1: "Additional Strike Weapons"
 tech_flak_batteries_1_desc: "Researches new weapons for our strike craft Fighters and Bombers with increased armor penetration capabilities."
-tech_flak_batteries_2: "Upgraded Strike Weapon Alternatives"
+tech_flak_batteries_2: "Effective Strike Weapons"
 tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our strike craft weapon alternatives."
 
 tech_repeatable_weapon_type_strike_craft_fire_damage: "Synapse Hangar Engineers"
@@ -33,7 +33,7 @@ tech_repeatable_weapon_type_strike_craft_fire_rate: "Boost Coolers"
 tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Boosting the coolers allows excess heat from the automated strike craft construction systems in the hangar bays allows faster launch times for new strike craft squadrons."
 
 tech_strike_craft_1: "Automated Strike Fighters"
-tech_strike_craft_1_desc: "These unmanned strike craft drones are autonomously constructed and launched from capable warships, like the Battleship, and rely on their speed and small size to survive long enough to punch through enemy defenses. Spawns 2 craft per Battleship when you engage a hostile fleet, with a 150 day construction time before a new squadron is ready."
+tech_strike_craft_1_desc: "Computer-controlled, unmanned drones are automatically built and launched from capable warships - like the Battleship. They rely on speed and small size to survive long enough to punch through enemy defenses. Spawns 2 craft per Battleship when you engage a hostile fleet, with a 150 day construction time before a new squadron is ready."
 tech_strike_craft_2: "Automated Strike Bombers"
 tech_strike_craft_2_desc: "Allows the Battleship to construct an additional type of strike craft drone per squadron: The Bomber! On engagement, the type of strike craft produced is determined by a randomized set of dice rolled by the engineers."
 tech_strike_craft_3: "Additional Strike Craft"
