@@ -113,9 +113,7 @@ country_event = {
 	option = { name = OK }
 }
 
-# XXX
-# Should probably set a flag that prevents the ai researching the
-# tech any further. Would need to override the tech file then. Gah.
+# ZZZ We can't prevent the AI from researching this further without overwriting the tech files.
 country_event = {
 	id = howitshouldbe.3
 	title = "Stop researching fire rate"
