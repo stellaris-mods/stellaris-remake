@@ -7,14 +7,8 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# Find a random player country to decide the features
-		random_country = {
-			limit = {
-				is_ai = no
-				is_country_type = "default"
-			}
-			set_country_flag = "zhow_decider"
-		}
+		set_global_flag = "has_zhow"
+
 		while = {
 			limit = {
 				any_country = {
@@ -35,27 +29,18 @@ event = {
 					50 = {
 						give_technology = {
 							tech = tech_mass_drivers_1
-							message = yes
+							message = no
 						}
 					}
 					50 = {
 						give_technology = {
 							tech = tech_lasers_1
-							message = yes
+							message = no
 						}
 					}
 				}
 			}
 		}
-		# every_country = {
-		# 	limit = {
-		# 		NOT = { has_modifier = zhow_ship_speed }
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = zhow_ship_speed
-		# 		days = -1
-		# 	}
-		# }
 	}
 }
 
@@ -67,18 +52,38 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_country_flag = "zhow_decider"
+		is_same_value = event_target:addonMenuCountry
+		OR = {
+			has_global_flag = "inAddonMenu"
+			NOT = { has_global_flag = "addonMenuMultiple" }
+		}
 	}
 
 	option = {
-		name = zhow.enable.all
-		custom_tooltip = zhow.enable.tooltip
-		hidden_effect = {
-			set_global_flag = "zhow_enable_carrier"
-			#set_global_flag = "zhow_enable_carrier"
-			#set_global_flag = "zhow_enable_carrier"
+		name = "addonMenu.back"
+		default_hide_option = yes
+		trigger = {
+			has_global_flag = "inAddonMenu"
+			has_global_flag = "addonMenuMultiple"
 		}
+		hidden_effect = { country_event = { id = addonMenu.20 } }
 	}
+	option = {
+		name = "addonMenu.done"
+		trigger = {
+			NOT = { has_global_flag = "addonMenuMultiple" }
+		}
+		hidden_effect = { country_event = { id = zhowstart.10 } }
+	}
+	#option = {
+	#	name = zhow.enable.all
+	#	custom_tooltip = zhow.enable.tooltip
+	#	hidden_effect = {
+	#		set_global_flag = "zhow_enable_carrier"
+			#set_global_flag = "zhow_enable_carrier"
+			#set_global_flag = "zhow_enable_carrier"
+	#	}
+	#}
 	option = {
 		name = zhow.enable.carrier
 		custom_tooltip = zhow.enable.tooltip
@@ -97,10 +102,10 @@ country_event = {
 			country_event = { id = zhowstart.3 }
 		}
 	}
-	option = {
-		name = zhow.enable.close
-		default_hide_option = yes
-	}
+	#option = {
+	#	name = zhow.enable.close
+	#	default_hide_option = yes
+	#}
 }
 
 # Console event to enable features in existing games
@@ -110,5 +115,17 @@ country_event = {
 	hide_window = yes
 	immediate = {
 		set_global_flag = "zhow_enable_carrier"
+	}
+}
+
+country_event = {
+	id = zhowstart.10
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		log = "zhow start .10"
+		# Triggered from addonMenu. Empty for now, we don't need to do anything.
+		# I just have it here because it's easier than adding a country_event = { id }
+		# call to addonMenu later, if other addons start using it.
 	}
 }

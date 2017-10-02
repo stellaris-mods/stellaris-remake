@@ -4,10 +4,12 @@ on_game_start = {
 		zhow_drone.1
 		zhow_amoeba.1
 		zhowstart.1
+		addonMenu.10
 	}
 }
 on_press_begin = {
 	events = {
+		addonMenu.20
 		zhowstart.3
 	}
 }

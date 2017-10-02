@@ -43,6 +43,13 @@ tech_swarm_strike_craft_1_desc: "Analyzing specimens from defeated Prethoryn ena
 
 # End vanilla overrides
 
+# Mod menu
+zhow_modmenu: "§YA Stellaris Remake ...§!"
+addonMenu.title: "Addon Features"
+addonMenu.desc: "Welcome! In this menu you can find lots of features to enable/disable before game start. You are the only player that has access to this menu, so please choose carefully - and most likely you should confer with any other players about which features to enable or disable.\n\n§PIt's important that you take the time to go through the menus. No other player can see this menu.§!"
+addonMenu.done: "§GApply features and close menu§!"
+addonMenu.back: "§Y<<< Back§!"
+
 # Carrier Supergroup
 # Carrier Strike Group
 
