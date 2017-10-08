@@ -75,20 +75,26 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
 	prerequisites = { "tech_spaceport_6" }
 	weight = @repeatableTechWeight
 
+	prereqfor_desc = {
+		custom = {
+			title = "STRIKE_AMOUNT"
+			desc = "STRIKE_AMOUNT_DESC"
+		}
+	}
+
 	weight_modifier = {
 		factor = @repatableTechFactor
 	}
-
 	ai_weight = {
 		factor = 1.0
 	}
-
 	weight_groups = {
 		repeatable
 	}
 	mod_weight_if_group_picked = {
 		repeatable = 0.01
 	}
+	modifier = {}
 }
 
 tech_repeatable_weapon_type_strike_craft_fire_rate = {
@@ -98,9 +104,16 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 	tier = @repeatableTechTier
 	category = { voidcraft }
 	ai_update_type = military
-	levels = -1
+	levels = 14
 	prerequisites = { "tech_spaceport_6" }
 	weight = @repeatableTechWeight
+
+	prereqfor_desc = {
+		custom = {
+			title = "STRIKE_COOLDOWN"
+			desc = "STRIKE_COOLDOWN_DESC"
+		}
+	}
 
 	weight_modifier = {
 		factor = @repatableTechFactor
@@ -113,13 +126,11 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 	weight_groups = {
 		repeatable
 	}
+
 	mod_weight_if_group_picked = {
 		repeatable = 0.01
 	}
-
-	modifier = {
-		weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
-	}
+	modifier = {}
 }
 
 
@@ -183,7 +194,7 @@ tech_pd_tracking_1 = {
 	cost = @tier1cost2
 	category = { computing }
 	ai_update_type = military
-	prerequisites = { "tech_administrative_ai" "tech_spaceport_6" }
+	prerequisites = { "tech_spaceport_6" }
 	weight = @tier1weight2
 
 	# unlocks point defence 1

@@ -28,7 +28,7 @@ tech_flak_batteries_2: "Effective Strike Weapons"
 tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our strike craft weapon alternatives."
 
 tech_repeatable_weapon_type_strike_craft_fire_damage: "Synapse Hangar Engineers"
-tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Adds additional hangar engineering tools and automated construction robots to allow for an additional strike craft production per cycle."
+tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Adds additional hangar engineering tools and automated construction robots to allow for an additional strike craft production for Battleships per cycle."
 tech_repeatable_weapon_type_strike_craft_fire_rate: "Boost Coolers"
 tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Boosting the coolers allows excess heat from the automated strike craft construction systems in the hangar bays allows faster launch times for new strike craft squadrons."
 
@@ -37,11 +37,17 @@ tech_strike_craft_1_desc: "Computer-controlled, unmanned drones are automaticall
 tech_strike_craft_2: "Automated Strike Bombers"
 tech_strike_craft_2_desc: "Allows the Battleship to construct an additional type of strike craft drone per squadron: The Bomber! On engagement, the type of strike craft produced is determined by a randomized set of dice rolled by the engineers."
 tech_strike_craft_3: "Additional Strike Craft"
-tech_strike_craft_3_desc: "A further refinement in strike craft construction hangar designs allows our Battleships to construct an extra random drone strike craft per squadron, bringing it up to a total of 3."
+tech_strike_craft_3_desc: "A further refinement in strike craft construction hangar designs allows our Battleships to construct an extra random drone strike craft."
 tech_amoeba_strike_craft_1_desc: "As we breed Space Amoebas in captivity, we study their symbiotic flagella and use this knowledge to upgrade our strike fighters and bombers. $GAdds new Section Template for strike crafts.§!"
 tech_swarm_strike_craft_1_desc: "Analyzing specimens from defeated Prethoryn enables us to clone and study their genetic buildup, allowing us to use this knowledge to improve our strike craft systems. $GAdds new Section Template for strike crafts.§!"
 
 # End vanilla overrides
+
+STRIKE_COOLDOWN: "Strike Craft Launch Rate: §G-10 days§!"
+STRIKE_COOLDOWN_DESC: "Lowers the time between automated strike craft deployment from §HBattleships§! by 10 days. Does not affect the §HCarrier§!."
+
+STRIKE_AMOUNT: "Strike Craft Amount: §G+1§!"
+STRIKE_AMOUNT_DESC: "Makes your §HBattleships§! spawn extra strike crafts at every hostile engagement (provided the cooldown is up). Does not affect the §HCarrier§!."
 
 # Mod menu
 zhow_modmenu: "§YA Stellaris Remake ...§!"
@@ -228,22 +234,6 @@ STRIKE_ARMOR_1: "Reinforced Hull"
 STRIKE_DAMAGE_1: "Barrel Widener"
 STRIKE_POWER_1: "Battery"
 STRIKE_EVASION_1: "Extra CPU"
-
-# This is show in the tech desc
-# Unlocks Component: STRIKE_COOLDOWN
-# if you hover it, the tooltip shows STRIKE_COOLDOWN_DESC
-# then the actual component is shown with the component type icon on the right side,
-# with a tooltip containing STRIKE_COOLDOWN_TEST and STRIKE_COOLDOWN_TEST_DESC
-STRIKE_COOLDOWN: "Strike Craft Cooldown -10"
-STRIKE_COOLDOWN_DESC: "Lowers the time between automated strike craft deployment by Battleships by 10 days. The cooldown starts at 150 days. The cooldown can't be less than 10 days, and you will get a warning message if you ever reach level 14 or higher on this repeatable technology."
-STRIKE_COOLDOWN_1: "$STRIKE_COOLDOWN$"
-STRIKE_COOLDOWN_1_DESC: "$STRIKE_COOLDOWN_DESC$\n\nThis component doesn't actually exist. It was only added to force this text show up in the technology description."
-
-STRIKE_AMOUNT: "Strike Crafts +1"
-STRIKE_AMOUNT_DESC: "Makes your Battleships spawn one extra random type of Strike Fighter or Bomber at every hostile engagement (provided the cooldown is up)."
-STRIKE_AMOUNT_1: "$STRIKE_AMOUNT$"
-STRIKE_AMOUNT_1_DESC: "$STRIKE_AMOUNT_DESC$\n\nThis component doesn't actually exist. It was only added to force this text show up in the technology description."
-
 
 ####################################
 # Carrier
