@@ -73,6 +73,6 @@ fleet_event = {
 				}
 			}
 		}
-		fleet_event = { id = zhowStrike.210 days = 10 }
+		fleet_event = { id = zhowStrike.200 days = 10 }
 	}
 }
