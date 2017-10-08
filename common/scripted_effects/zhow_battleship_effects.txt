@@ -6,7 +6,6 @@
 #}
 
 zhow_spawn_default_fighter = {
-	log = "Fighter"
 	create_ship = {
 		name = ""
 		random_existing_design = "strike_fighter"
@@ -16,7 +15,6 @@ zhow_spawn_default_fighter = {
 	}
 }
 zhow_spawn_default_bomber = {
-	log = "Bomber"
 	create_ship = {
 		name = ""
 		random_existing_design = "strike_bomber"

@@ -20,6 +20,7 @@ zcarrier_bomber = {
 }
 
 zcarrier_launch_squadron = {
+	zhowdbg_spawn_carrier = yes
 	fleet = {
 		while = {
 			count = 12

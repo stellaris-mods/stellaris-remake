@@ -20,17 +20,14 @@ fleet_event = {
 					is_ship_size = zhow_carrier
 				}
 				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_1" } }
-					log = "[root.GetName]: Carrier spawning squadron 1."
 					zcarrier_launch_squadron = yes
 					set_timed_ship_flag = { flag = "zhow_carrier_squad_1" days = 90 }
 				}
 				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_2" } }
-					log = "[root.GetName]: Carrier spawning squadron 2."
 					zcarrier_launch_squadron = yes
 					set_timed_ship_flag = { flag = "zhow_carrier_squad_2" days = 100 }
 				}
 				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_3" } }
-					log = "[root.GetName]: Carrier spawning squadron 3."
 					zcarrier_launch_squadron = yes
 					set_timed_ship_flag = { flag = "zhow_carrier_squad_3" days = 110 }
 				}

@@ -32,17 +32,18 @@ fleet_event = {
 			owner = {
 				set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
 				divide_variable = { which = "ZHowTmp" value = 2 }
-				#log = "[this.GetName]: Spawning [this.ZHowTmp] from Battleship."
 				while = {
 					limit = { check_variable = { which = "ZHowTmp" value > 0 } }
 					if = {
 						limit = { has_technology = "tech_strike_craft_2" }
+							zhowdbg_spawn_bs2 = yes
 							ROOT = {
 								zhow_spawn_default_fighter = yes
 								zhow_spawn_default_fighter = yes
 								zhow_spawn_default_bomber = yes
 							}
 						else = {
+							zhowdbg_spawn_bs = yes
 							ROOT = {
 								zhow_spawn_default_fighter = yes
 								zhow_spawn_default_fighter = yes
