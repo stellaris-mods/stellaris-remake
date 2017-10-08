@@ -1,0 +1,42 @@
+namespace = zhowBattleship
+
+# Battleships only. Chains itself.
+fleet_event = {
+	id = zhowBattleship.200
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_scope_valid = yes
+		is_in_combat = yes
+		exists = owner
+		any_owned_ship = { is_ship_size = battleship } # Fleet
+	}
+	immediate = {
+		owner = {
+			set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
+			while = {
+				limit = { check_variable = { which = "ZHowTmp" value > 0 } }
+				every_owned_ship = {
+					limit = {
+						exists = fleet
+						fleet = { is_same_value = ROOT }
+						is_ship_size = battleship
+					}
+					if = {
+						limit = { NOT = { has_ship_flag = "zhow_ignore" } }
+						if = {
+							limit = { PREV = { has_technology = "tech_strike_craft_2" } }
+								ROOT = { zhow_spawn_random = yes }
+							else = {
+								ROOT = { zhow_spawn_fighter = yes }
+							}
+						}
+						zhow_set_ignore_flag = yes
+					}
+				}
+				subtract_variable = { which = "ZHowTmp" value = 1 }
+			}
+		}
+		fleet_event = { id = zhowStrike.210 days = 14 }
+	}
+}

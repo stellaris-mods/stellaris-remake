@@ -78,8 +78,8 @@ STATION_LARGE_2NDAURA_MINEFIELD_1: "$AURA_MINEFIELD_1$ - $military_station_large
 ZHOW_LARGE_MISSILE_1: "$LARGE_MISSILE_1$"
 ZHOW_LARGE_MISSILE_2: "$LARGE_MISSILE_2$"
 
-howitshouldbe.explain.strike_cooldown: "We can stop researching strike craft fire rate now, we will no longer get any benefits from it.\n\nThe repeatable Strike Craft Fire Damage tech WILL give benefits, so pick that one instead."
-howitshouldbe.explain.strike_crafts: "You've finished researching Strike Fighter (drone) technology. We're getting a detailed report from our scientists:\n\n - Drones are launched from Battleships in combat\n - Autobuilt drones run out of fuel after ~100 days\n - Make sure all ships use the §Rsame FTL type§!\n - Shields only provide §R50%§! of their stated value on drones\n\nSince the drones are buildable, they occupy 1 navy slot. If you find yourself with too many, don't be afraid of sending them on a suicide mission, or dismantling them."
+zhowTech.explain.strike_cooldown: "We can stop researching strike craft fire rate now, we will no longer get any benefits from it.\n\nThe repeatable Strike Craft Fire Damage tech WILL give benefits, so pick that one instead."
+zhowTech.explain.strike_crafts: "You've finished researching Strike Fighter (drone) technology. We're getting a detailed report from our scientists:\n\n - Drones are launched from Battleships in combat\n - Autobuilt drones run out of fuel after ~100 days\n - Make sure all ships use the §Rsame FTL type§!\n - Shields only provide §R50%§! of their stated value on drones\n\nSince the drones are buildable, they occupy 1 navy slot. If you find yourself with too many, don't be afraid of sending them on a suicide mission, or dismantling them."
 
 CORVETTE_TORPEDO_1: "Standard Ballistic"
 DESTROYER_TORPEDO_1: "Standard Ballistic"

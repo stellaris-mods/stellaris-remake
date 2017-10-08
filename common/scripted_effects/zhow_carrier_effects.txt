@@ -5,7 +5,7 @@ zcarrier_fighter = {
 		random_existing_design = "strike_fighter"
 		prefix = no
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 90 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 
@@ -15,7 +15,7 @@ zcarrier_bomber = {
 		random_existing_design = "strike_bomber"
 		prefix = no
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 90 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 

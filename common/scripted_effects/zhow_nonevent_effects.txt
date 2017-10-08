@@ -3,7 +3,7 @@ zhow_spawn_fighter_drone = {
 		name = "Drone"
 		design = "Ancient Drone"
 		upgradable = no
-		#effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_ship_flag = "zhow_timed_life" } # Eternal
 	}
 }
 zhow_spawn_drone_fleet = {
@@ -33,6 +33,6 @@ zhow_spawn_fighter_amoeba = {
 		name = "Amoeba"
 		design = "Tiny Space Organism"
 		upgradable = no
-		#effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_ship_flag = "zhow_timed_life" } # Eternal
 	}
 }

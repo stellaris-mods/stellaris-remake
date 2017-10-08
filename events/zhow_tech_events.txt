@@ -1,0 +1,117 @@
+namespace = zhowTech
+
+# on game start
+event = {
+	id = zhowTech.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			zhow_free_missile_tech = yes
+			set_variable = {
+				which = "HISBStrikeAmount"
+				value = 2
+			}
+			set_variable = {
+				which = "HISBStrikeCooldown"
+				value = 150
+			}
+		}
+	}
+}
+
+# For any primitive civ that advances, or any other new country introduced somehow
+country_event = {
+	id = zhowTech.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		zhow_free_missile_tech = yes
+		if = {
+			limit = {
+				has_technology = tech_spaceport_6
+				has_global_flag = "zhow_enable_carrier"
+				NOT = { has_technology = zhow_tech_carrier_1 }
+			}
+			give_technology = {
+				tech = zhow_tech_carrier_1
+				message = yes
+			}
+			# Immediately create carrier project
+			country_event = { id = zhowCarrier.101 }
+		}
+		# last_increased_tech can't be used in a switch statement
+		# yes yes I should have used else-ifs below
+		if = {
+			limit = {
+				last_increased_tech = {
+					tech = tech_repeatable_weapon_type_strike_craft_fire_rate
+					level > 0
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = "HISBStrikeCooldown"
+						value > 19
+					}
+				}
+				subtract_variable = {
+					which = "HISBStrikeCooldown"
+					value = 10
+				}
+				else = {
+					country_event = { id = zhowTech.3 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = {
+					tech = tech_repeatable_weapon_type_strike_craft_fire_damage
+					level > 0
+				}
+			}
+			change_variable = {
+				which = "HISBStrikeAmount"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_strike_craft_1
+			}
+			country_event = { id = zhowTech.4 }
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_strike_craft_3
+			}
+			change_variable = {
+				which = "HISBStrikeAmount"
+				value = 1
+			}
+		}
+	}
+}
+
+# XXX We can't prevent the AI from researching this further without overwriting the tech files.
+country_event = {
+	id = zhowTech.3
+	title = "Stop researching fire rate"
+	desc = "zhowTech.explain.strike_cooldown"
+	is_triggered_only = yes
+	picture = GFX_evt_fleet_good
+	trigger = { is_ai = no }
+	option = { name = OK }
+}
+
+country_event = {
+	id = zhowTech.4
+	title = "Strike Crafts"
+	desc = "zhowTech.explain.strike_crafts"
+	is_triggered_only = yes
+	picture = GFX_evt_fleet_good
+	trigger = { is_ai = no }
+	option = { name = OK }
+}

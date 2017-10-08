@@ -1,0 +1,86 @@
+
+zhow_free_missile_tech = {
+	if = { limit = { NOT = { has_technology = "tech_missiles_1" } }
+		give_technology = {
+			tech = tech_missiles_1
+			message = no
+		}
+	}
+}
+
+# ZZZ This doesn't work, only last_increased_tech
+#has_technology = {
+#	tech = tech_repeatable_weapon_type_strike_craft_fire_rate
+#	level = 3
+#}
+
+zhow_spawn_random = {
+	random_list = {
+		50 = {
+			create_ship = {
+				name = ""
+				random_existing_design = "strike_fighter"
+				prefix = no
+				upgradable = no
+				effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+			}
+		}
+		50 = {
+			create_ship = {
+				name = ""
+				random_existing_design = "strike_bomber"
+				prefix = no
+				upgradable = no
+				effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+			}
+		}
+	}
+}
+zhow_spawn_fighter = {
+	create_ship = {
+		name = ""
+		random_existing_design = "strike_fighter"
+		prefix = no
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+
+zhow_set_ignore_flag = {
+	owner = {
+	if = { limit = {
+		OR = {
+			check_variable = { which = "HISBStrikeCooldown" value = 150 }
+			check_variable = { which = "HISBStrikeCooldown" value < 10 }
+		} }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 150 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 140 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 140 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 130 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 130 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 120 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 120 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 110 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 110 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 100 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 100 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 90 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 90 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 80 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 80 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 70 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 70 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 60 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 60 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 50 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 50 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 40 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 40 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 30 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 30 } }
+	else = { if = { limit = { check_variable = { which = "HISBStrikeCooldown" value = 20 } }
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 20 } }
+	else = {
+		PREV = { set_timed_ship_flag = { flag = "zhow_ignore" days = 10 } }
+	} } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+}

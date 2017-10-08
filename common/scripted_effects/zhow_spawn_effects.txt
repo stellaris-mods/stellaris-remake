@@ -1,315 +1,193 @@
-# technosphere country should get extra, has 4x hangars
+# XXX technosphere country should get extra, has 4x hangars
 
 # Individual ships
 zhow_spawn_fighter_swarm = {
 	create_ship = {
-		name = random
+		name = ""
 		design = "Swarm Tiny"
 		graphical_culture = "swarm_01"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 zhow_spawn_fighter_ed1 = {
 	create_ship = {
-		name = random
+		name = ""
 		design = "Extradimensional Speck"
 		graphical_culture = "extra_dimensional_01"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 zhow_spawn_fighter_ed2 = {
 	create_ship = {
-		name = random
+		name = ""
 		design = "Extradimensional Speck"
 		graphical_culture = "extra_dimensional_02"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 zhow_spawn_fighter_ed3 = {
 	create_ship = {
-		name = random
+		name = ""
 		design = "Extradimensional Speck"
 		graphical_culture = "extra_dimensional_03"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 zhow_spawn_fighter_ai = {
 	create_ship = {
-		name = random
+		name = ""
 		design = "AI Chip"
 		graphical_culture = "ai_01"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 zhow_spawn_fighter_hiver = {
 	create_ship = {
-		name = "Hive Drone"
+		name = ""
 		design = "Hive Fighter"
 		upgradable = no
-		effect = { set_timed_ship_flag = { flag = zhow_timed_life days = 100 } }
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
 }
 
 # ===========================
-# Create new fleet, spawning from stations
+# Station spawns
 #
 zhow_spawn_hiver_fleet = {
-	prev = {
-		set_timed_fleet_flag = {
-			flag = howitshouldbe_ignore
-			days = 30
-		}
-	}
+	fleet_event = { id = zhowStrike.100 days = 30 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			set_location = PREVPREV
+			set_owner = ROOT.owner
+			while = {
+				count = 10
+				zhow_spawn_fighter_hiver = yes
+			}
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 }
 
 zhow_spawn_swarm_fleet = {
-	zhow_set_fleet_timer = yes
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
+			set_owner = ROOT.owner
 			zhow_spawn_fighter_swarm = yes
 			zhow_spawn_fighter_swarm = yes
 			zhow_spawn_fighter_swarm = yes
 			zhow_spawn_fighter_swarm = yes
-			set_location = PREVPREV
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 }
-zhow_spawn_ed1_fleet ={
-	zhow_set_fleet_timer = yes
+zhow_spawn_ed1_fleet = {
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
+			set_owner = ROOT.owner
 			zhow_spawn_fighter_ed1 = yes
 			zhow_spawn_fighter_ed1 = yes
 			zhow_spawn_fighter_ed1 = yes
-			set_location = PREVPREV
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 }
 zhow_spawn_ed2_fleet = {
-	zhow_set_fleet_timer = yes
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
+			set_owner = ROOT.owner
 			zhow_spawn_fighter_ed2 = yes
 			zhow_spawn_fighter_ed2 = yes
 			zhow_spawn_fighter_ed2 = yes
-			set_location = PREVPREV
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 
 }
 zhow_spawn_ed3_fleet = {
-	zhow_set_fleet_timer = yes
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
+			set_owner = ROOT.owner
 			zhow_spawn_fighter_ed3 = yes
 			zhow_spawn_fighter_ed3 = yes
 			zhow_spawn_fighter_ed3 = yes
-			set_location = PREVPREV
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 }
 
 # final_core_ai 2s + 8m + 6l + 4xl + 16 strike
 # core_ai 2s + 8m + 6l + 2xl + 8 strike
-zhow_spawn_ai_fleet ={
-	zhow_set_fleet_timer = yes
+zhow_spawn_ai_fleet = {
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
-			set_owner = PREV
+			set_owner = ROOT.owner
 			while = {
 				count = 16
 				zhow_spawn_fighter_ai = yes
 			}
-			set_location = PREVPREV
+			set_location = ROOT
 			set_fleet_stance = aggressive
 			set_aggro_range = 80
-			set_aggro_range_measure_from = self
+			set_aggro_range_measure_from = ROOT
 		}
 	}
 }
 
-# zhow_spawn_default_fleet = {
-# 	zhow_set_fleet_timer = yes
-# 	create_fleet = {
-# 		effect = {
-# 			set_owner = PREV
-# 			set_location = PREVPREV
-# 			set_fleet_stance = aggressive
-# 			set_aggro_range = 80
-# 			set_aggro_range_measure_from = self
-# 		}
-# 	}
-# 	set_variable = {
-# 		which = temp_counter
-# 		value = HISBStrikeAmount
-# 	}
-# 	while = {
-# 		limit = {
-# 			check_variable = {
-# 				which = temp_counter
-# 				value > 0
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				has_technology = tech_strike_craft_2
-# 			}
-# 			last_created_fleet = {
-# 				hisb_create_random_craft = yes
-# 			}
-# 			else = {
-# 				last_created_fleet = {
-# 					hisb_create_fighter_craft = yes
-# 				}
-# 			}
-# 		}
-# 		change_variable = {
-# 			which = temp_counter
-# 			value = -1
-# 		}
-# 	}
-# }
-
 # ===========================
-# Spawn into an existing fleet, root
+# Ship spawns
 #
 
 zhow_spawn_hiver = {
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-			zhow_spawn_fighter_hiver = yes
-		}
-	}
+	zhow_spawn_fighter_hiver = yes
+	zhow_spawn_fighter_hiver = yes
+	zhow_spawn_fighter_hiver = yes
 }
-
 zhow_spawn_swarm = {
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_swarm = yes
-			zhow_spawn_fighter_swarm = yes
-			zhow_spawn_fighter_swarm = yes
-		}
-	}
+	zhow_spawn_fighter_swarm = yes
+	zhow_spawn_fighter_swarm = yes
+	zhow_spawn_fighter_swarm = yes
 }
-zhow_spawn_ed1 ={
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_ed1 = yes
-			zhow_spawn_fighter_ed1 = yes
-			zhow_spawn_fighter_ed1 = yes
-		}
-	}
+zhow_spawn_ed1 = {
+	zhow_spawn_fighter_ed1 = yes
+	zhow_spawn_fighter_ed1 = yes
+	zhow_spawn_fighter_ed1 = yes
 }
 zhow_spawn_ed2 = {
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_ed2 = yes
-			zhow_spawn_fighter_ed2 = yes
-			zhow_spawn_fighter_ed2 = yes
-		}
-	}
+	zhow_spawn_fighter_ed2 = yes
+	zhow_spawn_fighter_ed2 = yes
+	zhow_spawn_fighter_ed2 = yes
 }
 zhow_spawn_ed3 = {
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_ed3 = yes
-			zhow_spawn_fighter_ed3 = yes
-			zhow_spawn_fighter_ed3 = yes
-		}
-	}
+	zhow_spawn_fighter_ed3 = yes
+	zhow_spawn_fighter_ed3 = yes
+	zhow_spawn_fighter_ed3 = yes
 }
-
-zhow_spawn_ai ={
-	prev = {
-		zhow_set_ship_timer = yes
-		fleet = {
-			zhow_spawn_fighter_ai = yes
-			zhow_spawn_fighter_ai = yes
-			zhow_spawn_fighter_ai = yes
-		}
-	}
-}
-
-zhow_spawn_default = {
-	hisb_set_timed_strike_flag = yes
-	set_variable = {
-		which = temp_counter
-		value = HISBStrikeAmount
-	}
-	while = {
-		limit = {
-			check_variable = {
-				which = temp_counter
-				value > 0
-			}
-		}
-		if = {
-			limit = {
-				has_technology = tech_strike_craft_2
-			}
-			prev = {
-				fleet = {
-					hisb_create_random_craft = yes
-				}
-			}
-			else = {
-				prev = {
-					fleet = {
-						hisb_create_fighter_craft = yes
-					}
-				}
-			}
-		}
-		change_variable = {
-			which = temp_counter
-			value = -1
-		}
-	}
+zhow_spawn_ai = {
+	zhow_spawn_fighter_ai = yes
+	zhow_spawn_fighter_ai = yes
+	zhow_spawn_fighter_ai = yes
 }
