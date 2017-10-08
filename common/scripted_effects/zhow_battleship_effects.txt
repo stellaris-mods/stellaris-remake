@@ -1,45 +1,25 @@
 
-zhow_free_missile_tech = {
-	if = { limit = { NOT = { has_technology = "tech_missiles_1" } }
-		give_technology = {
-			tech = tech_missiles_1
-			message = no
-		}
-	}
-}
-
 # ZZZ This doesn't work, only last_increased_tech
 #has_technology = {
 #	tech = tech_repeatable_weapon_type_strike_craft_fire_rate
 #	level = 3
 #}
 
-zhow_spawn_random = {
-	random_list = {
-		50 = {
-			create_ship = {
-				name = ""
-				random_existing_design = "strike_fighter"
-				prefix = no
-				upgradable = no
-				effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-			}
-		}
-		50 = {
-			create_ship = {
-				name = ""
-				random_existing_design = "strike_bomber"
-				prefix = no
-				upgradable = no
-				effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-			}
-		}
-	}
-}
-zhow_spawn_fighter = {
+zhow_spawn_default_fighter = {
+	log = "Fighter"
 	create_ship = {
 		name = ""
 		random_existing_design = "strike_fighter"
+		prefix = no
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_default_bomber = {
+	log = "Bomber"
+	create_ship = {
+		name = ""
+		random_existing_design = "strike_bomber"
 		prefix = no
 		upgradable = no
 		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }

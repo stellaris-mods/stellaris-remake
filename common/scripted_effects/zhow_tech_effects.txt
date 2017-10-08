@@ -1,0 +1,9 @@
+
+zhow_free_missile_tech = {
+	if = { limit = { NOT = { has_technology = "tech_missiles_1" } }
+		give_technology = {
+			tech = tech_missiles_1
+			message = no
+		}
+	}
+}

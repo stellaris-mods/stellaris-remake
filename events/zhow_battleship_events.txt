@@ -12,31 +12,47 @@ fleet_event = {
 		any_owned_ship = { is_ship_size = battleship } # Fleet
 	}
 	immediate = {
-		owner = {
-			set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
-			while = {
-				limit = { check_variable = { which = "ZHowTmp" value > 0 } }
-				every_owned_ship = {
+		while = {
+			limit = {
+				count_fleet_ships = {
+					count > 0
 					limit = {
-						exists = fleet
-						fleet = { is_same_value = ROOT }
 						is_ship_size = battleship
-					}
-					if = {
-						limit = { NOT = { has_ship_flag = "zhow_ignore" } }
-						if = {
-							limit = { PREV = { has_technology = "tech_strike_craft_2" } }
-								ROOT = { zhow_spawn_random = yes }
-							else = {
-								ROOT = { zhow_spawn_fighter = yes }
-							}
-						}
-						zhow_set_ignore_flag = yes
+						NOT = { has_ship_flag = "zhow_ignore" }
 					}
 				}
-				subtract_variable = { which = "ZHowTmp" value = 1 }
+			}
+			random_owned_ship = {
+				limit = {
+					is_ship_size = battleship
+					NOT = { has_ship_flag = "zhow_ignore" }
+				}
+				zhow_set_ignore_flag = yes
+			}
+			owner = {
+				set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
+				divide_variable = { which = "ZHowTmp" value = 2 }
+				#log = "[this.GetName]: Spawning [this.ZHowTmp] from Battleship."
+				while = {
+					limit = { check_variable = { which = "ZHowTmp" value > 0 } }
+					if = {
+						limit = { has_technology = "tech_strike_craft_2" }
+							ROOT = {
+								zhow_spawn_default_fighter = yes
+								zhow_spawn_default_fighter = yes
+								zhow_spawn_default_bomber = yes
+							}
+						else = {
+							ROOT = {
+								zhow_spawn_default_fighter = yes
+								zhow_spawn_default_fighter = yes
+							}
+						}
+					}
+					subtract_variable = { which = "ZHowTmp" value = 1 }
+				}
 			}
 		}
-		fleet_event = { id = zhowStrike.210 days = 14 }
+		fleet_event = { id = zhowStrike.210 days = 10 }
 	}
 }

@@ -36,7 +36,7 @@ fleet_event = {
 				}
 			}
 		}
-		fleet_event = { id = zhowCarrier.200 days = 14 }
+		fleet_event = { id = zhowCarrier.200 days = 10 }
 	}
 }
 
