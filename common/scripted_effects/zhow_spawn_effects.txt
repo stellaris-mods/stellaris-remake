@@ -45,6 +45,39 @@ zhow_spawn_fighter_hiver = {
 	}
 }
 
+zhow_spawn_fighter_fe_jump = {
+	create_ship = {
+		name = ""
+		design = "Zip"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_bomber_fe_jump = {
+	create_ship = {
+		name = ""
+		design = "Zap"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_fighter_fe_psijump = {
+	create_ship = {
+		name = ""
+		design = "Psi-Zip"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_bomber_fe_psijump = {
+	create_ship = {
+		name = ""
+		design = "Psi-Zap"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+
 # ===========================
 # Station spawns
 #
@@ -130,17 +163,59 @@ zhow_spawn_swarm = {
 	}
 }
 
+# set_country_flag = fallen_empire_2 uses psi jump
+# the other FEs use JUMP_DRIVE_1
 # massive_ship_fallen_empire has 4x strike
 # large_ship_fallen_empire has 2x strike
 # 8x ships from each component = 16/32
-zhow_spawn_fe = {
-	while = {
-		count = 16
-		zcarrier_fighter = yes
+zhow_spawn_fallen_massive = {
+	ROOT = {
+		if = {
+			limit = { owner = { has_country_flag = "fallen_empire_2" } }
+			while = {
+				count = 16
+				zhow_spawn_fighter_fe_psijump = yes
+			}
+			while = {
+				count = 16
+				zhow_spawn_bomber_fe_psijump = yes
+			}
+			else = {
+				while = {
+					count = 16
+					zhow_spawn_fighter_fe_jump = yes
+				}
+				while = {
+					count = 16
+					zhow_spawn_bomber_fe_jump = yes
+				}
+			}
+		}
 	}
-	while = {
-		count = 8
-		zcarrier_bomber = yes
+}
+zhow_spawn_fallen_large = {
+	ROOT = {
+		if = {
+			limit = { owner = { has_country_flag = "fallen_empire_2" } }
+			while = {
+				count = 8
+				zhow_spawn_fighter_fe_psijump = yes
+			}
+			while = {
+				count = 8
+				zhow_spawn_bomber_fe_psijump = yes
+			}
+			else = {
+				while = {
+					count = 8
+					zhow_spawn_fighter_fe_jump = yes
+				}
+				while = {
+					count = 8
+					zhow_spawn_bomber_fe_jump = yes
+				}
+			}
+		}
 	}
 }
 

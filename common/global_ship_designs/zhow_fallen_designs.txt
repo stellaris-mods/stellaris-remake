@@ -1,0 +1,143 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+###
+
+
+ship_design = {
+	name = "Zip"
+	ship_size = strike_fighter
+	section = {
+		template = "STRIKE_FIGHTER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_PLASMA_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FIGHTER_POINT_DEFENCE_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component = "STRIKE_JUMP_DRIVE_1"
+	required_component = "STRIKE_FIGHTER_COMPONENT_5"
+}
+
+ship_design = {
+	name = "Zap"
+	ship_size = strike_bomber
+	section = {
+		template = "STRIKE_BOMBER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_AUTOCANNON_2"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "STRIKE_PD_MISSILE_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component = "STRIKE_JUMP_DRIVE_1"
+	required_component = "STRIKE_BOMBER_COMPONENT_5"
+}
+
+ship_design = {
+	name = "Psi-Zip"
+	ship_size = strike_fighter
+	section = {
+		template = "STRIKE_FIGHTER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_PLASMA_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "FIGHTER_POINT_DEFENCE_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component = "STRIKE_PSI_JUMP_DRIVE_1"
+	required_component = "STRIKE_FIGHTER_COMPONENT_5"
+}
+
+ship_design = {
+	name = "Psi-Zap"
+	ship_size = strike_bomber
+	section = {
+		template = "STRIKE_BOMBER_1"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "STRIKE_PD_AUTOCANNON_2"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "STRIKE_PD_MISSILE_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "STRIKE_EVASION_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "STRIKE_EVASION_1"
+		}
+	}
+	required_component = "STRIKE_PSI_JUMP_DRIVE_1"
+	required_component = "STRIKE_BOMBER_COMPONENT_5"
+}
