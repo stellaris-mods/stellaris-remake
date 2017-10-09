@@ -41,6 +41,7 @@ ship_section_template = {
 	medium_utility_slots = 0
 	aux_utility_slots = 3
 }
+
 ship_section_template = {
 	key = "HIVE_STRIKE_FIGHTER_1"
 	ship_size = nongfx_strike_fighter
@@ -62,6 +63,68 @@ ship_section_template = {
 	}
 
 	small_utility_slots = 0
+	medium_utility_slots = 0
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "AI_STRIKE_FIGHTER_1"
+	ship_size = nongfx_strike_fighter
+	fits_on_slot = mid
+	entity = "ai_01_strike_fighter_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part2"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part3"
+	}
+
+	small_utility_slots = 1
+	medium_utility_slots = 0
+	aux_utility_slots = 3
+}
+
+ship_section_template = {
+	key = "SWARM_STRIKE_FIGHTER_1"
+	ship_size = nongfx_strike_fighter
+	fits_on_slot = mid
+	entity = "swarm_01_strike_fighter_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part1"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part2"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "part3"
+	}
+
+	small_utility_slots = 1
 	medium_utility_slots = 0
 	aux_utility_slots = 3
 }

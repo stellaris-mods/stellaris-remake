@@ -24,34 +24,6 @@ zhow_spawn_fighter_swarm = {
 	create_ship = {
 		name = ""
 		design = "Swarm Tiny"
-		graphical_culture = "swarm_01"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_ed1 = {
-	create_ship = {
-		name = ""
-		design = "Extradimensional Speck"
-		graphical_culture = "extra_dimensional_01"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_ed2 = {
-	create_ship = {
-		name = ""
-		design = "Extradimensional Speck"
-		graphical_culture = "extra_dimensional_02"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_ed3 = {
-	create_ship = {
-		name = ""
-		design = "Extradimensional Speck"
-		graphical_culture = "extra_dimensional_03"
 		upgradable = no
 		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
@@ -60,7 +32,6 @@ zhow_spawn_fighter_ai = {
 	create_ship = {
 		name = ""
 		design = "AI Chip"
-		graphical_culture = "ai_01"
 		upgradable = no
 		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
 	}
@@ -77,14 +48,43 @@ zhow_spawn_fighter_hiver = {
 # ===========================
 # Station spawns
 #
+
+# NAME_Hive_Asteroid has 3x HIVE_STRIKE_CRAFT
+# count = 20
+# regeneration_per_day = 0
+# launch_time = 0.2
+# Our crafts have a bit more damage, but lower weapon range
+# 20 range vs 40 vanilla
 zhow_spawn_hiver_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 30 }
+	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
 			set_owner = ROOT.owner
 			while = {
-				count = 10
+				count = 60
 				zhow_spawn_fighter_hiver = yes
+			}
+			set_location = ROOT
+			set_fleet_stance = aggressive
+			set_aggro_range = 140
+			set_aggro_range_measure_from = ROOT
+		}
+	}
+}
+
+# large station has 3x SWARM_STRIKE_CRAFT
+# small station has 1x SWARM_STRIKE_CRAFT
+# count = 10
+# regeneration_per_day = @regen
+# launch_time = 1.0
+zhow_spawn_swarm_fleet = {
+	fleet_event = { id = zhowStrike.100 days = 120 }
+	create_fleet = {
+		effect = {
+			set_owner = ROOT.owner
+			while = {
+				count = 20
+				zhow_spawn_fighter_swarm = yes
 			}
 			set_location = ROOT
 			set_fleet_stance = aggressive
@@ -94,78 +94,16 @@ zhow_spawn_hiver_fleet = {
 	}
 }
 
-zhow_spawn_swarm_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			zhow_spawn_fighter_swarm = yes
-			zhow_spawn_fighter_swarm = yes
-			zhow_spawn_fighter_swarm = yes
-			zhow_spawn_fighter_swarm = yes
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
-		}
-	}
-}
-zhow_spawn_ed1_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			zhow_spawn_fighter_ed1 = yes
-			zhow_spawn_fighter_ed1 = yes
-			zhow_spawn_fighter_ed1 = yes
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
-		}
-	}
-}
-zhow_spawn_ed2_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			zhow_spawn_fighter_ed2 = yes
-			zhow_spawn_fighter_ed2 = yes
-			zhow_spawn_fighter_ed2 = yes
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
-		}
-	}
-
-}
-zhow_spawn_ed3_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			zhow_spawn_fighter_ed3 = yes
-			zhow_spawn_fighter_ed3 = yes
-			zhow_spawn_fighter_ed3 = yes
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
-		}
-	}
-}
-
-# final_core_ai 2s + 8m + 6l + 4xl + 16 strike
-# core_ai 2s + 8m + 6l + 2xl + 8 strike
+# AI_STRIKE_CRAFT has 100hp and launches 10x strike
+# final_core_ai 16x AI_STRIKE_CRAFT
+# core_ai 8x AI_STRIKE_CRAFT
 zhow_spawn_ai_fleet = {
 	fleet_event = { id = zhowStrike.100 days = 120 }
 	create_fleet = {
 		effect = {
 			set_owner = ROOT.owner
 			while = {
-				count = 16
+				count = 120
 				zhow_spawn_fighter_ai = yes
 			}
 			set_location = ROOT
@@ -180,33 +118,41 @@ zhow_spawn_ai_fleet = {
 # Ship spawns
 #
 
-zhow_spawn_hiver = {
-	zhow_spawn_fighter_hiver = yes
-	zhow_spawn_fighter_hiver = yes
-	zhow_spawn_fighter_hiver = yes
-}
+# large_ship_carrier_swarm has 4x SWARM_STRIKE_CRAFT
+# queen_swarm has 3x
+# count = 10
+# regeneration_per_day = @regen
+# launch_time = 1.0
 zhow_spawn_swarm = {
-	zhow_spawn_fighter_swarm = yes
-	zhow_spawn_fighter_swarm = yes
-	zhow_spawn_fighter_swarm = yes
+	while = {
+		count = 30
+		zhow_spawn_fighter_swarm = yes
+	}
 }
-zhow_spawn_ed1 = {
-	zhow_spawn_fighter_ed1 = yes
-	zhow_spawn_fighter_ed1 = yes
-	zhow_spawn_fighter_ed1 = yes
+
+# massive_ship_fallen_empire has 4x strike
+# large_ship_fallen_empire has 2x strike
+# 8x ships from each component = 16/32
+zhow_spawn_fe = {
+	while = {
+		count = 16
+		zcarrier_fighter = yes
+	}
+	while = {
+		count = 8
+		zcarrier_bomber = yes
+	}
 }
-zhow_spawn_ed2 = {
-	zhow_spawn_fighter_ed2 = yes
-	zhow_spawn_fighter_ed2 = yes
-	zhow_spawn_fighter_ed2 = yes
-}
-zhow_spawn_ed3 = {
-	zhow_spawn_fighter_ed3 = yes
-	zhow_spawn_fighter_ed3 = yes
-	zhow_spawn_fighter_ed3 = yes
-}
-zhow_spawn_ai = {
-	zhow_spawn_fighter_ai = yes
-	zhow_spawn_fighter_ai = yes
-	zhow_spawn_fighter_ai = yes
+
+
+# Uses 2x standard fighters and 2x bomber = 32 strikers
+zhow_spawn_sphere = {
+	while = {
+		count = 16
+		zcarrier_fighter = yes
+	}
+	while = {
+		count = 16
+		zcarrier_bomber = yes
+	}
 }

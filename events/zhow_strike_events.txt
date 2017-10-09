@@ -44,7 +44,12 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_technology = "tech_spaceport_6"
+		OR = {
+			has_technology = "tech_spaceport_6"
+			# These dont have the all_technology_module
+			is_country_type = guardian_hiver
+			is_country_type = guardian_sphere
+		}
 		# ZZZ When this event triggers, is_in_combat is already true.
 		FROMFROM = {
 			NOT = { has_fleet_flag = "zhow_ignore" }
@@ -69,9 +74,6 @@ country_event = {
 								is_ship_size = military_station_large_swarm
 								is_ship_size = military_station_small_swarm
 								is_ship_size = hive_asteroid
-								is_ship_size = dimensional_portal_ed
-								is_ship_size = military_station_large_ed
-								is_ship_size = anchor_station
 								is_ship_size = final_core_ai
 								is_ship_size = core_ai
 							}
@@ -90,8 +92,6 @@ country_event = {
 									is_ship_size = large_ship_carrier_swarm
 									is_ship_size = queen_swarm
 									is_ship_size = sphere
-									is_ship_size = large_ship_ed # TEST
-									is_ship_size = large_ship_ai # TEST
 								}
 							}
 						}
@@ -117,9 +117,6 @@ fleet_event = {
 			switch = {
 				trigger = is_country_type
 				swarm = { ROOT = { zhow_spawn_swarm_fleet = yes } }
-				extradimensional = { ROOT = { zhow_spawn_ed1_fleet = yes } }
-				extradimensional_2 = { ROOT = { zhow_spawn_ed2_fleet = yes } }
-				extradimensional_3 = { ROOT = { zhow_spawn_ed3_fleet = yes } }
 				ai_empire = { ROOT = { zhow_spawn_ai_fleet = yes } }
 				guardian_hiver = { ROOT = { zhow_spawn_hiver_fleet = yes } }
 			}
@@ -159,19 +156,15 @@ fleet_event = {
 								is_ship_size = large_ship_carrier_swarm
 								is_ship_size = queen_swarm
 								is_ship_size = sphere
-								is_ship_size = large_ship_ed # TEST
-								is_ship_size = large_ship_ai # TEST
 							}
 						}
 						PREV = {
 							switch = {
 								trigger = is_country_type
 								swarm = { ROOT = { zhow_spawn_swarm = yes } }
-								extradimensional = { ROOT = { zhow_spawn_ed1 = yes } }
-								extradimensional_2 = { ROOT = { zhow_spawn_ed2 = yes } }
-								extradimensional_3 = { ROOT = { zhow_spawn_ed3 = yes } }
-								ai_empire = { ROOT = { zhow_spawn_ai = yes } }
-								guardian_hiver = { ROOT = { zhow_spawn_hiver = yes } }
+								fallen_empire = { ROOT = { zhow_spawn_fe = yes } }
+								awakened_fallen_empire = { ROOT = { zhow_spawn_fe = yes } }
+								guardian_sphere = { ROOT = { zhow_spawn_sphere = yes }}
 							}
 						}
 					}

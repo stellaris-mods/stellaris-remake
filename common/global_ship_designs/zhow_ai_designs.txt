@@ -17,19 +17,40 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 ###
 
+
+# From AI_STRIKE_CRAFT:
+# count = 10
+# regeneration_per_day = @regen
+# launch_time = 1.0
+#
+# damage = { min = 19 max = 21 }
+# cooldown = 8
+# range = 20
+# accuracy = 1.0
+#
+# health = 100 - base hp is 50 + SMALL_ARMOR_1
+# armor = 0
+# shield = 0
+# evasion = 0.80
+
 ship_design = {
 	name = "AI Chip"
-	ship_size = strike_fighter
+	ship_size = nongfx_strike_fighter
+
 	section = {
-		template = "STRIKE_FIGHTER_1"
+		template = "AI_STRIKE_FIGHTER_1"
 		slot = "mid"
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "STRIKE_PD_AUTOCANNON_3"
+			template = "STRIKE_PD_PLASMA_3"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
-			template = "FIGHTER_POINT_DEFENCE_3"
+			template = "FIGHTER_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "STRIKE_PD_AUTOCANNON_1"
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
@@ -39,7 +60,11 @@ ship_design = {
 			slot = "AUX_UTILITY_2"
 			template = "STRIKE_EVASION_1"
 		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_ARMOR_1"
+		}
 	}
-	required_component="STRIKE_WARP_DRIVE_3"
-	required_component="STRIKE_FIGHTER_COMPONENT_3"
+	required_component = "STRIKE_WARP_DRIVE_3"
+	required_component = "STRIKE_FIGHTER_COMPONENT_3"
 }

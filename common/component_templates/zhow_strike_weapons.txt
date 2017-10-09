@@ -18,7 +18,7 @@
 ###
 
 
-@fighter_range = 12
+@fighter_range = 20
 @bomber_range = 80
 
 # All weapons are defined for the PD slot
