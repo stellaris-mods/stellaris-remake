@@ -50,7 +50,6 @@ fleet_event = {
 			}
 			owner = {
 				set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
-				divide_variable = { which = "ZHowTmp" value = 2 }
 				while = {
 					limit = { check_variable = { which = "ZHowTmp" value > 0 } }
 					if = {
@@ -69,7 +68,7 @@ fleet_event = {
 							}
 						}
 					}
-					subtract_variable = { which = "ZHowTmp" value = 1 }
+					subtract_variable = { which = "ZHowTmp" value = 2 }
 				}
 			}
 		}

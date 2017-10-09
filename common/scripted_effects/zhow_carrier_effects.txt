@@ -18,36 +18,16 @@
 ###
 
 
-zcarrier_fighter = {
-	create_ship = {
-		name = ""
-		random_existing_design = "strike_fighter"
-		prefix = no
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-
-zcarrier_bomber = {
-	create_ship = {
-		name = ""
-		random_existing_design = "strike_bomber"
-		prefix = no
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-
 zcarrier_launch_squadron = {
 	zhowdbg_spawn_carrier = yes
 	fleet = {
 		while = {
 			count = 12
-			zcarrier_fighter = yes
+			zhow_spawn_default_fighter = yes
 		}
 		while = {
 			count = 4
-			zcarrier_bomber = yes
+			zhow_spawn_default_bomber = yes
 		}
 	}
 }

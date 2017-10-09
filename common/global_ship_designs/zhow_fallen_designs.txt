@@ -46,7 +46,7 @@ ship_design = {
 		}
 	}
 	required_component = "STRIKE_JUMP_DRIVE_1"
-	required_component = "STRIKE_FIGHTER_COMPONENT_5"
+	required_component = "STRIKE_FIGHTER_COMPONENT_2"
 }
 
 ship_design = {
@@ -57,7 +57,7 @@ ship_design = {
 		slot = "mid"
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "STRIKE_PD_AUTOCANNON_2"
+			template = "FIGHTER_POINT_DEFENCE_1"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
@@ -77,7 +77,7 @@ ship_design = {
 		}
 	}
 	required_component = "STRIKE_JUMP_DRIVE_1"
-	required_component = "STRIKE_BOMBER_COMPONENT_5"
+	required_component = "STRIKE_BOMBER_COMPONENT_2"
 }
 
 ship_design = {
@@ -108,7 +108,7 @@ ship_design = {
 		}
 	}
 	required_component = "STRIKE_PSI_JUMP_DRIVE_1"
-	required_component = "STRIKE_FIGHTER_COMPONENT_5"
+	required_component = "STRIKE_FIGHTER_COMPONENT_2"
 }
 
 ship_design = {
@@ -119,7 +119,7 @@ ship_design = {
 		slot = "mid"
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "STRIKE_PD_AUTOCANNON_2"
+			template = "FIGHTER_POINT_DEFENCE_1"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
@@ -139,5 +139,5 @@ ship_design = {
 		}
 	}
 	required_component = "STRIKE_PSI_JUMP_DRIVE_1"
-	required_component = "STRIKE_BOMBER_COMPONENT_5"
+	required_component = "STRIKE_BOMBER_COMPONENT_2"
 }
