@@ -15,6 +15,7 @@ on_press_begin = {
 }
 on_monthly_pulse = {
 	events = {
+		zhowStrike.10
 		zhowStrike.1000
 	}
 }

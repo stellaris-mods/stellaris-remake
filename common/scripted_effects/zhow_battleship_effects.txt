@@ -24,25 +24,6 @@
 #	level = 3
 #}
 
-zhow_spawn_default_fighter = {
-	create_ship = {
-		name = ""
-		random_existing_design = "strike_fighter"
-		prefix = no
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_default_bomber = {
-	create_ship = {
-		name = ""
-		random_existing_design = "strike_bomber"
-		prefix = no
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-
 zhow_set_ignore_flag = {
 	owner = {
 	if = { limit = {

@@ -20,13 +20,13 @@
 
 
 zhowdbg_spawn_bs = {
-	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [Root.GetName]: Battleship wave #[this.ZHowTmp]: 2x fighter." }
+	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [this.GetName]: Battleship launching 2x fighter." }
 }
 zhowdbg_spawn_bs2 = {
-	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [Root.GetName]: Battleship wave #[this.ZHowTmp]: 2x fighter + bomber." }
+	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [this.GetName]: Battleship launching 2x fighter + bomber." }
 }
 zhowdbg_spawn_carrier = {
-	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [Root.GetName]: Carrier launching 12x figher + 4x bomber."}
+	if = { limit = { has_global_flag = "debug" } log = "ZHOW: [this.GetName]: Carrier launching 12x figher + 4x bomber."}
 }
 
 

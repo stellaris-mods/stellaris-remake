@@ -104,7 +104,7 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 	tier = @repeatableTechTier
 	category = { voidcraft }
 	ai_update_type = military
-	levels = 14
+	levels = 12
 	prerequisites = { "tech_spaceport_6" }
 	weight = @repeatableTechWeight
 

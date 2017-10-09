@@ -19,43 +19,6 @@
 
 namespace = zhowCarrier
 
-# Carrier enters combat, and recurring.
-fleet_event = {
-	id = zhowCarrier.200
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_scope_valid = yes
-		is_in_combat = yes
-		exists = owner
-		any_owned_ship = { is_ship_size = zhow_carrier } # Fleet
-	}
-	immediate = {
-		owner = {
-			every_owned_ship = {
-				limit = {
-					exists = fleet
-					fleet = { is_same_value = ROOT }
-					is_ship_size = zhow_carrier
-				}
-				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_1" } }
-					zcarrier_launch_squadron = yes
-					set_timed_ship_flag = { flag = "zhow_carrier_squad_1" days = 90 }
-				}
-				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_2" } }
-					zcarrier_launch_squadron = yes
-					set_timed_ship_flag = { flag = "zhow_carrier_squad_2" days = 100 }
-				}
-				if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_3" } }
-					zcarrier_launch_squadron = yes
-					set_timed_ship_flag = { flag = "zhow_carrier_squad_3" days = 110 }
-				}
-			}
-		}
-		fleet_event = { id = zhowCarrier.200 days = 10 }
-	}
-}
-
 # MTTH 30 years +/-
 country_event = {
 	id = zhowCarrier.100

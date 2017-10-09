@@ -72,7 +72,7 @@ country_event = {
 				limit = {
 					check_variable = {
 						which = "HISBStrikeCooldown"
-						value > 19
+						value > 30
 					}
 				}
 				subtract_variable = {

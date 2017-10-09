@@ -44,7 +44,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		OR = {
+		OR = { # Same as in zhow_can_country_spawn trigger
 			has_technology = "tech_spaceport_6"
 			# These dont have the all_technology_module
 			is_country_type = guardian_hiver
@@ -53,10 +53,7 @@ country_event = {
 		# ZZZ When this event triggers, is_in_combat is already true.
 		FROMFROM = {
 			NOT = { has_fleet_flag = "zhow_ignore" }
-			OR = {
-				is_ship_class = shipclass_military_station
-				is_ship_class = shipclass_military
-			}
+			any_owned_ship = { zhow_can_ship_spawn = yes }
 		}
 	}
 	immediate = {
@@ -67,222 +64,30 @@ country_event = {
 					flag = "zhow_ignore"
 					days = 1
 				}
-				if = { limit = { is_ship_class = shipclass_military_station }
-					if = {
-						limit = {
-							OR = {
-								is_ship_size = military_station_large_swarm
-								is_ship_size = military_station_small_swarm
-								is_ship_size = hive_asteroid
-								is_ship_size = final_core_ai
-								is_ship_size = core_ai
-							}
-						}
-						fleet_event = { id = zhowStrike.100 }
-					}
-				else = {
-					if = {
-						limit = {
-							any_owned_ship = { # Fleet
-								OR = {
-									is_ship_size = zhow_carrier
-									is_ship_size = battleship
-									is_ship_size = massive_ship_fallen_empire
-									is_ship_size = large_ship_fallen_empire
-									is_ship_size = large_ship_carrier_swarm
-									is_ship_size = queen_swarm
-									is_ship_size = sphere
-								}
-							}
-						}
-						fleet_event = { id = zhowStrike.200 }
-					}
-				} }
+				zhow_do_fleet_spawns = yes
 			}
 		}
 	}
 }
 
-# Military Stations. All scripted effects chain back.
-fleet_event = {
-	id = zhowStrike.100
+# on_monthly_pulse
+event = {
+	id = zhowStrike.10
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		is_scope_valid = yes
-		is_in_combat = yes
-	}
 	immediate = {
-		owner = {
-			switch = {
-				trigger = is_country_type
-				swarm = { ROOT = { zhow_spawn_swarm_fleet = yes } }
-				ai_empire = { ROOT = { zhow_spawn_ai_fleet = yes } }
-				guardian_hiver = { ROOT = { zhow_spawn_hiver_fleet = yes } }
+		every_country = {
+			limit = { zhow_can_country_spawn = yes }
+			every_owned_fleet = {
+				limit = {
+					is_in_combat = yes
+					any_owned_ship = { zhow_can_ship_spawn = yes }
+				}
+				zhow_do_fleet_spawns = yes
 			}
 		}
 	}
 }
-
-# Military Ships.
-fleet_event = {
-	id = zhowStrike.200
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_scope_valid = yes
-		is_in_combat = yes
-	}
-	immediate = {
-		if = { limit = { owner = { is_ai = no } }
-			if = {
-				limit = { any_owned_ship = { is_ship_size = battleship } }
-				fleet_event = { id = zhowBattleship.200 }
-			}
-			if = {
-				limit = { any_owned_ship = { is_ship_size = zhow_carrier } }
-				fleet_event = { id = zhowCarrier.200 }
-			}
-		else = { if = { limit = { owner = { is_country_type = "swarm" } }
-			if = {
-				limit = {
-					any_owned_ship = {
-						OR = {
-							is_ship_size = queen_swarm
-							is_ship_size = large_ship_carrier_swarm
-						}
-					}
-				}
-				fleet_event = { id = zhowStrike.210 }
-			}
-		else = { if = { limit = { owner = { is_country_type = "guardian_sphere" } }
-			if = {
-				limit = { any_owned_ship = { is_ship_size = sphere } }
-				zhow_spawn_sphere = yes
-				fleet_event = { id = zhowStrike.200 days = 110 }
-			}
-		else = { if = { limit = { owner = {
-			OR = {
-				is_country_type = "awakened_fallen_empire"
-				is_country_type = "fallen_empire"
-			} } }
-			if = {
-				limit = {
-					any_owned_ship = {
-						OR = {
-							is_ship_size = massive_ship_fallen_empire
-							is_ship_size = large_ship_fallen_empire
-						}
-					}
-				}
-				fleet_event = { id = zhowStrike.220 }
-			}
-		} } } } } } }
-	}
-}
-
-# Swarm
-fleet_event = {
-	id = zhowStrike.210
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_scope_valid = yes
-		is_in_combat = yes
-		exists = owner
-		any_owned_ship = { # Fleet
-			OR = {
-				is_ship_size = large_ship_carrier_swarm
-				is_ship_size = queen_swarm
-			}
-		}
-	}
-	immediate = {
-		while = {
-			limit = {
-				count_fleet_ships = {
-					count > 0
-					limit = {
-						OR = {
-							is_ship_size = large_ship_carrier_swarm
-							is_ship_size = queen_swarm
-						}
-						NOT = { has_ship_flag = "zhow_ignore" }
-					}
-				}
-			}
-			random_owned_ship = {
-				limit = {
-					OR = {
-						is_ship_size = large_ship_carrier_swarm
-						is_ship_size = queen_swarm
-					}
-					NOT = { has_ship_flag = "zhow_ignore" }
-				}
-				set_timed_ship_flag = {
-					flag = "zhow_ignore"
-					days = 110
-				}
-			}
-			zhow_spawn_swarm = yes
-		}
-		fleet_event = { id = zhowStrike.210 days = 30 }
-	}
-}
-
-# Fallen Empire
-fleet_event = {
-	id = zhowStrike.220
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_scope_valid = yes
-		is_in_combat = yes
-		exists = owner
-		any_owned_ship = { # Fleet
-			OR = {
-				is_ship_size = massive_ship_fallen_empire
-				is_ship_size = large_ship_fallen_empire
-			}
-		}
-	}
-	immediate = {
-		while = {
-			limit = {
-				count_fleet_ships = {
-					count > 0
-					limit = {
-						OR = {
-							is_ship_size = massive_ship_fallen_empire
-							is_ship_size = large_ship_fallen_empire
-						}
-						NOT = { has_ship_flag = "zhow_ignore" }
-					}
-				}
-			}
-			random_owned_ship = {
-				limit = {
-					OR = {
-						is_ship_size = massive_ship_fallen_empire
-						is_ship_size = large_ship_fallen_empire
-					}
-					NOT = { has_ship_flag = "zhow_ignore" }
-				}
-				set_timed_ship_flag = {
-					flag = "zhow_ignore"
-					days = 110
-				}
-				if = { limit = { is_ship_size = massive_ship_fallen_empire }
-					zhow_spawn_fallen_massive = yes
-				else = {
-					zhow_spawn_fallen_large = yes
-				} }
-			}
-		}
-		fleet_event = { id = zhowStrike.220 days = 30 }
-	}
-}
-
 
 # on_monthly_pulse
 # Deletes strike vessels.

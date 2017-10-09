@@ -1,0 +1,95 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+###
+
+zhow_spawn_fighter_swarm = {
+	create_ship = {
+		name = ""
+		design = "Swarm Tiny"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_fighter_ai = {
+	create_ship = {
+		name = ""
+		design = "AI Chip"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_fighter_hiver = {
+	create_ship = {
+		name = ""
+		design = "Hive Fighter"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+
+zhow_spawn_fighter_fe_jump = {
+	create_ship = {
+		name = ""
+		design = "Zip"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_bomber_fe_jump = {
+	create_ship = {
+		name = ""
+		design = "Zap"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_fighter_fe_psijump = {
+	create_ship = {
+		name = ""
+		design = "Psi-Zip"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_bomber_fe_psijump = {
+	create_ship = {
+		name = ""
+		design = "Psi-Zap"
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+
+zhow_spawn_default_fighter = {
+	create_ship = {
+		name = ""
+		random_existing_design = "strike_fighter"
+		prefix = no
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}
+zhow_spawn_default_bomber = {
+	create_ship = {
+		name = ""
+		random_existing_design = "strike_bomber"
+		prefix = no
+		upgradable = no
+		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+	}
+}

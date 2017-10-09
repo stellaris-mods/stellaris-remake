@@ -17,90 +17,59 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 ###
 
-# XXX technosphere country should get extra, has 4x hangars
 
-# Individual ships
-zhow_spawn_fighter_swarm = {
-	create_ship = {
-		name = ""
-		design = "Swarm Tiny"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_ai = {
-	create_ship = {
-		name = ""
-		design = "AI Chip"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_hiver = {
-	create_ship = {
-		name = ""
-		design = "Hive Fighter"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
+###############################################################################
+# Utility
+#
+
+# THIS is a ship
+zhow_create_strike_fleet = {
+	create_fleet = {
+		effect = {
+			set_owner = PREV.owner
+			set_location = PREV
+			set_fleet_stance = aggressive
+			set_aggro_range = 80
+			set_aggro_range_measure_from = PREV
+		}
 	}
 }
 
-zhow_spawn_fighter_fe_jump = {
-	create_ship = {
-		name = ""
-		design = "Zip"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_bomber_fe_jump = {
-	create_ship = {
-		name = ""
-		design = "Zap"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_fighter_fe_psijump = {
-	create_ship = {
-		name = ""
-		design = "Psi-Zip"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
-}
-zhow_spawn_bomber_fe_psijump = {
-	create_ship = {
-		name = ""
-		design = "Psi-Zap"
-		upgradable = no
-		effect = { set_timed_ship_flag = { flag = "zhow_timed_life" days = 90 } }
-	}
+# THIS is a ship
+zhow_set_standard_timeout = {
+	set_timed_ship_flag = { flag = "zhow_ignore" days = 120 }
 }
 
-# ===========================
-# Station spawns
+###############################################################################
+# Docs
+#
+# The effects in this file deal with spawning strike crafts from the
+# specific ship_sizes that should.
+#
+# There is one effect per ship ID.
+# In all effects except zhow_do_fleet_spawns, THIS is the ship itself,
+# and no other scope can be inferred. ROOT might not even exist.
+# owner+fleet obviously exist as well.
+#
+
+
+###############################################################################
+# Spawners
 #
 
 # NAME_Hive_Asteroid has 3x HIVE_STRIKE_CRAFT
-# count = 20
+# count = 20 x3 = 60
 # regeneration_per_day = 0
 # launch_time = 0.2
 # Our crafts have a bit more damage, but lower weapon range
 # 20 range vs 40 vanilla
-zhow_spawn_hiver_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			while = {
-				count = 60
-				zhow_spawn_fighter_hiver = yes
-			}
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 140
-			set_aggro_range_measure_from = ROOT
+zhow_spawn_hive_asteroid = {
+	zhow_set_standard_timeout = yes
+	zhow_create_strike_fleet = yes
+	last_created_fleet = {
+		while = {
+			count = 60
+			zhow_spawn_fighter_hiver = yes
 		}
 	}
 }
@@ -110,19 +79,23 @@ zhow_spawn_hiver_fleet = {
 # count = 10
 # regeneration_per_day = @regen
 # launch_time = 1.0
-zhow_spawn_swarm_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			while = {
-				count = 20
-				zhow_spawn_fighter_swarm = yes
-			}
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
+zhow_spawn_military_station_large_swarm = {
+	zhow_set_standard_timeout = yes
+	zhow_create_strike_fleet = yes
+	last_created_fleet = {
+		while = {
+			count = 30
+			zhow_spawn_fighter_swarm = yes
+		}
+	}
+}
+zhow_spawn_military_station_small_swarm = {
+	zhow_set_standard_timeout = yes
+	zhow_create_strike_fleet = yes
+	last_created_fleet = {
+		while = {
+			count = 10
+			zhow_spawn_fighter_swarm = yes
 		}
 	}
 }
@@ -130,36 +103,48 @@ zhow_spawn_swarm_fleet = {
 # AI_STRIKE_CRAFT has 100hp and launches 10x strike
 # final_core_ai 16x AI_STRIKE_CRAFT
 # core_ai 8x AI_STRIKE_CRAFT
-zhow_spawn_ai_fleet = {
-	fleet_event = { id = zhowStrike.100 days = 120 }
-	create_fleet = {
-		effect = {
-			set_owner = ROOT.owner
-			while = {
-				count = 120
-				zhow_spawn_fighter_ai = yes
-			}
-			set_location = ROOT
-			set_fleet_stance = aggressive
-			set_aggro_range = 80
-			set_aggro_range_measure_from = ROOT
+zhow_spawn_final_core_ai = {
+	zhow_set_standard_timeout = yes
+	zhow_create_strike_fleet = yes
+	last_created_fleet = {
+		while = {
+			count = 160
+			zhow_spawn_fighter_ai = yes
 		}
 	}
 }
-
-# ===========================
-# Ship spawns
-#
+zhow_spawn_core_ai = {
+	zhow_set_standard_timeout = yes
+	zhow_create_strike_fleet = yes
+	last_created_fleet = {
+		while = {
+			count = 80
+			zhow_spawn_fighter_ai = yes
+		}
+	}
+}
 
 # large_ship_carrier_swarm has 4x SWARM_STRIKE_CRAFT
 # queen_swarm has 3x
 # count = 10
 # regeneration_per_day = @regen
 # launch_time = 1.0
-zhow_spawn_swarm = {
-	while = {
-		count = 30
-		zhow_spawn_fighter_swarm = yes
+zhow_spawn_large_ship_carrier_swarm = {
+	zhow_set_standard_timeout = yes
+	fleet = {
+		while = {
+			count = 30
+			zhow_spawn_fighter_swarm = yes
+		}
+	}
+}
+zhow_spawn_queen_swarm = {
+	zhow_set_standard_timeout = yes
+	fleet = {
+		while = {
+			count = 30
+			zhow_spawn_fighter_swarm = yes
+		}
 	}
 }
 
@@ -168,66 +153,123 @@ zhow_spawn_swarm = {
 # massive_ship_fallen_empire has 4x strike
 # large_ship_fallen_empire has 2x strike
 # 8x ships from each component = 16/32
-zhow_spawn_fallen_massive = {
-	ROOT = {
-		if = {
-			limit = { owner = { has_country_flag = "fallen_empire_2" } }
-			while = {
-				count = 16
-				zhow_spawn_fighter_fe_psijump = yes
-			}
-			while = {
-				count = 16
-				zhow_spawn_bomber_fe_psijump = yes
-			}
-			else = {
-				while = {
-					count = 16
-					zhow_spawn_fighter_fe_jump = yes
-				}
-				while = {
-					count = 16
-					zhow_spawn_bomber_fe_jump = yes
-				}
-			}
-		}
-	}
-}
-zhow_spawn_fallen_large = {
-	ROOT = {
-		if = {
-			limit = { owner = { has_country_flag = "fallen_empire_2" } }
-			while = {
-				count = 8
-				zhow_spawn_fighter_fe_psijump = yes
-			}
-			while = {
-				count = 8
-				zhow_spawn_bomber_fe_psijump = yes
-			}
-			else = {
-				while = {
-					count = 8
-					zhow_spawn_fighter_fe_jump = yes
-				}
-				while = {
-					count = 8
-					zhow_spawn_bomber_fe_jump = yes
-				}
-			}
-		}
-	}
-}
 
+zhow_spawn_massive_ship_fallen_empire = {
+	zhow_set_standard_timeout = yes
+	fleet = {
+		if = { limit = { owner = { has_country_flag = "fallen_empire_2" } }
+			while = { count = 16 zhow_spawn_fighter_fe_psijump = yes }
+			while = { count = 16 zhow_spawn_bomber_fe_psijump = yes }
+		else = {
+			while = { count = 16 zhow_spawn_fighter_fe_jump = yes }
+			while = { count = 16 zhow_spawn_bomber_fe_jump = yes }
+		} }
+	}
+}
+zhow_spawn_large_ship_fallen_empire = {
+	zhow_set_standard_timeout = yes
+	fleet = {
+		if = { limit = { owner = { has_country_flag = "fallen_empire_2" } }
+			while = { count = 8 zhow_spawn_fighter_fe_psijump = yes }
+			while = { count = 8 zhow_spawn_bomber_fe_psijump = yes }
+		else = {
+			while = { count = 8 zhow_spawn_fighter_fe_jump = yes }
+			while = { count = 8 zhow_spawn_bomber_fe_jump = yes }
+		} }
+	}
+}
 
 # Uses 2x standard fighters and 2x bomber = 32 strikers
 zhow_spawn_sphere = {
-	while = {
-		count = 16
-		zcarrier_fighter = yes
+	zhow_set_standard_timeout = yes
+	fleet = {
+		while = {
+			count = 16
+			zhow_spawn_default_fighter = yes
+		}
+		while = {
+			count = 16
+			zhow_spawn_default_bomber = yes
+		}
 	}
+}
+
+# Carrier spawns
+zhow_spawn_carrier = {
+	set_timed_ship_flag = { flag = "zhow_ignore" days = 89 }
+	if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_1" } }
+		zcarrier_launch_squadron = yes
+		set_timed_ship_flag = { flag = "zhow_carrier_squad_1" days = 88 }
+	}
+	if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_2" } }
+		zcarrier_launch_squadron = yes
+		set_timed_ship_flag = { flag = "zhow_carrier_squad_2" days = 88 }
+	}
+	if = { limit = { NOT = { has_ship_flag = "zhow_carrier_squad_3" } }
+		zcarrier_launch_squadron = yes
+		set_timed_ship_flag = { flag = "zhow_carrier_squad_3" days = 88 }
+	}
+}
+
+# Spawns from battleship based on tech level
+zhow_spawn_battleship = {
+	zhow_set_ignore_flag = yes
+	owner = {
+		set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
+		while = {
+			limit = { check_variable = { which = "ZHowTmp" value > 0 } }
+			if = { limit = { has_technology = "tech_strike_craft_2" }
+				zhowdbg_spawn_bs2 = yes
+				PREV = {
+					fleet = {
+						zhow_spawn_default_fighter = yes
+						zhow_spawn_default_fighter = yes
+						zhow_spawn_default_bomber = yes
+					}
+				}
+			else = {
+				zhowdbg_spawn_bs = yes
+				PREV = {
+					fleet = {
+						zhow_spawn_default_fighter = yes
+						zhow_spawn_default_fighter = yes
+					}
+				}
+			} }
+			subtract_variable = { which = "ZHowTmp" value = 2 }
+		}
+	}
+}
+
+###############################################################################
+# Handle an entire fleet
+#
+
+zhow_do_fleet_spawns = {
 	while = {
-		count = 16
-		zcarrier_bomber = yes
+		limit = {
+			count_fleet_ships = {
+				count > 0
+				limit = { zhow_can_ship_spawn = yes }
+			}
+		}
+		random_owned_ship = {
+			limit = { zhow_can_ship_spawn = yes }
+			switch = {
+				trigger = is_ship_size
+				zhow_carrier = { zhow_spawn_carrier = yes }
+				battleship = { zhow_spawn_battleship = yes }
+				massive_ship_fallen_empire = { zhow_spawn_massive_ship_fallen_empire = yes }
+				large_ship_fallen_empire = { zhow_spawn_large_ship_fallen_empire = yes }
+				large_ship_carrier_swarm = { zhow_spawn_large_ship_carrier_swarm = yes }
+				queen_swarm = { zhow_spawn_queen_swarm = yes }
+				sphere = { zhow_spawn_sphere = yes }
+				military_station_large_swarm = { zhow_spawn_military_station_large_swarm = yes }
+				military_station_small_swarm = { zhow_spawn_military_station_small_swarm = yes }
+				hive_asteroid = { zhow_spawn_hive_asteroid = yes }
+				final_core_ai = { zhow_spawn_final_core_ai = yes }
+				core_ai = { zhow_spawn_core_ai = yes }
+			}
+		}
 	}
 }
