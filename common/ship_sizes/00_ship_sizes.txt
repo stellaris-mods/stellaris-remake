@@ -1,4 +1,4 @@
-# XXX Changes from vanilla:
+# Changes from vanilla:
 # 1. All 4 standard ships evasion increased by 5
 # 2. Destroyer evasion increased to 40 from 25
 # 3. Large military station 2nd aura slot changed to station_large_2nd_aura_components to fix AI using same in both

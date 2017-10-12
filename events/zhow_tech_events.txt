@@ -114,7 +114,6 @@ country_event = {
 	}
 }
 
-# XXX We can't prevent the AI from researching this further without overwriting the tech files.
 country_event = {
 	id = zhowTech.3
 	title = "Stop researching fire rate"
