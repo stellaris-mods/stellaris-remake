@@ -24,11 +24,11 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "SMALL_MISSILE_2"
+	#upgrades_to = "SMALL_MISSILE_2"
 }
 
 ### Missile Launcher
@@ -45,18 +45,18 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "medium_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "MEDIUM_MISSILE_2"
+	#upgrades_to = "MEDIUM_MISSILE_2"
 }
 
 ### Missile Launcher
 weapon_component_template = {
 	key = "LARGE_MISSILE_1"
 	size = small
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 	hidden = yes
 	should_ai_use = no
 	ai_weight = { weight = 0 }
@@ -66,12 +66,11 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	prerequisites = { "tech_missiles_1" }
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "large_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "LARGE_MISSILE_2"
+	#upgrades_to = "LARGE_MISSILE_2"
 }
 
 ### Advanced Missile Launcher
@@ -88,11 +87,11 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "SMALL_MISSILE_3"
+	#upgrades_to = "SMALL_MISSILE_3"
 }
 
 ### Advanced Missile Launcher
@@ -109,18 +108,18 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "medium_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "MEDIUM_MISSILE_3"
+	#upgrades_to = "MEDIUM_MISSILE_3"
 }
 
 ### Advanced Missile Launcher
 weapon_component_template = {
 	key = "LARGE_MISSILE_2"
 	size = small
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 	hidden = yes
 	should_ai_use = no
 	ai_weight = { weight = 0 }
@@ -130,12 +129,11 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	prerequisites = { "tech_missiles_2" }
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "large_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
-	upgrades_to = "LARGE_MISSILE_3"
+	#upgrades_to = "LARGE_MISSILE_3"
 }
 
 ### Strike Missile Launcher
@@ -152,7 +150,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -173,7 +171,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "medium_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -184,7 +182,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "LARGE_MISSILE_3"
 	size = torpedo
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 
 	icon = "GFX_ship_part_missile_3"
 	icon_frame = 1
@@ -213,7 +211,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -234,7 +232,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "medium_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -245,7 +243,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "LARGE_MISSILE_4"
 	size = torpedo
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 
 	icon = "GFX_ship_part_missile_4"
 	icon_frame = 1
@@ -274,7 +272,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -294,7 +292,7 @@ weapon_component_template = {
 	static_rotation = no
 	type = missile
 
-	component_set = "zhow_hidden_set"
+	#component_set = "zhow_hidden_set"
 	projectile_gfx = "medium_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_long_range }
@@ -304,7 +302,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "LARGE_MISSILE_5"
 	size = torpedo
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 
 	icon = "GFX_ship_part_missile_5"
 	icon_frame = 1

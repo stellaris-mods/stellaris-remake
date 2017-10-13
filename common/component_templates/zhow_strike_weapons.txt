@@ -174,11 +174,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0.2
 	missile_health = 2
 	missile_armor = 0
 	missile_shield = 0
+	missile_retarget_range = 20
 
 	#size_restriction = { strike_bomber }
 }
@@ -211,11 +212,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0.3
 	missile_health = 3
 	missile_armor = 0
 	missile_shield = 0
+	missile_retarget_range = 20
 
 	#size_restriction = { strike_bomber }
 }
@@ -248,11 +250,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0.4
 	missile_health = 4
 	missile_armor = 0
 	missile_shield = 0
+	missile_retarget_range = 20
 
 	#size_restriction = { strike_bomber }
 }
@@ -284,11 +287,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0.5
 	missile_health = 5
 	missile_armor = 0
 	missile_shield = 1
+	missile_retarget_range = 20
 
 	#size_restriction = { strike_bomber }
 }
@@ -416,11 +420,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 3.6
+	missile_speed = 8
 	missile_evasion = 0.1
 	missile_health = 3
 	missile_armor = 0
 	missile_shield = 3
+	missile_retarget_range = 15
 
 	#size_restriction = { strike_bomber }
 }
@@ -454,11 +459,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 3.6
+	missile_speed = 8
 	missile_evasion = 0.1
 	missile_health = 4
 	missile_armor = 0
 	missile_shield = 3
+	missile_retarget_range = 15
 }
 ### Armored Torpedoes
 weapon_component_template = {
@@ -488,11 +494,12 @@ weapon_component_template = {
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 3.6
+	missile_speed = 8
 	missile_evasion = 0.1
 	missile_health = 5
 	missile_armor = 0
 	missile_shield = 3
+	missile_retarget_range = 15
 }
 
 

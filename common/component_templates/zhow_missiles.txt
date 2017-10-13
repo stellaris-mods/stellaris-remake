@@ -18,10 +18,15 @@
 ###
 
 ### Missile Launcher
+
+# These components basically allow us to scale down the starting tech
+# missiles without overwriting weapon_components.csv
+
+# Copy of SMALL_MISSILE_1
 weapon_component_template = {
 	key = "ZHOW_LARGE_MISSILE_1"
 	size = torpedo
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 
 	icon = "GFX_ship_part_missile_1"
 	icon_frame = 1
@@ -36,30 +41,32 @@ weapon_component_template = {
 	upgrades_to = "ZHOW_LARGE_MISSILE_2"
 
 	power = -2.5
-	cost = 2.5
+	cost = 3
 
 	damage = { min = 8 max = 12 }
-	shield_damage = 1
+	shield_damage = 1.15
 	shield_penetration = 0
-	armor_penetration = 0
-	windup = { min = 20 max = 30 }
+	armor_penetration = 0.15
+	windup = { min = 2 max = 25 }
 	total_fire_time = 30
-	range = 45
+	range = 70
 	accuracy = 1
 	tracking = 0.7
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0
 	missile_health = 1
 	missile_armor = 0
 	missile_shield = 0
+	missile_retarget_range = 20
 }
 
 ### Advanced Missile Launcher
+# Copy of MEDIUM_MISSILE_2
 weapon_component_template = {
 	key = "ZHOW_LARGE_MISSILE_2"
 	size = torpedo
-	entity = "turret_missile_large_entity"
+	entity = "turret_missile_medium_entity"
 
 	icon = "GFX_ship_part_missile_2"
 	icon_frame = 1
@@ -74,21 +81,22 @@ weapon_component_template = {
 	upgrades_to = "LARGE_MISSILE_3"
 
 	power = -10
-	cost = 10
+	cost = 7
 
 	damage = { min = 16 max = 30 }
-	shield_damage = 1
+	shield_damage = 1.15
 	shield_penetration = 0
-	armor_penetration = 0
-	windup = { min = 20 max = 30 }
+	armor_penetration = 0.25
+	windup = { min = 2 max = 25 }
 	total_fire_time = 30
-	range = 65
+	range = 90
 	accuracy = 1
-	tracking = 0.7
+	tracking = 0.4
 
-	missile_speed = 5
+	missile_speed = 10
 	missile_evasion = 0.1
-	missile_health = 1
+	missile_health = 3
 	missile_armor = 0
 	missile_shield = 0
+	missile_retarget_range = 25
 }
