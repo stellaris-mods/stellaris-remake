@@ -519,14 +519,14 @@ weapon_component_template = {
 	power = -1
 	cost = 0
 
-	damage = { min = 2 max = 3 }
+	damage = { min = 0.5 max = 2 }
 	shield_damage = 1
 	shield_penetration = 0
 	armor_penetration = 0
-	windup = { min = 1 max = 1 }
-	total_fire_time = 19
-	range = 10
-	accuracy = 0.8
+	windup = { min = 0.00 max = 0.00 }
+	total_fire_time = 3
+	range = 30
+	accuracy = 0.75
 	tracking = 0.1
 }
 
@@ -548,14 +548,14 @@ weapon_component_template = {
 	power = -2
 	cost = 0
 
-	damage = { min = 3 max = 4 }
+	damage = { min = 0.75 max = 3 }
 	shield_damage = 1
 	shield_penetration = 0
 	armor_penetration = 0
-	windup = { min = 1 max = 1 }
-	total_fire_time = 19
-	range = 10
-	accuracy = 0.8
+	windup = { min = 0.00 max = 0.00 }
+	total_fire_time = 3
+	range = 30
+	accuracy = 0.75
 	tracking = 0.2
 }
 
@@ -577,14 +577,14 @@ weapon_component_template = {
 	power = -3
 	cost = 0
 
-	damage = { min = 4 max = 5 }
+	damage = { min = 1 max = 4 }
 	shield_damage = 1
 	shield_penetration = 0
 	armor_penetration = 0
-	windup = { min = 1 max = 1 }
-	total_fire_time = 19
-	range = 10
-	accuracy = 0.8
+	windup = { min = 0.00 max = 0.00 }
+	total_fire_time = 3
+	range = 30
+	accuracy = 0.75
 	tracking = 0.3
 }
 ### Point Defence
@@ -604,13 +604,13 @@ weapon_component_template = {
 	power = -4
 	cost = 0
 
-	damage = { min = 5 max = 6 }
+	damage = { min = 1.25 max = 5 }
 	shield_damage = 1
 	shield_penetration = 0
 	armor_penetration = 0
-	windup = { min = 1 max = 1 }
-	total_fire_time = 19
-	range = 10
-	accuracy = 0.8
+	windup = { min = 0.00 max = 0.00 }
+	total_fire_time = 3
+	range = 30
+	accuracy = 0.75
 	tracking = 0.4
 }
