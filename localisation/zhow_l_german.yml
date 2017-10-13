@@ -9,6 +9,8 @@ l_german:
 # To override vanilla strings, they must be higher in natural sort order. A comes before B, etc.
 # A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
+count_combatant_fleet_trigger: "Count Combatant Fleets"
+
 starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
 
 weapon_type_strike_craft_weapon_damage_mult: "Ignore"
