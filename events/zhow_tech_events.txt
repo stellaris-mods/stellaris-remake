@@ -46,22 +46,21 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		zhow_free_missile_tech = yes
-		if = {
-			limit = {
-				has_technology = tech_spaceport_6
-				has_global_flag = "zhow_enable_carrier"
-				NOT = { has_technology = zhow_tech_carrier_1 }
-			}
-			give_technology = {
-				tech = zhow_tech_carrier_1
-				message = yes
-			}
+		if = { limit = { last_increased_tech = zhow_tech_carrier_1 }
 			# Immediately create carrier project
 			country_event = { id = zhowCarrier.101 }
-		}
-		# last_increased_tech can't be used in a switch statement
-		# yes yes I should have used else-ifs below
-		if = {
+		else = { if = { limit = { last_increased_tech = tech_strike_craft_2 }
+			country_event = { id = zhowTech.4 }
+		else = { if = { limit = {
+			last_increased_tech = {
+				tech = tech_repeatable_weapon_type_strike_craft_fire_damage
+				level > 0
+			} }
+			change_variable = {
+				which = "HISBStrikeAmount"
+				value = 1
+			}
+		else = { if = {
 			limit = {
 				last_increased_tech = {
 					tech = tech_repeatable_weapon_type_strike_craft_fire_rate
@@ -83,34 +82,7 @@ country_event = {
 					country_event = { id = zhowTech.3 }
 				}
 			}
-		}
-		if = {
-			limit = {
-				last_increased_tech = {
-					tech = tech_repeatable_weapon_type_strike_craft_fire_damage
-					level > 0
-				}
-			}
-			change_variable = {
-				which = "HISBStrikeAmount"
-				value = 1
-			}
-		}
-		if = {
-			limit = {
-				last_increased_tech = tech_spaceport_6
-			}
-			country_event = { id = zhowTech.4 }
-		}
-		if = {
-			limit = {
-				last_increased_tech = tech_strike_craft_3
-			}
-			change_variable = {
-				which = "HISBStrikeAmount"
-				value = 1
-			}
-		}
+		}}}}}}}
 	}
 }
 
@@ -126,7 +98,7 @@ country_event = {
 
 country_event = {
 	id = zhowTech.4
-	title = "Strike Crafts"
+	title = "Designable Drones"
 	desc = "zhowTech.explain.strike_crafts"
 	is_triggered_only = yes
 	picture = GFX_evt_fleet_good

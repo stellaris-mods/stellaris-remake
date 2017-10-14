@@ -54,7 +54,7 @@ ZHOW_LARGE_MISSILE_1: "$LARGE_MISSILE_1$"
 ZHOW_LARGE_MISSILE_2: "$LARGE_MISSILE_2$"
 
 zhowTech.explain.strike_cooldown: "We can stop researching $tech_repeatable_weapon_type_strike_craft_fire_rate$ now, we will no longer get any benefits from it.\n\n$tech_repeatable_weapon_type_strike_craft_fire_damage$ will give benefits, so pick that instead."
-zhowTech.explain.strike_crafts: "We're getting a detailed report from our scientists:\n\n - Drones are launched from Battleships in combat\n - Autobuilt drones run out of fuel after ~100 days\n - Make sure all ships use the §Rsame FTL type§!\n - Shields only provide §R50%§! of their stated value on drones. If you find yourself with too many, don't be afraid of sending them on a suicide mission, or dismantling them manually."
+zhowTech.explain.strike_crafts: "We're getting a detailed report from our engineers:\n\n - Drones run out of fuel after ~90 days\n - Make sure all ship designs use the §Rsame FTL type§!\n - Shields only provide §R50%§! of their stated value on drones."
 
 CORVETTE_TORPEDO_1: "Standard Ballistic"
 DESTROYER_TORPEDO_1: "Standard Ballistic"
