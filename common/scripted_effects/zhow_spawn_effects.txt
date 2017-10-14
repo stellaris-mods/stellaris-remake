@@ -194,6 +194,24 @@ zhow_spawn_sphere = {
 	}
 }
 
+# Spaceport
+show_spawn_spaceport = {
+	if = { limit = { owner = { has_technology = "tech_strike_craft_3" } }
+		zhow_set_standard_timeout = yes
+		zhow_create_strike_fleet = yes
+		last_created_fleet = {
+			while = {
+				count = 24
+				zhow_spawn_default_fighter = yes
+			}
+			while = {
+				count = 8
+				zhow_spawn_default_bomber = yes
+			}
+		}
+	}
+}
+
 # Carrier spawns
 zhow_spawn_carrier = {
 	set_timed_ship_flag = { flag = "zhow_ignore" days = 89 }
@@ -213,30 +231,32 @@ zhow_spawn_carrier = {
 
 # Spawns from battleship based on tech level
 zhow_spawn_battleship = {
-	zhow_set_ignore_flag = yes
-	owner = {
-		set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
-		while = {
-			limit = { check_variable = { which = "ZHowTmp" value > 0 } }
-			if = { limit = { has_technology = "tech_strike_craft_2" }
-				zhowdbg_spawn_bs2 = yes
-				PREV = {
-					fleet = {
-						zhow_spawn_default_fighter = yes
-						zhow_spawn_default_fighter = yes
-						zhow_spawn_default_bomber = yes
+	if = { limit = { owner = { has_technology = "tech_strike_craft_1" } }
+		zhow_set_ignore_flag = yes
+		owner = {
+			set_variable = { which = "ZHowTmp" value = "HISBStrikeAmount" }
+			while = {
+				limit = { check_variable = { which = "ZHowTmp" value > 0 } }
+				if = { limit = { has_technology = "tech_strike_craft_2" }
+					zhowdbg_spawn_bs2 = yes
+					PREV = {
+						fleet = {
+							zhow_spawn_default_fighter = yes
+							zhow_spawn_default_fighter = yes
+							zhow_spawn_default_bomber = yes
+						}
 					}
-				}
-			else = {
-				zhowdbg_spawn_bs = yes
-				PREV = {
-					fleet = {
-						zhow_spawn_default_fighter = yes
-						zhow_spawn_default_fighter = yes
+				else = {
+					zhowdbg_spawn_bs = yes
+					PREV = {
+						fleet = {
+							zhow_spawn_default_fighter = yes
+							zhow_spawn_default_fighter = yes
+						}
 					}
-				}
-			} }
-			subtract_variable = { which = "ZHowTmp" value = 2 }
+				} }
+				subtract_variable = { which = "ZHowTmp" value = 2 }
+			}
 		}
 	}
 }
@@ -269,6 +289,7 @@ zhow_do_fleet_spawns = {
 				hive_asteroid = { zhow_spawn_hive_asteroid = yes }
 				final_core_ai = { zhow_spawn_final_core_ai = yes }
 				core_ai = { zhow_spawn_core_ai = yes }
+				orbital_station = { show_spawn_spaceport = yes }
 			}
 		}
 	}

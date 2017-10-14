@@ -1,7 +1,8 @@
 
 zhow_can_country_spawn = {
 	OR = {
-		has_technology = "tech_spaceport_6"
+		has_technology = "tech_strike_craft_1"
+		has_technology = "zhow_tech_carrier_1"
 		# These dont have the all_technology_module
 		is_country_type = guardian_hiver
 		is_country_type = guardian_sphere
@@ -27,5 +28,6 @@ zhow_can_ship_spawn = {
 		is_ship_size = hive_asteroid
 		is_ship_size = final_core_ai
 		is_ship_size = core_ai
+		is_ship_size = orbital_station
 	}
 }

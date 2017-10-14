@@ -98,7 +98,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				last_increased_tech = tech_strike_craft_1
+				last_increased_tech = tech_spaceport_6
 			}
 			country_event = { id = zhowTech.4 }
 		}

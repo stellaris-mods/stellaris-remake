@@ -1,0 +1,42 @@
+﻿#l_braz_por:
+#l_english:
+#l_french:
+#l_german:
+l_polish:
+#l_russian:
+#l_spanish:
+
+count_combatant_fleet_trigger: "Count Combatant Fleets"
+
+starting_weapons_missiles_desc: "§RUnavailable as a starting technology.§!"
+
+weapon_type_strike_craft_weapon_damage_mult: "Ignore"
+weapon_type_strike_craft_weapon_fire_rate_mult: "Ignore"
+weapon_type_strike_craft_speed_mult: "Ignore"
+
+tech_pd_tracking_1: "Able Drone Weaponry"
+tech_pd_tracking_1_desc: "Provides downsized versions of some of our lower level weapons for mounting on drones."
+tech_pd_tracking_2: "Interlinked Drone Weaponry"
+tech_pd_tracking_2_desc: "A new array of upgraded downsized versions of our weapons for mounting on drones."
+tech_pd_tracking_3: "Algorithmic Drone Weaponry"
+tech_pd_tracking_3_desc: "Advanced computational prediction increases the effectiveness of our drone weaponry."
+
+tech_flak_batteries_1: "Additional Drone Weapons"
+tech_flak_batteries_1_desc: "Researches new weapons for our drones with increased armor penetration capabilities."
+tech_flak_batteries_2: "Effective Drone Weapons"
+tech_flak_batteries_2_desc: "Recent advances in engineering precision should allow us to increase the effectiveness of our drone-mounted weapon alternatives."
+
+tech_repeatable_weapon_type_strike_craft_fire_damage: "Additional Drones"
+tech_repeatable_weapon_type_strike_craft_fire_damage_desc: "Instruct your engineers to further refine the assembly and packaging process of the automated drone production facilities to increase yield per launch cycle by approximately 1 additional drone hull."
+tech_repeatable_weapon_type_strike_craft_fire_rate: "Radiator Capability Boost"
+tech_repeatable_weapon_type_strike_craft_fire_rate_desc: "Boosting the cooling system radiators allows the automated drone construction systems in the hangar bays to operate at a faster rate, thus increasing the launch rate by approximately 10 days."
+
+tech_strike_craft_1: "Battleship Drone Squadron"
+tech_strike_craft_1_desc: "Installs a fully autonomous assembly line for automated drone craft production in all standard Battleship configurations. Unfortunately, due to the relatively limited size of the Battleship hull compared to the Carrier, its launch capabilities will not be anywhere close to the Carrier.\n\nOur engineers estimate initial production capability at 2 fighter-class drones every 5 months."
+tech_strike_craft_2: "Designable Drones"
+tech_strike_craft_2_desc: "Our engineers have finally managed to securely transmit and receive drone designs in a cryptographically verifiable way throughout subspace. This will allow us to use our own designs for the autonomous drones produced by Carriers and Battleships."
+tech_strike_craft_3: "Spaceport Drone Squadrons"
+tech_strike_craft_3_desc: "Our Spaceports are way too vulnerable, not to mention valuable. Our engineers were able to better utilize the existing hangar bay sections on our spaceports, allowing for the installation of autonomous drone production facilities, at almost the same storage capability as the Carrier class."
+
+tech_amoeba_strike_craft_1_desc: "As we breed Space Amoebas in captivity, we study their symbiotic flagella and use this knowledge to upgrade our drones. $GAdds new Section Template for drones.§!"
+tech_swarm_strike_craft_1_desc: "Analyzing specimens from defeated Prethoryn enables us to clone their genetic buildup, allowing us to use this knowledge to improve our drone production systems. $GAdds new Section Template for drones.§!"

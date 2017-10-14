@@ -45,7 +45,8 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		OR = { # Same as in zhow_can_country_spawn trigger
-			has_technology = "tech_spaceport_6"
+			has_technology = "tech_strike_craft_1"
+			has_technology = "zhow_tech_carrier_1"
 			# These dont have the all_technology_module
 			is_country_type = guardian_hiver
 			is_country_type = guardian_sphere

@@ -88,7 +88,7 @@ zhow_tech_carrier_1 = {
 		modifier = {
 			factor = 10
 			any_neighbor_country = {
-				has_technology = zhow_tech_carrier_1
+				has_technology = "zhow_tech_carrier_1"
 			}
 		}
 		modifier = {
@@ -137,11 +137,6 @@ zhow_impossible_tech = {
 	area = engineering
 	weight = 0
 	category = { voidcraft }
-	tier = 3
-	ai_update_type = all
-	is_reverse_engineerable = no
-	weight_modifier = {
-		factor = 0
-	}
-	ai_weight = { factor = 0 }
+	tier = 0
+	icon = "tech_spaceport_2"
 }

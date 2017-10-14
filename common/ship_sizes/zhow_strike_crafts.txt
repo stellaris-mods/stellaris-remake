@@ -36,7 +36,7 @@ strike_fighter = {
 	}
 	max_hitpoints = 50
 	size_multiplier = 0
-	fleet_slot_size = 1
+	fleet_slot_size = 0
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 1
 	is_space_station = no
@@ -46,7 +46,7 @@ strike_fighter = {
 	enable_default_design = yes
 	required_spaceport_level = 50
 
-	prerequisites = { "tech_strike_craft_1" }
+	prerequisites = { "tech_strike_craft_2" }
 
 	# it's interesting, because the below custom ship class does in fact work throughout the code
 	# but it did't fix what I hoped it would fix, which is the automatic ship designs picking
@@ -76,7 +76,7 @@ strike_bomber = {
 	}
 	max_hitpoints = 70
 	size_multiplier = 0
-	fleet_slot_size = 1
+	fleet_slot_size = 0
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 1
 	is_space_station = no
@@ -114,7 +114,7 @@ nongfx_strike_fighter = {
 	}
 	max_hitpoints = 50
 	size_multiplier = 0
-	fleet_slot_size = 1
+	fleet_slot_size = 0
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no

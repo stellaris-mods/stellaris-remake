@@ -229,6 +229,50 @@ tech_strike_craft_1 = {
 	prerequisites = { "tech_spaceport_6" }
 	weight = @tier2weight1
 
+	prereqfor_desc = {
+		custom = {
+			title = "tech_strike_craft_1.custom.title"
+			desc = "tech_strike_craft_1.custom.desc"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_strike_craft_3 = {
+	cost = @tier2cost4
+	area = engineering
+	tier = 2
+	ai_update_type = military
+	category = { voidcraft }
+	prerequisites = { "tech_strike_craft_2" }
+	weight = @tier2weight4
+
+	prereqfor_desc = {
+		custom = {
+			title = "tech_strike_craft_3.custom.title"
+			desc = "tech_strike_craft_3.custom.desc"
+		}
+	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
