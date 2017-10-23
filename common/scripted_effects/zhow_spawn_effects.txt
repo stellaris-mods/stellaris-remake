@@ -158,11 +158,11 @@ zhow_spawn_massive_ship_fallen_empire = {
 	zhow_set_standard_timeout = yes
 	fleet = {
 		if = { limit = { owner = { has_country_flag = "fallen_empire_2" } }
-			while = { count = 16 zhow_spawn_fighter_fe_psijump = yes }
-			while = { count = 16 zhow_spawn_bomber_fe_psijump = yes }
+			while = { count = 12 zhow_spawn_fighter_fe_psijump = yes }
+			while = { count = 12 zhow_spawn_bomber_fe_psijump = yes }
 		else = {
-			while = { count = 16 zhow_spawn_fighter_fe_jump = yes }
-			while = { count = 16 zhow_spawn_bomber_fe_jump = yes }
+			while = { count = 12 zhow_spawn_fighter_fe_jump = yes }
+			while = { count = 12 zhow_spawn_bomber_fe_jump = yes }
 		} }
 	}
 }
@@ -170,11 +170,11 @@ zhow_spawn_large_ship_fallen_empire = {
 	zhow_set_standard_timeout = yes
 	fleet = {
 		if = { limit = { owner = { has_country_flag = "fallen_empire_2" } }
-			while = { count = 8 zhow_spawn_fighter_fe_psijump = yes }
-			while = { count = 8 zhow_spawn_bomber_fe_psijump = yes }
+			while = { count = 4 zhow_spawn_fighter_fe_psijump = yes }
+			while = { count = 4 zhow_spawn_bomber_fe_psijump = yes }
 		else = {
-			while = { count = 8 zhow_spawn_fighter_fe_jump = yes }
-			while = { count = 8 zhow_spawn_bomber_fe_jump = yes }
+			while = { count = 4 zhow_spawn_fighter_fe_jump = yes }
+			while = { count = 4 zhow_spawn_bomber_fe_jump = yes }
 		} }
 	}
 }
@@ -294,3 +294,5 @@ zhow_do_fleet_spawns = {
 		}
 	}
 }
+
+# XXX need to check fleet ships is less than 500 before we spawn more
