@@ -133,7 +133,7 @@ zhow_spawn_large_ship_carrier_swarm = {
 	zhow_set_standard_timeout = yes
 	fleet = {
 		while = {
-			count = 30
+			count = 10
 			zhow_spawn_fighter_swarm = yes
 		}
 	}
@@ -142,7 +142,7 @@ zhow_spawn_queen_swarm = {
 	zhow_set_standard_timeout = yes
 	fleet = {
 		while = {
-			count = 30
+			count = 15
 			zhow_spawn_fighter_swarm = yes
 		}
 	}
