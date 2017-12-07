@@ -95,7 +95,7 @@ This addon overwrites the whole world; I have tried to keep it at a minimum, and
 \- Almost all files in common/global\_ship\_designs
 
 ## Contacting me
-Feel free to start a new discussion topics on any of my addons, or post in the comment section below\. If you want to talk to me directly, I hang out on the [NSC Discord server](https://discord\.gg/K9jUfws)\. Type _@folk_ in the \#modding\-discussion channel and I will see your message\.
+**I do not read comments or forums on Steam any more\. I can only be reached on Github\.**
 
 
 [//]: # (stop)
