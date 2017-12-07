@@ -211,7 +211,7 @@ chinorr = {
 		name_list = "MOL1"
 		trait = "trait_industrious"
 		trait = "trait_intelligent"
-		trait = "trait_repugnant"
+		trait = "trait_solitary"
 		trait = "trait_wasteful"
 	}
 

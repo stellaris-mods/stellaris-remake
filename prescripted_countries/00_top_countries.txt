@@ -37,8 +37,8 @@ humans1 = {
 	initializer = "sol_system_initializer"
 	system_name = "NAME_Sol"
 
-	graphical_culture = "mammalian_01"
-	city_graphical_culture = "mammalian_01"
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
 
 	empire_flag = {
 		icon= {
@@ -106,8 +106,8 @@ humans2 = {
 	initializer = "deneb_system"
 	system_name = "NAME_Deneb"
 
-	graphical_culture = "mammalian_01"
-	city_graphical_culture = "mammalian_01"
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
 
 	empire_flag = {
 		icon= {

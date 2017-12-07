@@ -268,6 +268,7 @@ zhow_spawn_battleship = {
 zhow_do_fleet_spawns = {
 	while = {
 		limit = {
+			num_ships < 490
 			count_fleet_ships = {
 				count > 0
 				limit = { zhow_can_ship_spawn = yes }

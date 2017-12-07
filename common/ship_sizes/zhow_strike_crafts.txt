@@ -119,7 +119,7 @@ nongfx_strike_fighter = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 10
+	icon_frame = 2
 	is_designable = no
 
 	# it's interesting, because the below custom ship class does in fact work throughout the code
