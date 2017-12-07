@@ -71,7 +71,7 @@ zhow_tech_carrier_1 = {
 	category = { voidcraft }
 	ai_update_type = military
 	prerequisites = { "tech_spaceport_6" }
-	weight = 0
+	weight = 45
 
 	prereqfor_desc = {
 		ship = {
@@ -82,8 +82,8 @@ zhow_tech_carrier_1 = {
 
 	weight_modifier = {
 		modifier = {
-			add = 50
-			has_global_flag = "zhow_enable_carrier"
+			factor = 0
+			NOT = { has_global_flag = "zhow_enable_carrier" }
 		}
 		modifier = {
 			factor = 10
